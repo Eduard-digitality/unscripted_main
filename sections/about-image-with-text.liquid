@@ -1,0 +1,84 @@
+<section class="about-hero-section" style="padding: 60px 0;">
+  <div class="page-width">
+    <div class="grid grid--2-col {% if section.settings.image_position == 'right' %}grid--reverse{% endif %}" style="align-items: center; gap: 40px;">
+
+      <!-- Image Column -->
+      <div class="grid__item">
+        {% if section.settings.image %}
+          <img
+            src="{{ section.settings.image | image_url: '800x' }}"
+            alt="{{ section.settings.image.alt | escape }}"
+            width="{{ section.settings.image.width }}"
+            height="{{ section.settings.image.height }}"
+            class="hero__image"
+            style="max-width: 100%; height: auto;"
+          >
+        {% endif %}
+      </div>
+
+      <!-- Text Column -->
+      <div class="grid__item">
+        <h1 class="hero__heading">{{ section.settings.heading }}</h1>
+        {% if section.settings.subheading != blank %}
+          <h2 class="hero__subheading">{{ section.settings.subheading }}</h2>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <p class="hero__description">{{ section.settings.description }}</p>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About Image with text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Welcome to Our Story"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Driven by Passion, Guided by Purpose"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "We started with a mission to create meaningful experiences. Here's a look at who we are and what we stand for."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image Position",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Image Section "
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,193 @@
+{%- style -%}
+  h3{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 10%;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #021045;
+  }
+  h4{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 10%;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #021045;
+  }
+  p{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0%;
+    text-align: justify;
+    color: #4D4D4D;
+
+  }
+    section.contact-info-images {
+      padding: 30px 0px 30px 30px !important;
+  }
+  .contact-info {
+      min-width: 48%;
+  }
+  
+
+{%- endstyle -%}
+<section class="contact-info-images" style="padding: 60px 0;">
+  <div class="page-width">
+    <div class="grid grid--3-col" style="gap: 30px; align-items: flex-start;">
+      
+      <!-- Contact Details -->
+      <div class="contact-info">
+        <h3>{{ section.settings.address_heading }}</h3>
+        <p>{{ section.settings.address_text }}</p>
+
+        <h4>{{ section.settings.hours_heading }}</h4>
+        <p>{{ section.settings.hours_text }}</p>
+
+        <h4>{{ section.settings.phone_heading }}</h4>
+        <p>{{ section.settings.phone_text }}</p>
+
+        <h4>{{ section.settings.email_heading }}</h4>
+        <p>{{ section.settings.email_text }}</p>
+
+        <h4>{{ section.settings.social_heading }}</h4>
+        <p>
+          {% if section.settings.facebook_url != blank %}
+            <a href="{{ section.settings.facebook_url }}" target="_blank">Facebook</a><br>
+          {% endif %}
+          {% if section.settings.instagram_url != blank %}
+            <a href="{{ section.settings.instagram_url }}" target="_blank">Instagram</a><br>
+          {% endif %}
+          {% if section.settings.twitter_url != blank %}
+            <a href="{{ section.settings.twitter_url }}" target="_blank">Twitter</a><br>
+          {% endif %}
+        </p>
+      </div>
+
+      <!-- Image 1 -->
+      <div>
+        {% if section.settings.image_1 %}
+         <img
+            src="{{ section.settings.image_1 | img_url: 'master' }}"
+            alt="{{ section.settings.image_1.alt | escape }}"
+            width="{{ section.settings.image_1.width }}"
+            height="{{ section.settings.image_1.height }}"
+            style="width: 100%; height: auto;"
+          >
+        {% endif %}
+      </div>
+
+      <!-- Image 2 -->
+      <div>
+        {% if section.settings.image_2 %}
+          <img
+            src="{{ section.settings.image_2 | img_url: 'master' }}"
+            alt="{{ section.settings.image_2.alt | escape }}"
+            width="{{ section.settings.image_2.width }}"
+            height="{{ section.settings.image_2.height }}"
+            style="width: 100%; height: auto;"
+          >
+
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Contact Info with Images",
+  "settings": [
+    {
+      "type": "text",
+      "id": "address_heading",
+      "label": "Address Heading",
+      "default": "Address Details"
+    },
+    {
+      "type": "textarea",
+      "id": "address_text",
+      "label": "Address Text",
+      "default": "Lorem ipsum, 33, Dolor, 00882, consectetur. "
+    },
+    {
+      "type": "text",
+      "id": "hours_heading",
+      "label": "Opening Hours Heading",
+      "default": "Opening Hours"
+    },
+    {
+      "type": "textarea",
+      "id": "hours_text",
+      "label": "Opening Hours Text",
+      "default": "Mon–Fri: 9am – 6pm"
+    },
+    {
+      "type": "text",
+      "id": "phone_heading",
+      "label": "Phone Heading",
+      "default": "Phone Number"
+    },
+    {
+      "type": "text",
+      "id": "phone_text",
+      "label": "Phone Text",
+      "default": "+39 00 8712345"
+    },
+    {
+      "type": "text",
+      "id": "email_heading",
+      "label": "Email Heading",
+      "default": "Email"
+    },
+    {
+      "type": "text",
+      "id": "email_text",
+      "label": "Email Text",
+      "default": "info@obliq.com"
+    },
+    {
+      "type": "text",
+      "id": "social_heading",
+      "label": "Social Heading",
+      "default": "Our Social"
+    },
+    {
+      "type": "url",
+      "id": "facebook_url",
+      "label": "Facebook URL"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "url",
+      "id": "twitter_url",
+      "label": "Twitter URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Left Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Right Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact Info with Images"
+    }
+  ]
+}
+{% endschema %}

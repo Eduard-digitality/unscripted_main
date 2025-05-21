@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Du-Play Variable";
+  src: url("https://cdn.shopify.com/s/files/1/0914/8638/8542/files/DuPlay-SemiBold.woff2?v=1738188718")
+      format("woff2"),
+    url("https://cdn.shopify.com/s/files/1/0914/8638/8542/files/DuPlay-SemiBold.woff?v=1738188718")
+      format("woff");
+  font-weight: lighter;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply the font globally */
+body {
+  font-family: "Du-Play Variable", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Du-Play Variable", sans-serif !important;
+}
+.rich-text.content-container.color-background-1.gradient.rich-text--full-width.content-container--full-width.section-template--20666892058973__rich_text_Kqx3jB-padding {
+  border-bottom: none !important;
+
+  padding-bottom: 0 !important;
+}
+.section__header {
+  text-align: left;
+  margin-left: 10;
+  padding-left: 10;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Forces left alignment */
+}
+.text-container {
+  max-width: 100%;
+  width: 100%;
+  padding: 10 !important;
+  margin: 10 !important;
+}
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 10 !important;
+  margin: 10 auto; /* Keeps images centered */
+}

@@ -1,0 +1,62 @@
+/*Header*/
+
+.header .header__linklist-item a{
+  font-family: "DM Sans", sans-serif;
+font-weight: 200;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.04em;
+color: #000;
+  text-transform: lowercase;
+}
+.header #header-localization-form{
+  display: none;
+}
+.cvc-switcher-btn span{
+  font-family: "DM Sans", sans-serif;
+font-weight: 200;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.04em;
+color: #000;
+}
+
+.header__icon-wrapper svg {
+  opacity: 0;
+}
+.header__icon-wrapper{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 32px;
+  height: 32px;
+}
+.header__icon-wrapper[aria-label="Search"]{
+  background-image: url('https://cdn.shopify.com/s/files/1/0914/8638/8542/files/search.svg?v=1746557455');
+}
+.header__icon-wrapper[aria-label="Login"]{
+  background-image: url('https://cdn.shopify.com/s/files/1/0914/8638/8542/files/carbon_user-profile.svg?v=1746557455');
+}
+.header__icon-wrapper[aria-label="Cart"]{
+  background-image: url('https://cdn.shopify.com/s/files/1/0914/8638/8542/files/solar_bag-3-outline.svg?v=1746557455');
+}
+button.header__icon-wrapper{
+  display: none!important;
+}
+
+.header__icon-list{
+  gap: 16px;
+}
+
+.header__secondary-links .header__icon-list {
+  display: flex;
+  flex-direction: row;
+}
+.header__secondary-links .header__icon-list .cvc-dropdown-btn {
+  order: -1;
+  margin: 0;
+}
+.header__secondary-links .header__icon-list > * {
+  display: flex;
+  align-items: center;
+}
