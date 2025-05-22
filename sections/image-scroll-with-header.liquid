@@ -1,0 +1,65 @@
+<section class="image-scroll-with-header" style="padding: 60px 0;">
+  <div class="page-width">
+    
+    <!-- Heading & Text in One Row -->
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+      <h2 style="margin: 0;">{{ section.settings.heading }}</h2>
+      <p style="max-width: 600px; margin: 0;">{{ section.settings.text }}</p>
+    </div>
+
+    <!-- Scrollable Images -->
+    <div class="scroll-images" style="margin-top: 30px; display: flex; overflow-x: auto; gap: 20px; scroll-snap-type: x mandatory;">
+      {% for block in section.blocks %}
+        {% if block.settings.image %}
+          <div style="flex: 0 0 auto; scroll-snap-align: start;">
+            <img 
+              src="{{ block.settings.image | img_url: '500x' }}" 
+              alt="{{ block.settings.image.alt | escape }}" 
+              style="width: 100%; max-width: 300px; height: auto; border-radius: 8px;">
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Image Scroll with Header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Explore Our Gallery"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "A collection of our most iconic moments and visuals."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Scrollable Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "Image Scroll Section",
+      "category": "Media"
+    }
+  ]
+}
+{% endschema %}
