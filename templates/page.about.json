@@ -12,8 +12,9 @@
     "about-hero-image-text-sAm1we1": {
       "type": "text-overlay-banner",
       "settings": {
-        "small_text": "Our Journey",
-        "heading_text": "Our Story",
+        "bg_image": "shopify://shop_images/1653369c2b308b591e52f9a605c0bc9d208c3b84.jpg",
+        "small_text": "LEARN MORE",
+        "heading_text": "ABOUT US",
         "text_color": "#ffffff",
         "overlay_opacity": 40
       }
@@ -21,39 +22,117 @@
     "about-text-two-image-sAm1we2": {
       "type": "text-with-two-images",
       "settings": {
-        "heading": "Our Mission",
-        "text": "We aim to bring excellence through innovation and commitment."
+        "heading": "The Essence of Our Brand",
+        "text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui. Auctor tincidunt id ornare.",
+        "image_1": "shopify://shop_images/Frame_235.png",
+        "image_2": "shopify://shop_images/Rectangle_2000.png"
       }
     },
     "about-card-slider-sAm1we3": {
       "type": "slider-cards",
       "blocks": {
+        "card_ptybfX": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Link.png",
+            "card_heading": "2025 - today",
+            "card_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui. Auctor tincidunt id ornare."
+          }
+        },
+        "card_qjXpyq": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Link_1.png",
+            "card_heading": "2023",
+            "card_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui. Auctor tincidunt id ornare."
+          }
+        },
         "card_7dDmgb": {
           "type": "card",
           "settings": {
-            "card_heading": "John Doe",
-            "card_text": "Team Lead & Visionary"
+            "image": "shopify://shop_images/xo-animate.png",
+            "card_heading": "2021",
+            "card_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui. Auctor tincidunt id ornare."
           }
         }
       },
       "block_order": [
+        "card_ptybfX",
+        "card_qjXpyq",
         "card_7dDmgb"
       ],
       "settings": {
-        "heading": "What We Do"
+        "heading": "Our Story"
       }
     },
     "about-scroll-gallery-sAm1we4": {
       "type": "image-scroll-with-header",
+      "blocks": {
+        "image_4yC3mz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_2005.png"
+          }
+        },
+        "image_FrHcQX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_2007.png"
+          }
+        },
+        "image_FJcPYB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_2006.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_4yC3mz",
+        "image_FrHcQX",
+        "image_FJcPYB"
+      ],
       "settings": {
-        "heading": "Behind The Scenes",
-        "text": "Take a look into our workspace and creative environment."
+        "heading": "The Concept Behind Our Store",
+        "text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui."
       }
     },
     "about-social-scroll-sAm1we5": {
       "type": "instagram-scroll-feed",
+      "blocks": {
+        "image_FiDLkX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Collection_card.png"
+          }
+        },
+        "image_WQUUCB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Collection_card_1.png"
+          }
+        },
+        "image_BXqnWc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Collection_card_2.png"
+          }
+        },
+        "image_9K4VhJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Collection_card_3.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_FiDLkX",
+        "image_WQUUCB",
+        "image_BXqnWc",
+        "image_9K4VhJ"
+      ],
       "settings": {
-        "heading": "Connect With Us",
+        "heading": "follow us",
         "instagram_url": "https://www.instagram.com/yourbrand"
       }
     }

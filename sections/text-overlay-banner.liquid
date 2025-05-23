@@ -1,3 +1,32 @@
+{% style %}
+
+  section.text-overlay-banner {
+    min-height: 400px;
+}
+section.text-overlay-banner p{
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 18px !important;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    margin: 0 !important;
+  
+}
+section.text-overlay-banner h2{
+    font-weight: 700;
+    font-size: 56px !important;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+  
+}
+  @media screen and (max-width: 767px) {
+  section.text-overlay-banner h2 {
+      font-size: 42px !important;
+  }
+}
+{% endstyle %}
 <section 
   class="text-overlay-banner" 
   style="
@@ -47,13 +76,13 @@
       "type": "text",
       "id": "small_text",
       "label": "Small Text (above heading)",
-      "default": "Welcome to"
+      "default": "LEARN MORE"
     },
     {
       "type": "text",
       "id": "heading_text",
       "label": "Heading Text",
-      "default": "Our Story"
+      "default": "ABOUT US"
     },
     {
       "type": "color",
