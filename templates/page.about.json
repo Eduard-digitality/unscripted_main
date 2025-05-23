@@ -9,54 +9,139 @@
  */
 {
   "sections": {
-    "main-info": {
-      "type": "about-image-with-text",
+    "about-hero-image-text-sAm1we1": {
+      "type": "text-overlay-banner",
       "settings": {
-        "heading": "Our Mission",
-        "subheading": "Driven by Passion, Guided by Purpose",
-        "description": "We started with a mission to create meaningful experiences. Here's a look at who we are and what we stand for.",
-        "image_position": "right"
+        "bg_image": "shopify://shop_images/1653369c2b308b591e52f9a605c0bc9d208c3b84.jpg",
+        "small_text": "LEARN MORE",
+        "heading_text": "ABOUT US",
+        "text_color": "#ffffff",
+        "overlay_opacity": 40
       }
     },
-    "why_choose": {
-      "type": "about-why-choose",
+    "about-text-two-image-sAm1we2": {
+      "type": "text-with-two-images",
       "settings": {
-        "heading": "Why Choose Us"
+        "heading": "The Essence of Our Brand",
+        "text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui. Auctor tincidunt id ornare.",
+        "image_1": "shopify://shop_images/Frame_235.png",
+        "image_2": "shopify://shop_images/Rectangle_2000.png"
       }
     },
-    "mission": {
-      "type": "about-image-with-text",
+    "about-card-slider-sAm1we3": {
+      "type": "slider-cards",
+      "blocks": {
+        "card_ptybfX": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Link.png",
+            "card_heading": "2025 - today",
+            "card_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui. Auctor tincidunt id ornare."
+          }
+        },
+        "card_qjXpyq": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Link_1.png",
+            "card_heading": "2023",
+            "card_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui. Auctor tincidunt id ornare."
+          }
+        },
+        "card_7dDmgb": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/xo-animate.png",
+            "card_heading": "2021",
+            "card_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui. Auctor tincidunt id ornare."
+          }
+        }
+      },
+      "block_order": [
+        "card_ptybfX",
+        "card_qjXpyq",
+        "card_7dDmgb"
+      ],
       "settings": {
-        "heading": "Our Mission",
-        "subheading": "Driven by Passion, Guided by Purpose",
-        "description": "We started with a mission to create meaningful experiences. Here's a look at who we are and what we stand for.",
-        "image_position": "left"
+        "heading": "Our Story"
       }
     },
-    "vision": {
-      "type": "about-image-with-text",
+    "about-scroll-gallery-sAm1we4": {
+      "type": "image-scroll-with-header",
+      "blocks": {
+        "image_4yC3mz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_2005.png"
+          }
+        },
+        "image_FrHcQX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_2007.png"
+          }
+        },
+        "image_FJcPYB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_2006.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_4yC3mz",
+        "image_FrHcQX",
+        "image_FJcPYB"
+      ],
       "settings": {
-        "heading": "Our Vision",
-        "subheading": "Driven by Passion, Guided by Purpose",
-        "description": "We started with a mission to create meaningful experiences. Here's a look at who we are and what we stand for.",
-        "image_position": "right"
+        "heading": "The Concept Behind Our Store",
+        "text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui."
       }
     },
-    "impact": {
-      "type": "about-full-bg-image",
+    "about-social-scroll-sAm1we5": {
+      "type": "instagram-scroll-feed",
+      "blocks": {
+        "image_FiDLkX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Collection_card.png"
+          }
+        },
+        "image_WQUUCB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Collection_card_1.png"
+          }
+        },
+        "image_BXqnWc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Collection_card_2.png"
+          }
+        },
+        "image_9K4VhJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Collection_card_3.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_FiDLkX",
+        "image_WQUUCB",
+        "image_BXqnWc",
+        "image_9K4VhJ"
+      ],
       "settings": {
-        "heading": "Inspire with Impact",
-        "text": "We believe in making bold moves that push the industry forward.",
-        "button_label": "Learn More",
-        "button_link": "shopify://pages/contact"
+        "heading": "follow us",
+        "instagram_url": "https://www.instagram.com/yourbrand"
       }
     }
   },
   "order": [
-    "main-info",
-    "why_choose",
-    "mission",
-    "vision",
-    "impact"
+    "about-hero-image-text-sAm1we1",
+    "about-text-two-image-sAm1we2",
+    "about-card-slider-sAm1we3",
+    "about-scroll-gallery-sAm1we4",
+    "about-social-scroll-sAm1we5"
   ]
 }

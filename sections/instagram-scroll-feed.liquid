@@ -1,0 +1,122 @@
+{% style %}
+  section.instagram-scroll-feed{
+    max-width: 1376px;
+    margin: 0 auto;
+}
+  section.instagram-scroll-feed .page-width{
+    overflow-x: auto;
+  } 
+  .instagram-scroll-feed .scroll-images{
+        width: 1376px;
+  }
+section.instagram-scroll-feed h2 {
+    font-weight: 700 !important;
+    font-size: 64px !important;
+    vertical-align: middle;
+    text-transform: uppercase;
+    line-height: 62px;
+    max-width: 617px;
+}
+  section.instagram-scroll-feed .button{
+    width: 207px;
+    height: 57px;
+    padding-top: 16px;
+    padding-right: 32px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    border-width: 1px;
+    border-radius: 100px;
+    overflow: hidden;
+    background: #DD3F21;
+    color: #fff;
+    line-height: 32px;
+  }
+  section.instagram-scroll-feed .scroll-images {
+    margin: 0;
+    display: flex !important;
+    column-gap: 1% !important;
+}
+
+    @media screen and (max-width: 767px) {
+  section.instagram-scroll-feed .scroll-images img{
+    w
+}
+
+  section.instagram-scroll-feed h2
+     {
+    font-size: 30px !important;
+    line-height: 32px;
+    max-width: 100%;
+}
+      .instagram-scroll-feed .scroll-images{
+            margin: 0 15px;
+  }
+      section.instagram-scroll-feed {
+    padding: 20px !important;
+}
+    }
+{% endstyle %}
+<section class="instagram-scroll-feed" style="padding: 60px 0;">
+  <!-- Heading and Instagram Button -->
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+      <h2 style="margin: 0;">{{ section.settings.heading }}</h2>
+      <a href="{{ section.settings.instagram_url }}" target="_blank" class="button">
+        Follow on Instagram
+      </a>
+    </div>
+  <div class="page-width">
+    <!-- Scrollable Image Feeds -->
+    <div class="scroll-images" style="margin-top: 30px; display: flex; overflow-x: auto; gap: 20px; scroll-snap-type: x mandatory;">
+      {% for block in section.blocks %}
+        {% if block.settings.image %}
+          <div>
+            <img 
+              src="{{ block.settings.image | img_url: '500x' }}" 
+              alt="{{ block.settings.image.alt | escape }}"
+              style="width: 100%;  height: auto; border-radius: 6px;">
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Instagram Scroll Feed",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "follow us"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "instagram"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Instagram Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "Instagram Feed Scroll",
+      "category": "Social"
+    }
+  ]
+}
+{% endschema %}

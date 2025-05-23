@@ -1,3 +1,51 @@
+{% style %}
+  .shopify-section.shopify-section--rich-text .heading.h2 {
+    text-align: left !important;
+    max-width: 1376px;
+    margin: 0 auto;
+}
+  #shopify-section-template--19296470008060__text_with_icons_jcAtW6{
+    max-width: 1376px;
+    margin: 0 auto;
+  }
+  .text-with-icons__item {
+    text-align: left !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: normal !important;
+    padding: 0  !important;
+    display: block !important;
+}
+  .text-with-icons__content-wrapper p.heading{
+    font-weight: 700 !important;;
+    font-size: 18px !important;;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #0E0E0E !important;
+        margin-bottom: 0;
+  }
+  .text-with-icons__content-wrapper .heading + p{
+      font-weight: 300 !important;;
+      font-size: 14px !important;;
+      vertical-align: middle;
+        margin-top: 0 !important;
+    color: #0E0E0E !important;
+  }
+  .text-with-icons__item .text-with-icons__icon-wrapper > *{
+      margin: 0;
+      color: #9D2204 !important;
+  }
+   @media screen and (max-width: 767px) {
+     .heading.h2 {
+          font-size: 53px !important;
+      }
+     .shopify-section--faq .heading.h2 {
+              text-align: left !important;
+      }
+     #shopify-section-template--19296470008060__text_with_icons_jcAtW6{
+    margin: 0 50px;
+  }
+   }
+{% endstyle %}
 {%- if section.settings.background != settings.background and section.settings.background != 'rgba(0,0,0,0)' -%}
   {%- assign blends_with_background = false -%}
 {%- else -%}
@@ -40,8 +88,8 @@
 {%- endcomment -%}
 
 <section class="section {% unless blends_with_background or is_boxed %}section--flush{% endunless %}">
-  <div class="section__color-wrapper">
-    <div class="container {% unless blends_with_background %}vertical-breather{% endunless %}">
+  <div class="section__color-wrapper section_wrapper">
+    <div class=" {% unless blends_with_background %}vertical-breather{% endunless %}">
       <native-carousel class="text-with-icons">
         <div class="text-with-icons__list hide-scrollbar">
           {%- for block in section.blocks -%}

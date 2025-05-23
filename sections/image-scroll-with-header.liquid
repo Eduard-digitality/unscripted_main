@@ -1,0 +1,131 @@
+{% style %}
+    section.image-scroll-with-header{
+    max-width: 1376px;
+    margin: 0 auto;
+}
+  section.image-scroll-with-header .page-width{
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  section.image-scroll-with-header .grid_text{
+    display: grid;
+    justify-content: space-between;
+    align-items: flex-end;
+    grid-template-columns: 50% 50%; 
+    margin: 0;
+}
+.image-scroll-with-header h2 {
+    font-weight: 700 !important;
+    font-size: 64px !important;
+    vertical-align: middle;
+    text-transform: uppercase;
+    line-height: 62px;
+    max-width: 617px;
+}
+.image-scroll-with-header p{
+    font-weight: 100 !important;
+    font-size: 16px !important;
+    vertical-align: middle;
+    margin: 0;
+    max-width: 282px !important;
+    color: #0E0E0E;
+    line-height: 18px;
+}
+  .image-scroll-with-header .scroll-images {
+    margin: 0px;
+    display: flex;
+    width: 1376px;
+    gap: 25px;
+    margin-top: 20px !important;
+}
+
+  .image-scroll-with-header .scroll-images div{
+    width: 100%;
+    max-height: 589px;
+}
+  .image-scroll-with-header .scroll-images img{
+           max-height: 575px;
+    border-radius: 12px !important;
+}
+   @media screen and (max-width: 767px) {
+     section.image-scroll-with-header{
+    padding: 20px !important;
+}
+  section.image-scroll-with-header .grid_text{
+        grid-template-columns: 100% !important;
+        margin: 0  !important;
+  }
+     .image-scroll-with-header h2{
+        font-size: 30px !important;
+        line-height: 32px;
+        max-width: 100%;
+      }
+     
+}
+{% endstyle %}
+<section class="image-scroll-with-header" style="padding: 60px 0;">
+      <!-- Heading & Text in One Row -->
+    <div  class="grid_text">
+      <h2 style="margin: 0;">{{ section.settings.heading }}</h2>
+      <p style="max-width: 600px; margin: 0;">{{ section.settings.text }}</p>
+    </div>
+  <div class="page-width">
+    
+
+
+    <!-- Scrollable Images -->
+    <div class="scroll-images">
+      {% for block in section.blocks %}
+        {% if block.settings.image %}
+          <div>
+            <img 
+              src="{{ block.settings.image | img_url: '500x' }}" 
+              alt="{{ block.settings.image.alt | escape }}" 
+              style="width: 100%; height: auto; border-radius: 8px;">
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Image Scroll with Header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The Concept Behind Our Store"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Scrollable Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "Image Scroll Section",
+      "category": "Media"
+    }
+  ]
+}
+{% endschema %}

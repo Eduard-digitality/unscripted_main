@@ -1,0 +1,110 @@
+{% style %}
+
+  section.text-overlay-banner {
+    min-height: 400px;
+}
+section.text-overlay-banner p{
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 18px !important;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    margin: 0 !important;
+  
+}
+section.text-overlay-banner h2{
+    font-weight: 700;
+    font-size: 56px !important;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+  
+}
+  @media screen and (max-width: 767px) {
+  section.text-overlay-banner h2 {
+      font-size: 42px !important;
+  }
+}
+{% endstyle %}
+<section 
+  class="text-overlay-banner" 
+  style="
+    position: relative;
+    background-image: url('{{ section.settings.bg_image | img_url: '1600x' }}');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 20px;
+    text-align: center;
+    color: {{ section.settings.text_color }};
+  "
+>
+  <div class="page-width" style="position: relative; z-index: 1;">
+    {% if section.settings.small_text != blank %}
+      <p class="overlay-small-text" style="font-size: 1rem; margin-bottom: 0.5em;">
+        {{ section.settings.small_text }}
+      </p>
+    {% endif %}
+    {% if section.settings.heading_text != blank %}
+      <h2 class="overlay-heading" style="font-size: 2.5rem; margin: 0;">
+        {{ section.settings.heading_text }}
+      </h2>
+    {% endif %}
+  </div>
+
+  {% comment %}
+    Optional overlay layer for better contrast
+  {% endcomment %}
+  <div style="
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,{{ section.settings.overlay_opacity | divided_by: 100 }});
+    z-index: 0;
+  "></div>
+</section>
+
+{% schema %}
+{
+  "name": "Text Overlay Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "small_text",
+      "label": "Small Text (above heading)",
+      "default": "LEARN MORE"
+    },
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "ABOUT US"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay Opacity (%)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text Overlay Banner",
+      "category": "About"
+    }
+  ]
+}
+{% endschema %}
