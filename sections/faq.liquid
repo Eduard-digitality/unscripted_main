@@ -4,7 +4,7 @@
     font-weight: 300;
     font-size: 20px;
     vertical-align: middle;
-    padding: 20px 0 !important;
+    padding: 25px 0 !important;
 }
   .section_area{
     margin: 100px 0 !important;
@@ -16,10 +16,34 @@
     vertical-align: middle;
 }
 
+  .animated-plus:before
+ {
+    width: 16px !important;
+}
+  .animated-plus:after {
+    height: 16px !important;
+}
   .faq__wrapper {
     max-width: 994px !important;
     width: 100% !important;
     }
+  .faq__item{
+       position: relative;
+    /* border: none; */
+}
+  .faq__item:before{
+        content: '';
+   position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+        width: 100%;
+    background: linear-gradient(to right, red, darkred, black);
+    border: none;
+}
+  /* .faq__item:last-child:before{
+       display: none !important;
+} */
    @media screen and (max-width: 767px) {
      
      
