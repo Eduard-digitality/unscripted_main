@@ -22,7 +22,7 @@
           "settings": {
             "hide_sold_out_variants": false,
             "selector_mode": "block",
-            "color_mode": "swatch",
+            "color_mode": "hide",
             "variant_image_options": "",
             "size_chart_page": ""
           }
@@ -68,44 +68,6 @@
         "transition_effect": "slide"
       }
     },
-    "faq_8YGJq6": {
-      "type": "faq",
-      "blocks": {
-        "question_9fL3C9": {
-          "type": "question",
-          "settings": {
-            "title": "Description",
-            "answer": "<p>A whispered address, hidden beneath an unassuming façade. A soft knock, a knowing glance from the gatekeeper—suddenly, the ordinary world dissolves into pure magic. Here, menus are mere suggestions, and creativity flows as freely as the senses. Dive into the thrill of the evening with a fragrance that captures boldness and unbridled creativity. </p><p>Ignite your senses with the richness of cognac oil, as irresistible as the first sip of a perfect cocktail. As the heart unfolds, oak absolute and cinnamon essence entwine with Tonka bean, creating a spicy-sweet harmony that echoes the rhythm of a speakeasy.<br/></p><p>Finally, creamy sandalwood, praline, and vanilla linger—a luscious reminder of the magic you create when the night is yours to conquer.</p><p>Designed for those who live fully in the moment, making every night unforgettable.</p><p><strong> </strong></p>"
-          }
-        },
-        "question_6LNQVL": {
-          "type": "question",
-          "settings": {
-            "title": "Shipping & Return",
-            "answer": "<p>Orders within the UAE will be delivered in approximately 1-2 business days, while international orders may take around 10-14 business days to arrive.</p>"
-          }
-        },
-        "question_eGUDyx": {
-          "type": "question",
-          "settings": {
-            "title": "Additional Info",
-            "answer": "<p><strong>Notes:</strong></p><p>T: Cognac </p><p>H: Cinnamon, Tonka Bean, Oak </p><p>B: Praline, Vanilla, Sandalwood</p>"
-          }
-        }
-      },
-      "block_order": [
-        "question_9fL3C9",
-        "question_6LNQVL",
-        "question_eGUDyx"
-      ],
-      "settings": {
-        "show_navigation": false,
-        "title": "",
-        "content": "",
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
-      }
-    },
     "text_with_icons_U3rTJJ": {
       "type": "text-with-icons",
       "blocks": {
@@ -114,7 +76,6 @@
           "disabled": true,
           "settings": {
             "icon": "picto-box",
-            "custom_icon": "shopify://shop_images/Group_1.png",
             "custom_icon_width": 50,
             "title": "Free shipping",
             "content": "<p>Free worldwide shipping and returns - customs and duties taxes included</p>"
@@ -124,7 +85,6 @@
           "type": "item",
           "settings": {
             "icon": "picto-phone",
-            "custom_icon": "shopify://shop_images/Vector_1.png",
             "custom_icon_width": 50,
             "title": "Customer service",
             "content": "<p>We are available from monday to friday to answer your questions.</p>"
@@ -134,7 +94,6 @@
           "type": "item",
           "settings": {
             "icon": "picto-lock",
-            "custom_icon": "shopify://shop_images/icon-park-outline_shopping-bag.png",
             "custom_icon_width": 50,
             "title": "Secure payment",
             "content": "<p>Your payment information is processed securely.</p>"
@@ -144,7 +103,6 @@
           "type": "item",
           "settings": {
             "icon": "picto-email",
-            "custom_icon": "shopify://shop_images/Vector.png",
             "custom_icon_width": 50,
             "title": "Contact us",
             "content": "<p>Need to contact us? Just send us an e-mail at sales@amaya-international.com.</p>"
@@ -162,61 +120,102 @@
         "text_color": "rgba(0,0,0,0)"
       }
     },
-    "image_with_text_fRcq3r": {
-      "type": "image-with-text",
+    "about-product-U3rTTg": {
+      "type": "about-product",
       "blocks": {
-        "item_KqAbzy": {
-          "type": "item",
+        "info1": {
+          "type": "info_pair",
           "settings": {
-            "image": "shopify://shop_images/TheNightIsYoung2.png",
-            "tab_label": "",
-            "subheading": "",
-            "title": "ABOUT THE PRODUCT",
-            "content": "<p><strong>The First Sip</strong><br/>Cognac Oil—smooth, rich, and intoxicating.<br/>———————————————<br/><strong>A Smoky Whirl<br/></strong>Oak & Cinnamon swirl in forbidden allure.<br/>———————————————<br/><strong>The Final Note<br/></strong>Sandalwood & Vanilla—deep, lingering magic.<br/>———————————————<br/><strong>The Secret Unfolds<br/></strong>A scent where whispers turn to wonder.<br/>———————————————<br/><strong>Unscripted & Unapologetic<br/></strong>Crafted for those who rewrite the night.<br/>———————————————<br/><strong>For the Rulebreakers<br/></strong>A fragrance that never plays by the book.<br/>———————————————</p>",
-            "button_text": "",
-            "button_link": ""
+            "heading": "Top Notes",
+            "text": "Cognac – the rich aroma that sets the tone for the night."
+          }
+        },
+        "info2": {
+          "type": "info_pair",
+          "settings": {
+            "heading": "Heart Notes",
+            "text": "Cinnamon, Tonka Bean, Oak – a spicy, sweet harmony."
+          }
+        },
+        "info3": {
+          "type": "info_pair",
+          "settings": {
+            "heading": "Base Notes",
+            "text": "Sandalwood, Praline, Vanilla – warm and lasting impressions."
+          }
+        },
+        "info4": {
+          "type": "info_pair",
+          "settings": {
+            "heading": "Vibe",
+            "text": "Bold, Creative, Unforgettable."
           }
         }
       },
       "block_order": [
-        "item_KqAbzy"
+        "info1",
+        "info2",
+        "info3",
+        "info4"
       ],
-      "disabled": true,
-      "custom_css": [],
       "settings": {
-        "reveal_on_scroll": false,
-        "background_type": "boxed",
-        "background_overlap": "both",
-        "image_position": "left",
-        "text_alignment": "left",
-        "cycle_speed": 8,
-        "accent_background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)",
-        "button_background": "rgba(0,0,0,0)",
-        "button_text_color": "rgba(0,0,0,0)"
+        "main_heading": "About the Product"
       }
     },
-    "image_with_text_overlay_FzbR78": {
-      "type": "image-with-text-overlay",
-      "disabled": true,
+    "product-reviews-U3eTTW": {
+      "type": "product-reviews",
+      "blocks": {
+        "review_ULJAQC": {
+          "type": "review",
+          "settings": {
+            "review_text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
+            "stars": 3,
+            "user_image": "shopify://shop_images/Rectangle_2007.png",
+            "user_name": "test"
+          }
+        },
+        "review_TtPHYw": {
+          "type": "review",
+          "settings": {
+            "review_text": "",
+            "stars": 5,
+            "user_name": ""
+          }
+        },
+        "review_AfJfyY": {
+          "type": "review",
+          "settings": {
+            "review_text": "",
+            "stars": 5,
+            "user_name": ""
+          }
+        },
+        "review_gRnEec": {
+          "type": "review",
+          "settings": {
+            "review_text": "",
+            "stars": 5,
+            "user_name": ""
+          }
+        },
+        "review_EYXi4a": {
+          "type": "review",
+          "settings": {
+            "review_text": "",
+            "stars": 5,
+            "user_name": ""
+          }
+        }
+      },
+      "block_order": [
+        "review_ULJAQC",
+        "review_TtPHYw",
+        "review_AfJfyY",
+        "review_gRnEec",
+        "review_EYXi4a"
+      ],
       "settings": {
-        "reveal_on_scroll": true,
-        "section_height": "auto",
-        "image": "shopify://shop_images/Untitled_design_1_a19da7ff-6e89-4ecd-9688-d70c68503681.png",
-        "subheading": "",
-        "title": "",
-        "content": "",
-        "button_text": "",
-        "button_link": "",
-        "link_style": "link",
-        "background_type": "full_width",
-        "text_width": "medium",
-        "text_position": "middle_center",
-        "text_color": "#ffffff",
-        "button_background": "#ffffff",
-        "button_text_color": "#000000",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0
+        "heading": "Customer Reviews"
       }
     },
     "product-recommendations": {
@@ -275,39 +274,6 @@
         "text_color": "rgba(0,0,0,0)"
       }
     },
-    "product-content": {
-      "type": "product-content",
-      "blocks": {
-        "description": {
-          "type": "description",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "description"
-      ],
-      "disabled": true,
-      "settings": {}
-    },
-    "rich_text_gDwQAG": {
-      "type": "rich-text",
-      "custom_css": [],
-      "settings": {
-        "subheading": "",
-        "title": "OUR BENEFITS",
-        "content": "",
-        "button_text": "",
-        "button_link": "",
-        "background_type": "full_width",
-        "text_width": "large",
-        "text_position": "center",
-        "text_alignment": "left",
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)",
-        "button_background": "rgba(0,0,0,0)",
-        "button_text_color": "rgba(0,0,0,0)"
-      }
-    },
     "text_with_icons_erFPtk": {
       "type": "text-with-icons",
       "blocks": {
@@ -315,7 +281,6 @@
           "type": "item",
           "settings": {
             "icon": "picto-box",
-            "custom_icon": "shopify://shop_images/hugeicons_shopping-basket-secure-01.png",
             "custom_icon_width": 50,
             "title": "Fragrance as Identity",
             "content": "<p>Scents crafted to express your individuality.</p>"
@@ -325,7 +290,6 @@
           "type": "item",
           "settings": {
             "icon": "picto-phone",
-            "custom_icon": "shopify://shop_images/Vector_1_f7be9309-def4-488a-b99c-032607fb9fe6.png",
             "custom_icon_width": 50,
             "title": "Rule-Breaking Perfumes",
             "content": "<p>Designed for those who refuse the ordinary.</p>"
@@ -335,7 +299,6 @@
           "type": "item",
           "settings": {
             "icon": "picto-lock",
-            "custom_icon": "shopify://shop_images/streamline_shipment-check.png",
             "custom_icon_width": 50,
             "title": "Evolves With You",
             "content": "<p>Layers of scent revealing new sides of you.<br/></p>"
@@ -345,7 +308,6 @@
           "type": "item",
           "settings": {
             "icon": "picto-email",
-            "custom_icon": "shopify://shop_images/hugeicons_return-request.png",
             "custom_icon_width": 50,
             "title": "More Than a Scent",
             "content": "<p>A bold statement of freedom and self-discovery.</p>"
@@ -363,25 +325,14 @@
         "text_color": "rgba(0,0,0,0)"
       }
     },
-    "174723656553ef95cb": {
-      "type": "apps",
-      "settings": {
-        "include_horizontal_margins": true,
-        "include_vertical_margins": true
-      }
-    }
   },
   "order": [
     "main",
-    "faq_8YGJq6",
     "text_with_icons_U3rTJJ",
-    "image_with_text_fRcq3r",
-    "image_with_text_overlay_FzbR78",
+    "about-product-U3rTTg",
+    "product-reviews-U3eTTW",
     "product-recommendations",
     "faq_HKxcbx",
-    "product-content",
-    "rich_text_gDwQAG",
-    "text_with_icons_erFPtk",
-    "174723656553ef95cb"
+    "text_with_icons_erFPtk"
   ]
 }

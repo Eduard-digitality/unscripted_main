@@ -14,13 +14,8 @@
       </h2>
     {%- endif -%}
 
-    {% unless featured %}
-      <h1 class="product-meta__title heading h3">{{ product.title }}</h1>
-    {% else %}
-      <h2 class="product-meta__title heading h3">
-        <a href="{{ product.url }}">{{ product.title }}</a>
-      </h2>
-    {% endunless %}
+    <p>{{ product.description | truncate: 200 }}</p>
+
 
     <div class="product-meta__price-list-container">
       {%- if product.selected_or_first_available_variant != nil -%}
@@ -135,6 +130,15 @@
   </product-meta>
 
   {%- render 'product-form', product: product, product_form_id: product_form_id, update_url: update_url -%}
+  
+ {%- render 'product-collapse-info', 
+    blocks: collapse_blocks,
+    settings: section.settings,
+    section_id: section.id,
+    template_name: template.name,
+    template_suffix: template.suffix
+-%}
+
 
   {%- assign help_page = section.settings.help_page -%}
 
@@ -179,6 +183,7 @@
               </a>
             </div>
           </popover-content>
+          
 
           <div class="product-meta__share-button-list hidden-phone">
             <a class="product-meta__share-button-item product-meta__share-button-item--facebook link tap-area" href="https://www.facebook.com/sharer.php?u={{ share_url }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.facebook_share' | t }}">
