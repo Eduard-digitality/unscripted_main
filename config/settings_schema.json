@@ -457,7 +457,7 @@
             "label": "Swatch"
           }
         ],
-        "default": "count"
+        "default": "hide"
       },
       {
         "type": "select",
