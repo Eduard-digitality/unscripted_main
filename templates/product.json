@@ -71,49 +71,52 @@
     "text_with_icons_U3rTJJ": {
       "type": "text-with-icons",
       "blocks": {
-        "item_wtj6Ei": {
-          "type": "item",
-          "disabled": true,
-          "settings": {
-            "icon": "picto-box",
-            "custom_icon_width": 50,
-            "title": "Free shipping",
-            "content": "<p>Free worldwide shipping and returns - customs and duties taxes included</p>"
-          }
-        },
         "item_rxF4Pz": {
           "type": "item",
           "settings": {
             "icon": "picto-phone",
+            "custom_icon": "shopify://shop_images/icon-park_leaves.png",
             "custom_icon_width": 50,
-            "title": "Customer service",
-            "content": "<p>We are available from monday to friday to answer your questions.</p>"
+            "title": "Eco-friendly",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
           }
         },
         "item_BxMcnK": {
           "type": "item",
           "settings": {
             "icon": "picto-lock",
+            "custom_icon": "shopify://shop_images/fluent_box-20-regular.png",
             "custom_icon_width": 50,
-            "title": "Secure payment",
-            "content": "<p>Your payment information is processed securely.</p>"
+            "title": "lorem ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
           }
         },
         "item_jH7Vei": {
           "type": "item",
           "settings": {
             "icon": "picto-email",
+            "custom_icon": "shopify://shop_images/icon-park-outline_shopping-bag.png",
             "custom_icon_width": 50,
-            "title": "Contact us",
-            "content": "<p>Need to contact us? Just send us an e-mail at sales@amaya-international.com.</p>"
+            "title": "Dolor",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
+          }
+        },
+        "item_wtj6Ei": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon": "shopify://shop_images/basil_user-outline.png",
+            "custom_icon_width": 50,
+            "title": "Faucibus erat",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
           }
         }
       },
       "block_order": [
-        "item_wtj6Ei",
         "item_rxF4Pz",
         "item_BxMcnK",
-        "item_jH7Vei"
+        "item_jH7Vei",
+        "item_wtj6Ei"
       ],
       "settings": {
         "background": "rgba(0,0,0,0)",
@@ -324,7 +327,7 @@
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }
-    },
+    }
   },
   "order": [
     "main",

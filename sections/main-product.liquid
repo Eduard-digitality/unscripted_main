@@ -1,3 +1,54 @@
+{% style %}
+  .product-meta__title.heading.h3{
+    font-family: DuPlay;
+    font-weight: 700;
+    font-size: 80px;
+    vertical-align: middle;
+    text-transform: uppercase;
+  }
+  .product-form__option-selector{
+    display: none;
+}
+  span.product-form__quantity-label{
+    display: none;
+}
+  .product-meta {
+    border-bottom: none !important;
+    margin: 0 !important;
+    padding-block-end: 0 !important;
+}
+  .product-meta p{
+    font-family: DM Sans;
+    font-weight: 300;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+  .price--large{
+      font-family: DM Sans;
+      font-weight: 500;
+      font-size: 28px !important;
+      vertical-align: middle;
+      text-transform: uppercase;
+      color: #0E0E0E;
+  }
+  .about-product-content h2 {
+    font-family: DuPlay;
+    font-weight: 700;
+    font-size: 40px;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+  @media screen and (max-width: 1376px){
+    .section{
+      padding:0 15px;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .product-meta__title.heading.h3{
+      font-size: 40px;
+    }
+  }
+{% endstyle %}
 <style>
   #shopify-section-{{ section.id }} {
     {%- assign buy_buttons_block = section.blocks | where: 'type', 'buy_buttons' | first -%}

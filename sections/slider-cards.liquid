@@ -1,84 +1,108 @@
 {% style %}
-  @media screen and (max-width: 767px) {
-    body {
-        background-color: #fff !important;
-              overflow-x: hidden !important;
-    }
-}
-  section.slider-cards{
-    max-width: 1376px;
-    margin: 0 auto;
-    padding: 0 !important;
-}
-   section.slider-cards h3{
-      font-family: DM Sans;
-      font-weight: 700 !important;
-      font-size: 18px !important;
-      vertical-align: middle;
-      text-transform: uppercase;
-      margin-bottom: 0 !important;
-
-   }
-  section.slider-cards p{
-    font-weight: 300 !important;
-    font-size: 18px !important;
-    vertical-align: middle;
-    margin: 0 !important;
-    font-family: DM Sans;
- 
-   }
-  .marquee_container {
-      width: 100%;
-      overflow: hidden;
-      white-space: nowrap;
-      box-sizing: border-box;
+ @media screen and (max-width: 767px) {
+        body {
+            background-color: #fff !important;
+            overflow-x: hidden !important;
+        }
     }
 
-    .marquee_text {
-      display: inline-block;
-      padding-left: 100%;
-      animation: marquee 10s linear infinite;
-      font-size: 2rem;
-      text-align: center;
-      font-size: 80px;
-    font-weight: bold;
-    color: #000;
-    background: linear-gradient(to right, #330000, #ff0000, #330000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    section.slider-cards {
+        max-width: 1376px;
+        margin: 0 auto;
+        padding: 0 !important;
     }
 
-    @keyframes marquee {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
+    section.slider-cards h3 {
+        font-family: DM Sans;
+        font-weight: 700 !important;
+        font-size: 18px !important;
+        vertical-align: middle;
+        text-transform: uppercase;
+        margin-bottom: 0 !important;
+
     }
-  @media screen and (max-width: 767px) {
-    .marquee_text {
-    font-size: 30px !important;
-    line-height: 33px;
-}
-    section.image-scroll-with-header .grid_text {
-    grid-template-columns: 100%;
-    margin: 0 4%;
-}
-    .slider-cards .slider-wrapper{
-      display: block !important;
+
+    .slider-card {
+        padding: 0 !important;
+        border-radius: 0 !important;
     }
-    .slider-cards .slider-card{
-        width: 92% !important;
+
+    section.slider-cards p {
+        font-weight: 300 !important;
+        font-size: 18px !important;
+        vertical-align: middle;
+        margin: 0 !important;
+        font-family: DM Sans;
+
+    }
+
+    #heading-marquee span {
+        display: inline-block;
+        white-space: nowrap;
+        font-family: "DM Sans", sans-serif;
+        color: #F5F5F5;
+        padding: 0px 80px;
+        text-align: center;
+        font-size: 80px;
+        font-weight: bold;
+        color: #000;
+        background: linear-gradient(to right, #330000, #ff0000, #330000);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+    }
+
+    @media(max-width:767px) {
+        #heading-marquee span {
+            font-size: 40px;
+            padding: 0 33px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .marquee_text {
+            font-size: 30px !important;
+            line-height: 33px;
+        }
+
+        section.image-scroll-with-header .grid_text {
+            grid-template-columns: 100%;
+            margin: 0 4%;
+        }
+
+        .slider-cards .slider-wrapper {
+            display: block !important;
+        }
+
+        .slider-cards .slider-card {
+            width: 92% !important;
             margin: 0 4% 30px 4% !important;
-      }
-  }
+        }
+
+        .grid__item.tow {
+            width: 30%;
+            float: right;
+            margin-left: 0;
+            margin-top: 0;
+        }
+    }
 {% endstyle %}
 <section class="slider-cards" style="padding: 60px 0;">
   <div class="page-width">
     
     {% if section.settings.heading != blank %}
-    <div class="marquee_container"><div class="marquee_text">{{ section.settings.heading }}</div></div>
+      <!-- <div class="marquee_area">
+        <div class="marquee_container"><div class="marquee_text"><span>{{ section.settings.heading }}</span> </div></div>
+      </div> -->
+    <div id="heading-marquee">
+        <span> {{ section.settings.heading }}</span>
+    </div>
+    <script>
+        nodeMarquee({
+            parent: '#heading-marquee',
+            speed: 1
+        });
+    </script>
     {% endif %}
 
     <div class="slider-wrapper" style="overflow-x: auto; display: flex; gap: 20px; padding-top: 30px; scroll-snap-type: x mandatory;">

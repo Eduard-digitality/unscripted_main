@@ -38,7 +38,7 @@
   color: #FFFFFF80 !important;
 }
 {%- endstyle -%}
-<section class="contact-banner-form" style="background-image: url({{ section.settings.background_image | img_url: '1600x' }}); background-size: cover; background-position: center; padding: 80px 0;">
+<section class="contact-banner-form contact__main_section" style="background-image: url({{ section.settings.background_image | img_url: '1600x' }}); background-size: cover; background-position: center; padding: 80px 0;">
   <div class="page-width">
     <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="form" style="background: rgba(255,255,255,0.9); padding: 30px; border-radius: 8px;">
       <input type="hidden" name="form_type" value="contact">
