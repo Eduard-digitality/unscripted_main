@@ -63,7 +63,7 @@
         "enable_video_autoplay": true,
         "enable_video_looping": false,
         "enable_image_zoom": true,
-        "show_thumbnails_on_mobile": false,
+        "show_thumbnails_on_mobile": true,
         "desktop_thumbnails_position": "bottom",
         "transition_effect": "slide"
       }
@@ -71,95 +71,116 @@
     "text_with_icons_U3rTJJ": {
       "type": "text-with-icons",
       "blocks": {
-        "item_wtj6Ei": {
-          "type": "item",
-          "disabled": true,
-          "settings": {
-            "icon": "picto-box",
-            "custom_icon_width": 50,
-            "title": "Free shipping",
-            "content": "<p>Free worldwide shipping and returns - customs and duties taxes included</p>"
-          }
-        },
         "item_rxF4Pz": {
           "type": "item",
           "settings": {
             "icon": "picto-phone",
+            "custom_icon": "shopify://shop_images/icon-park_leaves.png",
             "custom_icon_width": 50,
-            "title": "Customer service",
-            "content": "<p>We are available from monday to friday to answer your questions.</p>"
+            "title": "Eco-friendly",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
           }
         },
         "item_BxMcnK": {
           "type": "item",
           "settings": {
             "icon": "picto-lock",
+            "custom_icon": "shopify://shop_images/fluent_box-20-regular.png",
             "custom_icon_width": 50,
-            "title": "Secure payment",
-            "content": "<p>Your payment information is processed securely.</p>"
+            "title": "lorem ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
           }
         },
         "item_jH7Vei": {
           "type": "item",
           "settings": {
             "icon": "picto-email",
+            "custom_icon": "shopify://shop_images/icon-park-outline_shopping-bag.png",
             "custom_icon_width": 50,
-            "title": "Contact us",
-            "content": "<p>Need to contact us? Just send us an e-mail at sales@amaya-international.com.</p>"
+            "title": "Dolor",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
+          }
+        },
+        "item_wtj6Ei": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon": "shopify://shop_images/basil_user-outline.png",
+            "custom_icon_width": 50,
+            "title": "Faucibus erat",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
           }
         }
       },
       "block_order": [
-        "item_wtj6Ei",
         "item_rxF4Pz",
         "item_BxMcnK",
-        "item_jH7Vei"
+        "item_jH7Vei",
+        "item_wtj6Ei"
       ],
       "settings": {
         "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
+        "text_color": "rgba(0,0,0,0)",
+        "show_heading": false,
+        "heading_text": "Our Benefits"
       }
     },
     "about-product-U3rTTg": {
       "type": "about-product",
       "blocks": {
+        "info_pair_HhJbWA": {
+          "type": "info_pair",
+          "settings": {
+            "heading": "Lorem ipsum",
+            "text": "Dolor sit amet"
+          }
+        },
+        "info_pair_gmY98J": {
+          "type": "info_pair",
+          "settings": {
+            "heading": "Lorem ipsum",
+            "text": "Dolor sit amet"
+          }
+        },
         "info1": {
           "type": "info_pair",
           "settings": {
-            "heading": "Top Notes",
-            "text": "Cognac – the rich aroma that sets the tone for the night."
+            "heading": "Lorem ipsum",
+            "text": "Dolor sit amet"
           }
         },
         "info2": {
           "type": "info_pair",
           "settings": {
-            "heading": "Heart Notes",
-            "text": "Cinnamon, Tonka Bean, Oak – a spicy, sweet harmony."
+            "heading": "Lorem ipsum",
+            "text": "Dolor sit amet"
           }
         },
         "info3": {
           "type": "info_pair",
           "settings": {
-            "heading": "Base Notes",
-            "text": "Sandalwood, Praline, Vanilla – warm and lasting impressions."
+            "heading": "Lorem ipsum",
+            "text": "Dolor sit amet"
           }
         },
         "info4": {
           "type": "info_pair",
           "settings": {
-            "heading": "Vibe",
-            "text": "Bold, Creative, Unforgettable."
+            "heading": "Lorem ipsum",
+            "text": "Dolor sit amet"
           }
         }
       },
       "block_order": [
+        "info_pair_HhJbWA",
+        "info_pair_gmY98J",
         "info1",
         "info2",
         "info3",
         "info4"
       ],
       "settings": {
-        "main_heading": "About the Product"
+        "main_heading": "about the product"
       }
     },
     "product-reviews-U3eTTW": {
@@ -168,7 +189,7 @@
         "review_ULJAQC": {
           "type": "review",
           "settings": {
-            "review_text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
+            "review_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae \nest dui. Pretium tellus",
             "stars": 3,
             "user_image": "shopify://shop_images/Rectangle_2007.png",
             "user_name": "test"
@@ -177,33 +198,37 @@
         "review_TtPHYw": {
           "type": "review",
           "settings": {
-            "review_text": "",
+            "review_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae \nest dui. Pretium tellus",
             "stars": 5,
-            "user_name": ""
+            "user_image": "shopify://shop_images/xo-animate.png",
+            "user_name": "John Bush"
           }
         },
         "review_AfJfyY": {
           "type": "review",
           "settings": {
-            "review_text": "",
+            "review_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae \nest dui. Pretium tellus",
             "stars": 5,
-            "user_name": ""
+            "user_image": "shopify://shop_images/Collection_card_1.png",
+            "user_name": "John Bush"
           }
         },
         "review_gRnEec": {
           "type": "review",
           "settings": {
-            "review_text": "",
+            "review_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae \nest dui. Pretium tellus",
             "stars": 5,
-            "user_name": ""
+            "user_image": "shopify://shop_images/yash-karmur-qYbitOLh7fk-unsplash_1.jpg",
+            "user_name": "John Bush"
           }
         },
         "review_EYXi4a": {
           "type": "review",
           "settings": {
-            "review_text": "",
+            "review_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae \nest dui. Pretium tellus",
             "stars": 5,
-            "user_name": ""
+            "user_image": "shopify://shop_images/Collection_card_3.png",
+            "user_name": "John Bush"
           }
         }
       },
@@ -215,7 +240,7 @@
         "review_EYXi4a"
       ],
       "settings": {
-        "heading": "Customer Reviews"
+        "heading": "Google reviews"
       }
     },
     "product-recommendations": {
@@ -226,7 +251,7 @@
       "settings": {
         "subheading": "",
         "title": "More Products",
-        "recommendations_count": 4,
+        "recommendations_count": 5,
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }
@@ -237,29 +262,45 @@
         "question_dbqDHa": {
           "type": "question",
           "settings": {
-            "title": "Do you ship overseas?",
+            "title": "Pellentesque habitant morbi tristique?",
             "answer": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
           }
         },
         "question_BCDEgU": {
           "type": "question",
           "settings": {
-            "title": "How long will it take to get my order?",
+            "title": "Lorem ipsum dolor sit?",
             "answer": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
           }
         },
         "question_jediTw": {
           "type": "question",
           "settings": {
-            "title": "Any question?",
+            "title": "Pretium tellus ?",
             "answer": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+          }
+        },
+        "question_jwqaUa": {
+          "type": "question",
+          "settings": {
+            "title": "Pellentesque habitant morbi tristique?",
+            "answer": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+          }
+        },
+        "question_BNnpmY": {
+          "type": "question",
+          "settings": {
+            "title": "Pretium tellus ?",
+            "answer": "<p>Lorem ipsum dolor sit?</p>"
           }
         }
       },
       "block_order": [
         "question_dbqDHa",
         "question_BCDEgU",
-        "question_jediTw"
+        "question_jediTw",
+        "question_jwqaUa",
+        "question_BNnpmY"
       ],
       "custom_css": [
         ".section__header {text-align: center; margin-left: 0;}",
@@ -268,7 +309,7 @@
       ],
       "settings": {
         "show_navigation": false,
-        "title": "Frequently asked questions",
+        "title": "frequently asked question",
         "content": "",
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
@@ -281,36 +322,40 @@
           "type": "item",
           "settings": {
             "icon": "picto-box",
+            "custom_icon": "shopify://shop_images/Vector.png",
             "custom_icon_width": 50,
-            "title": "Fragrance as Identity",
-            "content": "<p>Scents crafted to express your individuality.</p>"
+            "title": "free delivery",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. <br/><br/></p>"
           }
         },
         "item_eUn4A4": {
           "type": "item",
           "settings": {
             "icon": "picto-phone",
+            "custom_icon": "shopify://shop_images/hugeicons_shopping-basket-secure-01.png",
             "custom_icon_width": 50,
-            "title": "Rule-Breaking Perfumes",
-            "content": "<p>Designed for those who refuse the ordinary.</p>"
+            "title": "security payment",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. <br/><br/></p>"
           }
         },
         "item_mwDLrh": {
           "type": "item",
           "settings": {
             "icon": "picto-lock",
+            "custom_icon": "shopify://shop_images/hugeicons_return-request.png",
             "custom_icon_width": 50,
-            "title": "Evolves With You",
-            "content": "<p>Layers of scent revealing new sides of you.<br/></p>"
+            "title": "30 day return policy",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
           }
         },
         "item_TTXLnt": {
           "type": "item",
           "settings": {
             "icon": "picto-email",
+            "custom_icon": "shopify://shop_images/streamline_shipment-check.png",
             "custom_icon_width": 50,
-            "title": "More Than a Scent",
-            "content": "<p>A bold statement of freedom and self-discovery.</p>"
+            "title": "Every item is in stock ready to ship",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
           }
         }
       },
@@ -322,9 +367,11 @@
       ],
       "settings": {
         "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
+        "text_color": "rgba(0,0,0,0)",
+        "show_heading": true,
+        "heading_text": "Our Benefits"
       }
-    },
+    }
   },
   "order": [
     "main",

@@ -1,75 +1,91 @@
 {% style %}
-  .heading.h2 {
-      font-weight: 700 !important;
-      font-size: 64px !important;
-      vertical-align: middle;
-      text-transform: uppercase;
-      text-align: center;
-      width: 100%;
+     .heading.h2 {
+        font-weight: 700 !important;
+        font-size: 64px !important;
+        vertical-align: middle;
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%;
     }
-  input{
-    font-family: DM Sans;
-    font-weight: 700 !important;
-    font-size: 16px !important;
-    width: 100%;
-    border: 1px solid #3A3A3A1A;
-    background: #FFFFFF !important;
-    color: #0E0E0E99 !important;
-  }
-  textarea{
-    font-family: DM Sans;
-    font-weight: 700 !important;
-    font-size: 16px !important;
-    width: 100%;
-    background: #FFFFFF !important;
-    color: #0E0E0E99 !important;
-  }
-  .input__field {
-    font-family: DM Sans;
-    font-weight: 700 !important;
-    font-size: 16px !important;
-    width: 100%;
-    background: #FFFFFF !important;
-    color: #0E0E0E99 !important;
-  }
-  ..input__label{
-    font-family: DM Sans;
-    font-weight: 700 !important;
-    font-size: 16px !important;
-    width: 100%;
-    background: #FFFFFF !important;
-    color: #0E0E0E99 !important;
-  }
-  input::placeholder {
-  color: #0E0E0E99 !important;
-}
-  *:focus {
-    outline: none !important;
-    border: none !important;
-    box-shadow: 0 0 0 0 !important;
-}
-  .input_group {
-      display: flex;
-      gap: 15px;
-      margin-bottom: 15px;
-  }
-  .input-wrapper
- {
-    width: 100% !important;
-}
-  button.form__submit.button.button--primary.button--full {
-    border-radius: 100rem !important;
-    margin-top: 15px;
-}
-  .contact__form {
+
+    input {
+        font-family: DM Sans;
+        font-weight: 700 !important;
+        font-size: 16px !important;
+        width: 100%;
+        border: 1px solid #3A3A3A1A;
+        background: #FFFFFF !important;
+        color: #0E0E0E99 !important;
+    }
+
+    textarea {
+        font-family: DM Sans;
+        font-weight: 700 !important;
+        font-size: 16px !important;
+        width: 100%;
+        background: #FFFFFF !important;
+        color: #0E0E0E99 !important;
+    }
+
+    .input__field {
+        font-family: DM Sans;
+        font-weight: 700 !important;
+        font-size: 16px !important;
+        width: 100%;
+        background: #FFFFFF !important;
+        color: #0E0E0E99 !important;
+        border: none;
+    }
+
+    .input__label {
+        font-family: DM Sans;
+        font-weight: 700 !important;
+        font-size: 16px !important;
+        width: 100%;
+        background: #FFFFFF !important;
+        color: #0E0E0E99 !important;
+    }
+
+    input::placeholder {
+        color: #0E0E0E99 !important;
+    }
+
+    *:focus {
+        outline: none !important;
+        border: none !important;
+        box-shadow: 0 0 0 0 !important;
+    }
+
+    .input_group {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .input-wrapper {
+        width: 100% !important;
+    }
+
+    button.form__submit.button.button--primary.button--full {
+        border-radius: 100rem !important;
+        margin-top: 15px;
+    }
+
+    .contact__form {
         max-width: 704px !important;
     }
+
+    @media screen and (max-width: 1376px) {
+        .section{
+            width: 96%;
+            margin: 0 auto !important;
+        }
+    }
+  @media screen and (max-width: 767px) {
+    .contact__main_section .heading.h2 {
+        font-size: 34px !important;
+    }
 }
-  
-   @media screen and (max-width: 767px) {
-     
-     
-   }
 {% endstyle %}
 
 {%- if section.settings.background != settings.background and section.settings.background != 'rgba(0,0,0,0)' -%}
@@ -203,7 +219,7 @@
             <div class="input-group input_group">
               <!-- First Name Field -->
               <div class="input-wrapper">
-                <label for="contact-form-first-name" class="input__label">First Name</label>
+                <!-- <label for="contact-form-first-name" class="input__label">First Name</label> -->
                 <input
                   id="contact-form-first-name"
                   type="text"
@@ -220,7 +236,7 @@
 
               <!-- Last Name Field -->
               <div class="input-wrapper">
-                <label for="contact-form-last-name" class="input__label">Last Name</label>
+                <!-- <label for="contact-form-last-name" class="input__label">Last Name</label> -->
                 <input
                   id="contact-form-last-name"
                   type="text"
@@ -237,9 +253,10 @@
             </div>
 
             <div class="input">
+              <!-- <label for="contact-form-email" class="input__label">{{ 'contact.form.email' | t }}</label> -->
               <input
                 id="contact-form-email"
-                type="email"
+                type="email" placeholder="{{ 'contact.form.email' | t }}"
                 class="input__field {% if customer.email != blank %}is-filled{% endif %}"
                 name="contact[email]"
                 aria-label="{{ 'contact.form.email' | t }}"
@@ -248,7 +265,6 @@
                   value="{{ customer.email }}"
                 {% endif %}
               >
-              <label id="contact-form-email" class="input__label">{{ 'contact.form.email' | t }}</label>
             </div>
 
             {%- for block in section.blocks -%}
@@ -261,23 +277,27 @@
               {%- if block.type == 'text' -%}
                 <div class="input">
                   {%- if block.settings.use_long_text -%}
+                  <!-- <label for="contact-form-{{ field_title | handle }}" class="input__label">
+                    {{- block.settings.title | escape -}}
+                  </label> -->
                     <textarea
                       id="contact-form-{{ field_title | handle }}"
                       name="contact[{{ field_title | escape }}]"
-                      rows="4"
+                      rows="4" placeholder="{{- block.settings.title | escape -}}" 
                       class="input__field input__field--textarea"
                       aria-label="{{ block.settings.title | escape }}"
                       {% if block.settings.is_required %}
                         required
                       {% endif -%}
                     ></textarea>
-                    <label for="contact-form-{{ field_title | handle }}" class="input__label">
-                      {{- block.settings.title | escape -}}
-                    </label>
+                    
                   {%- else -%}
+                  <!-- <label for="contact-form-{{ field_title | handle }}" class="input__label">
+                    {{- block.settings.title | escape -}}
+                  </label> -->
                     <input
                       id="contact-form-{{ field_title | handle }}"
-                      type="text"
+                      type="text" placeholder="{{- block.settings.title | escape -}}" 
                       class="input__field"
                       name="contact[{{ field_title | escape }}]"
                       aria-label="{{ block.settings.title | escape }}"
@@ -285,9 +305,6 @@
                         required
                       {% endif %}
                     >
-                    <label for="contact-form-{{ field_title | handle }}" class="input__label">
-                      {{- block.settings.title | escape -}}
-                    </label>
                   {%- endif -%}
                 </div>
               {%- elsif block.type == 'dropdown' -%}
@@ -301,7 +318,7 @@
                   <div class="select-wrapper">
                     <select
                       id="contact-form-{{ field_title | handle }}"
-                      class="select"
+                      class="select"  placeholder="{{- block.settings.title | escape -}}" 
                       name="contact[{{ field_title | escape }}]"
                       title="{{ block.settings.title | escape }}"
                       required
@@ -318,9 +335,9 @@
                     {%- render 'icon' with 'chevron' -%}
                   </div>
 
-                  <label for="contact-form-{{ field_title | handle }}" class="input__label">
+                  <!-- <label for="contact-form-{{ field_title | handle }}" class="input__label">
                     {{- block.settings.title | escape -}}
-                  </label>
+                  </label> -->
                 </div>
               {%- endif -%}
             {%- endfor -%}
@@ -329,12 +346,12 @@
               <textarea
                 id="contact-form-message"
                 name="contact[body]"
-                rows="4"
+                rows="4" placeholder="{{ 'contact.form.message' | t }}" 
                 class="input__field input__field--textarea"
                 aria-label="{{ 'contact.form.message' | t }}"
                 required
               ></textarea>
-              <label for="contact-form-message" class="input__label">{{ 'contact.form.message' | t }}</label>
+              <!-- <label for="contact-form-message" class="input__label">{{ 'contact.form.message' | t }}</label> -->
             </div>
 
             <button is="loader-button" type="submit" class="form__submit button button--primary button--full">
