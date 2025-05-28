@@ -20,7 +20,6 @@
       "settings": {
         "reveal_on_scroll": true,
         "section_height": "large",
-        "image": "shopify://shop_images/All_Products_on_Concrete_Textured_Floor.png",
         "subheading": "",
         "title": "THE FREEDOM  TO BE YOU",
         "content": "<p>Are you ready to enter new realms of fragrance? Discover our signature collection of standout scents<br/></p>",
@@ -43,8 +42,6 @@
         "slide-2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Rectangle_197_png.png",
-            "mobile_image": "shopify://shop_images/Pinterest.png",
             "text_position": "top_left",
             "subheading": "",
             "title": "THE FREEDOM TO BE YOU",
@@ -115,7 +112,6 @@
         "image_AggERH": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/3.png",
             "image_link": "",
             "caption": "<p><strong>EXPLORE<br/></strong>Reveal new shades of your personality and uncover the bold, unexpected side of yourself.</p>"
           }
@@ -123,7 +119,6 @@
         "image_EFfbJg": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1.png",
             "image_link": "",
             "caption": "<p><strong>DREAM</strong><br/>Turn aspirations into reality and carve your own path with confidence and creativity.</p>"
           }
@@ -131,7 +126,6 @@
         "image_UzcAcB": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2.png",
             "image_link": "",
             "caption": "<p><strong>BREAK THE RULES</strong><br/>Live life your way, break away from the predictable, and express your individuality.</p>"
           }
@@ -161,7 +155,6 @@
         "image_NRXVnL": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/94e36d25-9110-4f38-b3b2-d56a889f0e73.png",
             "image_link": "shopify://collections/floral-fruity",
             "caption": "<p>FLORAL & FRUITY</p>"
           }
@@ -169,7 +162,6 @@
         "image_xAF4VA": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/888_1179.png",
             "image_link": "shopify://collections/woody",
             "caption": "<p>WOODY</p>"
           }
@@ -177,7 +169,6 @@
         "image_QMJiNJ": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/0cdc76202138795.668124d65f744.png",
             "image_link": "shopify://collections/fresh-leather",
             "caption": "<p>FRESH & LEATHER</p>"
           }
@@ -185,7 +176,6 @@
         "image_aUBP3c": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/74290e2a-70ec-4c74-92cc-d8c7fc326e17.png",
             "image_link": "shopify://collections/gourmand",
             "caption": "<p>GOURMAND & ORIENTAL</p>"
           }
@@ -218,7 +208,7 @@
           "type": "collection",
           "settings": {
             "collection": "frontpage",
-            "image": "shopify://shop_images/94e36d25-9110-4f38-b3b2-d56a889f0e73.png",
+            "image": "shopify://shop_images/1a04c5ba781f8d77fd12502bb5733945d6f01765.jpg",
             "subheading": "",
             "title": "FLORAL & FRUITY",
             "link_text": "",
@@ -232,7 +222,6 @@
           "type": "collection",
           "settings": {
             "collection": "fragrances",
-            "image": "shopify://shop_images/888_1179.png",
             "subheading": "",
             "title": "WOODY",
             "link_text": "",
@@ -246,7 +235,6 @@
           "type": "collection",
           "settings": {
             "collection": "fragrances",
-            "image": "shopify://shop_images/0cdc76202138795.668124d65f744.png",
             "subheading": "",
             "title": "FRESH & LEATHER",
             "link_text": "",
@@ -260,7 +248,6 @@
           "type": "collection",
           "settings": {
             "collection": "fragrances",
-            "image": "shopify://shop_images/74290e2a-70ec-4c74-92cc-d8c7fc326e17.png",
             "subheading": "",
             "title": "GOURMAND & ORIENTAL",
             "link_text": "",
@@ -298,7 +285,6 @@
         "image_ppL6ND": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/IMG_2.png",
             "image_link": "",
             "caption": ""
           }
@@ -306,7 +292,6 @@
         "image_KANQ6x": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/IMG_3.png",
             "image_link": "",
             "caption": ""
           }
@@ -314,7 +299,6 @@
         "image_VGBR8p": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/186616a6-8d58-4887-8d20-12a029acbef1_1.png",
             "image_link": "",
             "caption": ""
           }
@@ -383,8 +367,6 @@
       "custom_css": [],
       "settings": {
         "reveal_on_scroll": false,
-        "image": "shopify://shop_images/Untitled_design_7_64218e17-d0a8-47c4-b8b5-e5dbc6f1b440.png",
-        "mobile_image": "shopify://shop_images/Untitled_design_4_88af5282-0e16-4579-a8d8-260a252b557c.png",
         "subheading": "",
         "title": "",
         "content": "",
@@ -405,7 +387,6 @@
         "image_AGQAHA": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/daisy_calloway_ryke_meadows_raisy_addicted_calloway_sisters_series_7d76ee9c-3ef2-43f3-9026-90596ac5d09e.png",
             "image_link": "https://www.instagram.com/unscripted.dubai?igsh=Mm05cmdlZHVmem5i",
             "caption": ""
           }
@@ -413,7 +394,6 @@
         "image_wyTPFq": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/image-3-2_807a82dc-679d-47dd-9619-22b5f4885067.png",
             "image_link": "https://www.instagram.com/unscripted.dubai?igsh=Mm05cmdlZHVmem5i",
             "caption": ""
           }
@@ -421,7 +401,6 @@
         "image_atCnAV": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/514c7316bfb036bf77512744025946d7.jpg",
             "image_link": "https://www.instagram.com/unscripted.dubai?igsh=Mm05cmdlZHVmem5i",
             "caption": ""
           }
@@ -429,7 +408,6 @@
         "image_948dJW": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/6613e271a65728512cab3c94c0379d51.jpg",
             "image_link": "https://www.instagram.com/unscripted.dubai?igsh=Mm05cmdlZHVmem5i",
             "caption": ""
           }

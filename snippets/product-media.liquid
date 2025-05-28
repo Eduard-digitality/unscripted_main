@@ -1,3 +1,38 @@
+{% style %}
+    button.tap-area.product__zoom-button {
+        display: none !important;
+    }
+      scroll-shadow.product__thumbnail-scroll-shadow {
+        margin: 0 auto;
+        margin-top: -167px;
+    }
+      .hidden-lap-and-up {
+        display: block !important;
+    }
+  .product__media-prev-next {
+      position: relative;
+      width: 39px;
+      height: 39px;
+      border: 1px solid #DD3F21;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100px !important;
+      margin-top: -140%;
+  }
+  .product__media-prev-next svg{
+      color: #DD3F21 !important;
+  }
+  .product-media.product__media.became-visible{
+    position: relative;
+  }
+      .product__thumbnail {
+        width: 84px !important;
+        min-width: 74px !important;
+        border: 1.5px solid #0000001A !important;
+    }
+  
+{% endstyle %}
 {%- if product.media.size > 0 -%}
   {%- assign selected_media = product.selected_variant.featured_media | default: product.featured_media -%}
 

@@ -1,50 +1,183 @@
 {% style %}
-  .product-meta__title.heading.h3{
+  .product-meta__title.heading.h3 {
     font-family: DuPlay;
     font-weight: 700;
     font-size: 80px;
     vertical-align: middle;
     text-transform: uppercase;
   }
-  .product-form__option-selector{
+
+  .product-form__option-selector {
     display: none;
-}
-  span.product-form__quantity-label{
+  }
+
+  span.product-form__quantity-label {
     display: none;
-}
-  .product-meta {
-    border-bottom: none !important;
-    margin: 0 !important;
-    padding-block-end: 0 !important;
-}
-  .product-meta p{
+  }
+
+  .product-meta p {
     font-family: DM Sans;
     font-weight: 300;
     font-size: 16px;
     vertical-align: middle;
+
   }
-  .price--large{
-      font-family: DM Sans;
-      font-weight: 500;
-      font-size: 28px !important;
-      vertical-align: middle;
-      text-transform: uppercase;
-      color: #0E0E0E;
+
+  .product-reviews-heading {
+    font-family: DuPlay;
+    font-weight: 700 !important;
+    font-size: 40px !important;
+    vertical-align: middle;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 0;
+    line-height: 42px;
   }
+
+  .review-slider-button {
+    background: #fff !important;
+    color: #DD3F21 !important;
+    border: 1px solid #DD3F21 !important;
+    padding: 0 !important;
+    font-size: 18px !important;
+    cursor: pointer;
+    border-radius: 100px !important;
+    user-select: none;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heading.h2 {
+    font-family: DuPlay;
+    font-weight: 700;
+    font-size: 64px;
+    vertical-align: middle;
+    padding: 0 15px;
+    text-transform: uppercase;
+  }
+
+  .heading.h3 {
+    font-family: DuPlay;
+    font-weight: 700;
+    font-size: 64px;
+    padding: 0 15px;
+    vertical-align: middle;
+    text-transform: uppercase;
+  }
+
+  .section__color-wrapper.section_wrapper {
+    margin-top: 50px;
+    padding: 0 15px;
+  }
+
   .about-product-content h2 {
     font-family: DuPlay;
     font-weight: 700;
     font-size: 40px;
     vertical-align: middle;
     text-transform: uppercase;
-}
-  @media screen and (max-width: 1376px){
-    .section{
-      padding:0 15px;
-    }
+
   }
+
+  .about-product-content .info-pair h4 {
+    margin: 0;
+    color: #0E0E0EA6;
+    font-weight: 100 !important;
+    font-size: 14px !important;
+    vertical-align: middle;
+  }
+
+  .about-product-content .info-pair p {
+    color: #0E0E0E;
+    margin: 0;
+    font-family: DM Sans;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    vertical-align: middle;
+  }
+
+  .product-item-meta__title {
+    margin-block-end: 4px;
+    display: block;
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 18px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .product-item-meta__price-list-container {
+    font-family: DM Sans;
+    font-weight: 300;
+    font-size: 16px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  p.product-item-meta__color-count.text--small.text--subdued {
+    display: none;
+  }
+
+  product-payment-container#MainPaymentContainer {
+    position: relative;
+  }
+
+  button#AddToCart {
+    border: 1px solid #DD3F21;
+    background: none !important;
+    color: #DD3F21;
+    width: 70%;
+    float: right !important;
+    position: absolute;
+    right: 0;
+    top: -60px;
+    border-radius: 100px !important;
+    line-height: 46px;
+  }
+    .collapsible__content.text-container {
+        font-size: 14px !important;
+    }
+  .quantity-selector {
+    border: 1px solid #DD3F21 !important;
+  }
+
+  button.shopify-payment-button__button.shopify-payment-button__button--unbranded {
+    background: #DD3F21 !important;
+    border-radius: 100px !important;
+  }
+
+  .product-meta {
+    border-bottom: none !important;
+    margin: 0 !important;
+    padding-block-end: 0px;
+    display: block;
+  }
+
+  .product-meta p {
+    font-family: DM Sans;
+    font-weight: 300;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+
+  .product-meta .price--large {
+    font-family: DM Sans;
+    font-weight: 500;
+    font-size: 28px !important;
+    line-height: 140%;
+    vertical-align: middle;
+    text-transform: uppercase;
+  }
+    .product-form__payment-container {
+        margin-block-start: -4px !important;
+    }
   @media screen and (max-width: 1000px) {
-    .product-meta__title.heading.h3{
+    .product-meta__title.heading.h3 {
       font-size: 40px;
     }
   }

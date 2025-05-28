@@ -103,6 +103,11 @@
 {%- endcomment -%}
 
 <section class="section">
+  {%- if section.settings.show_heading -%}
+  <div class="section-heading">
+    <h2 class="heading h2">{{ section.settings.heading_text | escape }}</h2>
+  </div>
+{%- endif -%}
   <div class="section__color-wrapper section_wrapper">
       <div class="text-with-icons">
         <div class="text-with-icons__list">
@@ -351,7 +356,19 @@
       "id": "text_color",
       "label": "Text color",
       "default": "rgba(0,0,0,0)"
-    }
+    },
+    {
+  "type": "checkbox",
+  "id": "show_heading",
+  "label": "Show heading",
+  "default": false
+},
+{
+  "type": "text",
+  "id": "heading_text",
+  "label": "Heading text",
+  "default": "Our Benefits"
+}
   ],
   "presets": [
     {
