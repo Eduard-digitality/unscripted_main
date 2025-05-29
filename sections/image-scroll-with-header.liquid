@@ -71,51 +71,25 @@
       <h2 style="margin: 0;">{{ section.settings.heading }}</h2>
       <p style="max-width: 600px; margin: 0;">{{ section.settings.text }}</p>
     </div>
-  <gallery-list class="gallery">
-      <scrollable-content
-        {% unless section.settings.show_arrows %}
-          draggable
-        {% endunless %}
-        class="gallery__list-wrapper {% if section.blocks.size >= 4 %}is-scrollable{% endif %} hide-scrollbar"
-      >
-         <div class="container">
-          <div class="gallery__list scroll-images">
-              {% for block in section.blocks %}
+  <div class="page-width">
+    
+
+
+    <!-- Scrollable Images -->
+    <div class="scroll-images">
+      {% for block in section.blocks %}
         {% if block.settings.image %}
-               <gallery-item class="gallery__item" {{ block.shopify_attributes }}>
-                <figure class="gallery__figure">
-                   <div>
-                    <img 
-                      src="{{ block.settings.image | img_url: '500x' }}" 
-                      alt="{{ block.settings.image.alt | escape }}" 
-                      style="width: 100%; height: auto; border-radius: 0px;">
-                  </div>
-                </figure>
-                 </gallery-item>
-                 {% endif %}
-      {% endfor %}
+          <div>
+            <img 
+              src="{{ block.settings.image | img_url: '500x' }}" 
+              alt="{{ block.settings.image.alt | escape }}" 
+              style="width: 100%; height: auto; border-radius: 0px;">
           </div>
-         </div>
-        </scrollable-content>
+        {% endif %}
+      {% endfor %}
+    </div>
 
-       {%- if section.blocks.size > 1 and section.settings.show_arrows -%}
-        <prev-next-buttons class="gallery__prev-next-buttons prev-next-buttons">
-          <button class="gallery__arrow prev-next-button prev-next-button--prev">
-            <span class="visually-hidden">{{ 'general.accessibility.previous' | t }}</span>
-            {%- render 'icon' with 'nav-arrow-left', direction_aware: true -%}
-          </button>
-
-          <button class="gallery__arrow prev-next-button prev-next-button--next">
-            <span class="visually-hidden">{{ 'general.accessibility.next' | t }}</span>
-            {%- render 'icon' with 'nav-arrow-right', direction_aware: true -%}
-          </button>
-        </prev-next-buttons>
-      {% endif %}
-
-      <div class="gallery__progress-bar-wrapper container">
-        <span class="gallery__progress-bar progress-bar" style="--divider: {{ section.blocks.size }}"></span>
-      </div>
-    </gallery-list>
+  </div>
 </section>
 
 {% schema %}
@@ -133,28 +107,6 @@
       "id": "text",
       "label": "Text",
       "default": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui."
-    },
-     {
-      "type": "checkbox",
-      "id": "show_arrows",
-      "label": "Show navigation arrows",
-      "default": true
-    },
-    {
-      "type": "header",
-      "content": "Colors"
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "Background",
-      "default": "rgba(0,0,0,0)"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Color",
-      "default": "rgba(0,0,0,0)"
     }
   ],
   "blocks": [
