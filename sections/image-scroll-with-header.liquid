@@ -23,33 +23,35 @@
     max-width: 617px;
 }
 .image-scroll-with-header p{
-    font-weight: 100 !important;
-    font-size: 16px !important;
     vertical-align: middle;
     margin: 0;
     max-width: 282px !important;
     color: #0E0E0E;
     line-height: 18px;
+    font-family: DM Sans;
+    font-weight: 300 !important;
+    font-size: 16px !important;
+
 }
   .image-scroll-with-header .scroll-images {
     margin: 0px;
     display: flex;
     width: 1376px;
-    gap: 25px;
+    gap: 16px;
     margin-top: 20px !important;
 }
 
   .image-scroll-with-header .scroll-images div{
     width: 100%;
-    max-height: 589px;
+    max-height: 738px;
 }
   .image-scroll-with-header .scroll-images img{
-           max-height: 575px;
-    border-radius: 12px !important;
+           max-height: 738px;
+    border-radius: 0px !important;
 }
    @media screen and (max-width: 767px) {
      section.image-scroll-with-header{
-    padding: 20px !important;
+    padding: 16px !important;
 }
   section.image-scroll-with-header .grid_text{
         grid-template-columns: 100% !important;
@@ -69,25 +71,51 @@
       <h2 style="margin: 0;">{{ section.settings.heading }}</h2>
       <p style="max-width: 600px; margin: 0;">{{ section.settings.text }}</p>
     </div>
-  <div class="page-width">
-    
-
-
-    <!-- Scrollable Images -->
-    <div class="scroll-images">
-      {% for block in section.blocks %}
+  <gallery-list class="gallery">
+      <scrollable-content
+        {% unless section.settings.show_arrows %}
+          draggable
+        {% endunless %}
+        class="gallery__list-wrapper {% if section.blocks.size >= 4 %}is-scrollable{% endif %} hide-scrollbar"
+      >
+         <div class="container">
+          <div class="gallery__list scroll-images">
+              {% for block in section.blocks %}
         {% if block.settings.image %}
-          <div>
-            <img 
-              src="{{ block.settings.image | img_url: '500x' }}" 
-              alt="{{ block.settings.image.alt | escape }}" 
-              style="width: 100%; height: auto; border-radius: 8px;">
-          </div>
-        {% endif %}
+               <gallery-item class="gallery__item" {{ block.shopify_attributes }}>
+                <figure class="gallery__figure">
+                   <div>
+                    <img 
+                      src="{{ block.settings.image | img_url: '500x' }}" 
+                      alt="{{ block.settings.image.alt | escape }}" 
+                      style="width: 100%; height: auto; border-radius: 0px;">
+                  </div>
+                </figure>
+                 </gallery-item>
+                 {% endif %}
       {% endfor %}
-    </div>
+          </div>
+         </div>
+        </scrollable-content>
 
-  </div>
+       {%- if section.blocks.size > 1 and section.settings.show_arrows -%}
+        <prev-next-buttons class="gallery__prev-next-buttons prev-next-buttons">
+          <button class="gallery__arrow prev-next-button prev-next-button--prev">
+            <span class="visually-hidden">{{ 'general.accessibility.previous' | t }}</span>
+            {%- render 'icon' with 'nav-arrow-left', direction_aware: true -%}
+          </button>
+
+          <button class="gallery__arrow prev-next-button prev-next-button--next">
+            <span class="visually-hidden">{{ 'general.accessibility.next' | t }}</span>
+            {%- render 'icon' with 'nav-arrow-right', direction_aware: true -%}
+          </button>
+        </prev-next-buttons>
+      {% endif %}
+
+      <div class="gallery__progress-bar-wrapper container">
+        <span class="gallery__progress-bar progress-bar" style="--divider: {{ section.blocks.size }}"></span>
+      </div>
+    </gallery-list>
 </section>
 
 {% schema %}
@@ -105,6 +133,28 @@
       "id": "text",
       "label": "Text",
       "default": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui."
+    },
+     {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "Show navigation arrows",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color",
+      "default": "rgba(0,0,0,0)"
     }
   ],
   "blocks": [

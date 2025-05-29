@@ -69,12 +69,12 @@
     button.form__submit.button.button--primary.button--full {
         border-radius: 100rem !important;
         margin-top: 15px;
+        background: #DD3F21;
     }
 
     .contact__form {
         max-width: 704px !important;
     }
-
     @media screen and (max-width: 1376px) {
         .section{
             width: 96%;
@@ -131,9 +131,8 @@
   }
 </style>
 
-<section class="section {% if template.name == 'page' and template.suffix contains 'contact' %}section--tight{% endif %} {% unless blends_with_background %}section--flush{% endunless %}">
+<section class="section one_area {% if template.name == 'page' and template.suffix contains 'contact' %}section--tight{% endif %} {% unless blends_with_background %}section--flush{% endunless %}">
   <div class="section__color-wrapper">
-    <div class="container">
       <div class="contact {% unless blends_with_background %}vertical-breather{% endunless %}">
         {%- capture aside_content -%}
           {%- if section.settings.image != blank -%}
@@ -366,7 +365,6 @@
           </aside>
         {%- endif -%}
       </div>
-    </div>
   </div>
 </section>
 
