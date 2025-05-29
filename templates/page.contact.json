@@ -93,7 +93,7 @@
       ],
       "settings": {
         "show_navigation": false,
-        "title": "FREQUENTLY ASKED QUESTIONS",
+        "title": "FREQUENTLY ASKED QUESTION",
         "content": "",
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
@@ -135,7 +135,7 @@
           "settings": {
             "icon": "picto-phone",
             "custom_icon": "shopify://shop_images/hugeicons_shopping-basket-secure-01.png",
-            "custom_icon_width": 50,
+            "custom_icon_width": 40,
             "title": "security payment",
             "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
           }
@@ -144,8 +144,8 @@
           "type": "item",
           "settings": {
             "icon": "picto-lock",
-            "custom_icon": "shopify://shop_images/streamline_shipment-check.png",
-            "custom_icon_width": 50,
+            "custom_icon": "shopify://shop_images/hugeicons_return-request.png",
+            "custom_icon_width": 40,
             "title": "30 day return policy",
             "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
           }
@@ -154,8 +154,8 @@
           "type": "item",
           "settings": {
             "icon": "picto-email",
-            "custom_icon": "shopify://shop_images/hugeicons_return-request.png",
-            "custom_icon_width": 50,
+            "custom_icon": "shopify://shop_images/streamline_shipment-check.png",
+            "custom_icon_width": 40,
             "title": "Every item is in stock ready to ship",
             "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
           }

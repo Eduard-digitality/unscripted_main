@@ -62,7 +62,12 @@
     .collections-list ul li {
         list-style: none;
     }
-
+  .collections-list ul li a{
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 20px;
+    vertical-align: middle;
+  }
     .collections-list ul li ul {
         padding-left: 20px !important;
     }
@@ -86,7 +91,13 @@
         text-transform: uppercase !important;
         text-align: left !important;
     }
+  .product-facet__sort-by-title{
+    font-family: DM Sans;
+    font-weight: 300;
+    font-size: 16px;
+    vertical-align: middle;
 
+  }
     @media screen and (max-width: 1000px) {
       .collections-list {
           min-width: 100%;
@@ -219,7 +230,7 @@
 
             {%- if section.settings.filter_position == 'drawer' and section.settings.show_filters and collection.filters != empty -%}
               <button type="submit" is="toggle-button" class="product-facet__meta-bar-item product-facet__meta-bar-item--filter hidden-pocket" aria-controls="facet-filters" aria-expanded="false">
-                {%- render 'icon' with 'filters', inline: true -%} {{- 'collection.general.show_filters' | t -}} {% if active_filters_count > 0 %}<span class="product-facet__active-count bubble-count">{{ active_filters_count }}</span>{% endif %}
+                {%- render 'icon' with 'filters', inline: true -%} Filter {% if active_filters_count > 0 %}<span class="product-facet__active-count bubble-count">{{ active_filters_count }}</span>{% endif %}
               </button>
             {%- endif -%}
           
@@ -236,8 +247,8 @@
                       {%- endfor -%}
     
                       <button type="button" is="toggle-button" class="popover-button hidden-pocket" aria-expanded="false" aria-controls="sort-by-popover">
-                        <span id="sort-by-selected-value" style="pointer-events: none">{{- collection_sort_by_name -}}</span>
-                        {%- render 'icon' with 'chevron', inline: true -%}
+                        <span id="sort-by-selected-value" style="pointer-events: none">{{- collection_sort_by_name -}} </span>
+                        {%- render 'icon' with 'chevron', inline: true -%} 
                       </button>
     
                       <sort-by-popover id="sort-by-popover" class="popover">
@@ -555,7 +566,7 @@
     {
       "type": "checkbox",
       "id": "show_sort_by",
-      "label": "Show sort by",
+      "label": "sort by:",
       "default": true
     },
     {
