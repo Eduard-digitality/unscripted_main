@@ -31,7 +31,12 @@
         min-width: 74px !important;
         border: 1.5px solid #0000001A !important;
     }
-  
+    @media screen and (max-width: 767px) {
+      .product__thumbnail {
+          width: 40px !important;
+          min-width: 40px !important;
+      }
+    }
 {% endstyle %}
 {%- if product.media.size > 0 -%}
   {%- assign selected_media = product.selected_variant.featured_media | default: product.featured_media -%}

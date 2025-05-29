@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 {% style %}
   section.instagram-scroll-feed{
     max-width: 1376px;
@@ -20,16 +21,26 @@ section.instagram-scroll-feed h2 {
   section.instagram-scroll-feed .button{
     width: 207px;
     height: 57px;
-    padding-top: 16px;
-    padding-right: 32px;
-    padding-bottom: 16px;
-    padding-left: 32px;
+    padding: 0;
     border-width: 1px;
     border-radius: 100px;
     overflow: hidden;
     background: #DD3F21;
     color: #fff;
-    line-height: 32px;
+    line-height: 57px;
+    position: relative;
+    font-size: 18px;
+    padding-left: 35px;
+  }
+  section.instagram-scroll-feed .button:after{
+    content: '\f16d';
+    position: absolute;
+    left: 34px;
+    top: 0px;
+    font-size: 24px;
+    color: #fff;
+    font-family: FontAwesome;
+    
   }
   section.instagram-scroll-feed .scroll-images {
     margin: 0;
@@ -37,10 +48,7 @@ section.instagram-scroll-feed h2 {
     column-gap: 1% !important;
 }
 
-    @media screen and (max-width: 767px) {
-  section.instagram-scroll-feed .scroll-images img{
-    w
-}
+    @media screen and (max-width: 767px) 
 
   section.instagram-scroll-feed h2
      {
@@ -61,7 +69,7 @@ section.instagram-scroll-feed h2 {
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
       <h2 style="margin: 0;">{{ section.settings.heading }}</h2>
       <a href="{{ section.settings.instagram_url }}" target="_blank" class="button">
-        Follow on Instagram
+        {{ section.settings.instagram_button_text }}
       </a>
     </div>
   <div class="page-width">
@@ -73,7 +81,7 @@ section.instagram-scroll-feed h2 {
             <img 
               src="{{ block.settings.image | img_url: '500x' }}" 
               alt="{{ block.settings.image.alt | escape }}"
-              style="width: 100%;  height: auto; border-radius: 6px;">
+              style="width: 100%;  height: auto; border-radius: 0px;">
           </div>
         {% endif %}
       {% endfor %}
@@ -96,6 +104,12 @@ section.instagram-scroll-feed h2 {
       "type": "url",
       "id": "instagram_url",
       "label": "instagram"
+    },
+    {
+      "type": "text",
+      "id": "instagram_button_text",
+      "label": "Instagram Button Text",
+      "default": "instagram"
     }
   ],
   "blocks": [
