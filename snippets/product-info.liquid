@@ -8,6 +8,9 @@
     padding: 0 !important;
     margin: 0 auto;
 }
+  .product.product--thumbnails-bottom {
+    align-items: flex-start  !important;
+}
   ..product-meta__share-label {
     margin-inline-end: 20px;
     font-family: DM Sans;
@@ -27,6 +30,20 @@
   .product__info  .faq__item:before {
     background: #3A3A3A1A;
 }
+  .product-meta__share-label {
+    margin-inline-end: 10px;
+    font-family: DM Sans;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 2.56px;
+    vertical-align: middle;
+}
+  .shopify-payment-button button{
+    font-weight: 700 !important;
+  }
+  .loader-button__text{
+    font-weight: 700 !important;
+  }
 {% endstyle %}
 <div class="product__info">
   <!-- PRODUCT META -->
@@ -182,7 +199,7 @@
           {%- assign pinterest_image = product.featured_image | image_url: width: 800 | prepend: 'https:' -%}
 
           <button is="share-toggle-button" share-url="{{ share_url | escape }}" share-title="{{ product.title | escape }}" class="product-meta__share-label link hidden-tablet-and-up" aria-controls="mobile-share-buttons-{{ section.id }}" aria-expanded="false">{{ 'product.general.share' | t }}</button>
-          <div class="product-meta__share-label hidden-phone">{{ 'product.general.share' | t }}</div>
+          <div class="product-meta__share-label hidden-phone">{{ 'product.general.share' | t }} :</div>
 
           <popover-content id="mobile-share-buttons-{{ section.id }}" class="popover hidden-tablet-and-up">
             <span class="popover__overlay"></span>

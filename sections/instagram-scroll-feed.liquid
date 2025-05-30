@@ -14,7 +14,7 @@
   }
 section.instagram-scroll-feed h2 {
     font-weight: 700 !important;
-    font-size: 64px !important;
+    font-size: 64px;
     vertical-align: middle;
     text-transform: uppercase;
     line-height: 62px;
@@ -55,14 +55,17 @@ section.instagram-scroll-feed h2 {
  .instagram-feed-slider .slick-slide{
     padding:0  8px !important;
   }
-    @media screen and (max-width: 767px) 
+  ul.slick-dots {
+    display: none !important;
+}
+    @media screen and (max-width: 1024px) {
 
   section.instagram-scroll-feed h2
      {
-    font-size: 30px !important;
-    line-height: 32px;
-    max-width: 100%;
-}
+      font-size: 30px !important;
+      line-height: 32px;
+      max-width: 100%;
+  }
       .instagram-scroll-feed .scroll-images{
             margin: 0 15px;
   }
@@ -105,7 +108,32 @@ section.instagram-scroll-feed h2 {
   arrows: false,
   speed: 300,
   slidesToShow: 4,
-  adaptiveHeight: true
+  adaptiveHeight: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1.5,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1.5,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1.5,
+        slidesToScroll: 1
+      }
+    }
+  ]
 });
 </script>
 

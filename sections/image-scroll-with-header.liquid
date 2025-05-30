@@ -55,9 +55,15 @@
            max-height: 738px;
     border-radius: 0px !important;
 }
+@media screen and (max-width: 1024px) {
+  .about-images-slider .slick-slide{
+    padding:0  16px 0 0 !important;
+    min-height: auto;
+  }
+   }
    @media screen and (max-width: 767px) {
      section.image-scroll-with-header{
-    padding: 16px !important;
+    padding: 0 !important;
 }
   section.image-scroll-with-header .grid_text{
         grid-template-columns: 100% !important;
@@ -109,7 +115,36 @@
   speed: 300,
   slidesToShow: 2.5,
   initialSlide: 0,
-  varibalewidth: true
+  varibalewidth: true,
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+          autoplay: true,
+          centerMode: false,
+          initialSlide: 0,
+          varibalewidth: true,
+        slidesToShow: 1.5,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1.5,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1.5,
+        slidesToScroll: 1
+      }
+    }
+  ]
 });
     });
 </script>
