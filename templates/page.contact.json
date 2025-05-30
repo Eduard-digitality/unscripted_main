@@ -125,7 +125,7 @@
           "settings": {
             "icon": "picto-box",
             "custom_icon": "shopify://shop_images/Vector.png",
-            "custom_icon_width": 50,
+            "custom_icon_width": 40,
             "title": "free delivery",
             "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
           }

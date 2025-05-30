@@ -98,6 +98,7 @@
     vertical-align: middle;
 
   }
+  
     @media screen and (max-width: 1000px) {
       .collections-list {
           min-width: 100%;
@@ -236,7 +237,7 @@
           
             {%- if section.settings.show_sort_by -%}
                   <div class="product-facet__meta-bar-item product-facet__meta-bar-item--sort">
-                    <span class="product-facet__sort-by-title text--subdued hidden-pocket">{{ 'collection.general.sort_by' | t }}</span>
+                    <span class="product-facet__sort-by-title text--subdued hidden-pocket">{{ 'collection.general.sort_by' | t }} :</span>
     
                     <div class="popover-container">
                       {%- for option in collection.sort_options -%}
