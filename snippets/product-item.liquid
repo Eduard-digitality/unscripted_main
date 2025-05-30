@@ -7,7 +7,9 @@
     background: #9D2204;
     color: #fff;
     float: right;
+    border: 1px solid  #9D2204;
     line-height: 40px !important;
+    transform: translateY(-40px)  !important;
 }
   button.button.button--outline.button--text.button--full.hidden-touch {
     float: left;
@@ -17,7 +19,9 @@
     padding: 0px !important;
     background: #9D2204;
     color: #fff;
+    border: 1px solid  #9D2204;
     line-height: 40px !important;
+    transform: translateY(-40px)  !important;
 }
    button.button.button--outline.button--text.button--full.hidden-touch  .loader-button__text {
     justify-content: center;
@@ -30,6 +34,8 @@
     vertical-align: middle;
     text-transform: uppercase;
 }
+
+  
 {% endstyle %}
 {%- assign color_label_list = 'general.label.color' | t | replace: ', ', ',' | downcase | split: ',' -%}
 {%- assign color_white_label = 'general.label.white' | t | downcase -%}
