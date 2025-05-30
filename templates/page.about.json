@@ -85,12 +85,19 @@
           "settings": {
             "image": "shopify://shop_images/pic.png"
           }
+        },
+        "image_GnRMJr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_2007_12a43934-eb5e-41cc-bb91-2bd8d7f3b0a6.png"
+          }
         }
       },
       "block_order": [
         "image_4yC3mz",
         "image_FrHcQX",
-        "image_FJcPYB"
+        "image_FJcPYB",
+        "image_GnRMJr"
       ],
       "settings": {
         "heading": "The Concept Behind Our Store",
@@ -123,13 +130,20 @@
           "settings": {
             "image": "shopify://shop_images/Collection_card_3.png"
           }
+        },
+        "image_B7xxNG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Collection_card_1.png"
+          }
         }
       },
       "block_order": [
         "image_FiDLkX",
         "image_WQUUCB",
         "image_BXqnWc",
-        "image_9K4VhJ"
+        "image_9K4VhJ",
+        "image_B7xxNG"
       ],
       "settings": {
         "heading": "follow us",

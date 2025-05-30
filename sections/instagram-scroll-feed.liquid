@@ -49,7 +49,12 @@ section.instagram-scroll-feed h2 {
     display: flex !important;
     column-gap: 1% !important;
 }
-
+  .instagram-feed-slider{
+    margin-top: 30px !important;
+  }
+ .instagram-feed-slider .slick-slide{
+    padding:0  8px !important;
+  }
     @media screen and (max-width: 767px) 
 
   section.instagram-scroll-feed h2
@@ -74,7 +79,8 @@ section.instagram-scroll-feed h2 {
     </div>
   <div class="page-width">
     <!-- Scrollable Image Feeds -->
-    <div class="scroll-images" style="margin-top: 30px; display: flex; overflow-x: auto; gap: 20px; scroll-snap-type: x mandatory;">
+    <!-- <div class="scroll-images" style="margin-top: 30px; display: flex; overflow-x: auto; gap: 20px; scroll-snap-type: x mandatory;"> -->
+      <div class="instagram-feed-slider">
       {% for block in section.blocks %}
         {% if block.settings.image %}
           <div>
@@ -85,10 +91,23 @@ section.instagram-scroll-feed h2 {
           </div>
         {% endif %}
       {% endfor %}
-    </div>
+      </div>
+    <!-- </div> -->
 
   </div>
 </section>
+<script>
+  $('.instagram-feed-slider').slick({
+  dots: false,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows: false,
+  speed: 300,
+  slidesToShow: 4,
+  adaptiveHeight: true
+});
+</script>
 
 {% schema %}
 {
