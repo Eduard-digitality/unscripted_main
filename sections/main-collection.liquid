@@ -2,7 +2,12 @@
 .product-facet {
         display: block !important;
     }
-
+.container{
+      width: 100%;
+      max-width: 100%;
+      padding: 0 !important;
+      margin: 0 auto !important;
+  }
     .heading_sortby {
         display: flex;
         justify-content: space-between;
@@ -53,7 +58,15 @@
     .collections-list {
         min-width: 30%;
     }
+      .heading--small, .heading--xsmall, .heading--xxsmall{
+        font-family: DM Sans !important;
+        font-weight: 700;
+        font-size: 18px;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase  !important;
 
+      }
     .collections-list ul {
         margin: 0;
         padding: 0;
@@ -61,12 +74,20 @@
 
     .collections-list ul li {
         list-style: none;
-    }
+        font-family: DM Sans;
+        font-weight: 700;
+        font-size: 20px;
+        vertical-align: middle;
+  }
   .collections-list ul li a{
     font-family: DM Sans;
     font-weight: 700;
     font-size: 20px;
     vertical-align: middle;
+    color: #0E0E0EA6;
+  }
+  .collections-list ul li a.collection-active {
+    color: #0E0E0E;
   }
     .collections-list ul li ul {
         padding-left: 20px !important;
@@ -84,26 +105,50 @@
      {
         margin-block-end: 4px;
         display: block;
+           color: #0E0E0E !important;
         font-family: DM Sans;
         font-weight: 700;
         font-size: 18px;
         vertical-align: middle;
         text-transform: uppercase !important;
         text-align: left !important;
+       letter-spacing: 2.56px;
     }
   .product-facet__sort-by-title{
     font-family: DM Sans;
     font-weight: 300;
     font-size: 16px;
+        color: #0E0E0E !important;
     vertical-align: middle;
-
   }
-  
+  div#main {
+    padding: 0 15px  !important;
+}
+  @media screen and (min-width: 741px) {
+    .product-facet {
+        margin-block-start: 80px  !important;
+        margin-block-end: 80px;
+    }
+    
+}
+  button.button.button--outline.button--text.button--full.hidden-touch{
+    transform: translateY(-40px)  !important;
+    border: 1px solid #9D2204 !important;
+  }
     @media screen and (max-width: 1000px) {
       .collections-list {
           min-width: 100%;
           display: none;
       }
+      .anchor {
+        padding: 0 15px !important;
+    }
+      .heading--small + .heading--large {
+          margin-block-start: 0 !important;
+      }
+      .text-container .heading--small, .rte .heading--small{
+    margin: 0 !important;
+}
       div#mobile-facet-toolbar {
           display: none;
       }
@@ -301,13 +346,16 @@
             <div offset="30" class="product-facet__aside-inner">
               <div class="collections-list">
                 <ul>
-                  <li><a href="/collections/all">{{ 'All' }}</a></li>
-                  <li>Collections
+                        {% assign collection_lower = collection.title | downcase %}
+
+                  <li><a href="/collections/all" class="{% if collection_lower == 'products' %} collection-active {% endif %}">{{ 'All' }}</a></li>
+                  <li>Collections -
                     <ul>
                       {%- for coll in collections -%}
                         <li>
-                          <a href="{{ coll.url }}">{{ coll.title }}</a>
-                        </li>
+                      <a href="{{ coll.url }}" class="{% if collection.handle == coll.handle
+                                                      %} collection-active {% endif %}">{{ coll.title }}</a>
+                    </li>
                       {%- endfor -%}
                     </ul>
                   </li>
@@ -319,12 +367,14 @@
         {%- else -%}
           <div class="collections-list">
             <ul>
-              <li><a href="/collections">{{ 'All' }}</a></li>
-              <li>Collections
+              {% assign collection_lower = collection.title | downcase %}
+              <li><a href="/collections/all" class="{% if collection_lower == 'products' %} collection-active {% endif %}">{{ 'All' }}</a></li>
+              <li>Collections -
                 <ul>
                   {%- for coll in collections -%}
                     <li>
-                      <a href="{{ coll.url }}">{{ coll.title }}</a>
+                      <a href="{{ coll.url }}" class="{% if collection.handle == coll.handle
+                                                      %} collection-active {% endif %}">{{ coll.title }}</a>
                     </li>
                   {%- endfor -%}
                 </ul>
