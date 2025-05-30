@@ -45,6 +45,7 @@
 }
   .about-images-slider .slick-slide{
     padding:0  8px !important;
+    min-height: 738px;
   }
   .image-scroll-with-header .scroll-images div{
     width: 100%;
@@ -97,16 +98,20 @@
   </div>
 </section>
 <script>
+  $(window).on('load', function() {
   $('.about-images-slider').slick({
   dots: false,
-  infinite: true,
+  infinite: false,
   autoplay: true,
+  centerMode: false,
   autoplaySpeed: 2000,
   arrows: false,
   speed: 300,
-  slidesToShow: 3,
-  adaptiveHeight: true
+  slidesToShow: 2.5,
+  initialSlide: 0,
+  varibalewidth: true
 });
+    });
 </script>
 {% schema %}
 {
