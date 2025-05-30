@@ -1,4 +1,122 @@
 <style>
+  .social-media__item{
+    box-shadow:none;
+    border: 1px solid #DD3F21;
+    border-radius: 50%;
+  }
+  .social-media__item--instagram svg{
+    opacity:0;
+  }
+  .social-media__item--instagram a:before{
+    content:"";
+    display:block;
+    width: 27px;
+    height: 27px;
+    background-image: url("https://cdn.shopify.com/s/files/1/0914/8638/8542/files/instagram-icon.svg?v=1748590979");
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position: center center;
+    position:absolute;
+    top: calc(50% - 27px / 2);
+    left: calc(50% - 27px / 2);
+  }
+  
+  .footer__item .linklist__item{
+    font-family: "DM Sans", sans-serif;
+font-weight: 300;
+font-size: 18px;
+line-height: 140%;
+letter-spacing: 0.04em;
+color: #0e0e0e;
+  }
+.footer__item .linklist__item:not(:first-child){
+  padding-top:16px;
+}
+  
+.footer__item-title{
+  font-family: "DM Sans", sans-serif;
+font-weight: 700;
+font-size: 18px;
+line-height: 140%;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: #0e0e0e;
+}
+  
+.footer__copyright{
+  font-family: "Inter", sans-serif;
+font-weight: 500;
+font-size: 14px;
+line-height: 142%;
+color: #0e0e0e;
+}
+  
+.footer__payment-methods-label{
+  display:none;
+}
+  
+#localization_form_footer{
+  order:1;
+  margin-right:0;
+}
+ #localization_form_footer button{
+   border:none;
+   border-radius:0;
+   padding:0;
+   font-family: "Inter", sans-serif;
+font-weight: 500;
+font-size: 14px;
+line-height: 142%;
+color: #0e0e0e;
+   margin-left:8px;
+ }
+  
+  .footer__item--newsletter{
+    min-width:387px!important;
+  }
+  .footer__item--newsletter p{
+    margin-top:40px;
+    margin-bottom: 28px;
+    font-family: "DM Sans", sans-serif;
+font-weight: 300;
+font-size: 18px;
+line-height: 140%;
+letter-spacing: 0.04em;
+color: #0e0e0e;
+  }
+  .footer__item--newsletter .input__field{
+    font-family: "DM Sans", sans-serif;
+font-weight: 300;
+font-size: 18px;
+line-height: 140%;
+letter-spacing: 0.04em;
+color: rgba(14, 14, 14, 1);
+    border: 1px solid #dd3f21;
+border-radius: 31px;
+padding: 14px 33px;
+  }
+  .footer__item--newsletter label{
+    font-family: "DM Sans", sans-serif;
+font-weight: 300;
+font-size: 18px;
+line-height: 140%;
+letter-spacing: 0.04em;
+color: rgba(14, 14, 14, 0.65);
+    left:28px;
+    top:14px;
+  }
+  .footer__item--newsletter button svg{
+    opacity:0;
+  }
+  .footer__item--newsletter button:before{
+    display:block;
+    background-image:url('https://cdn.shopify.com/s/files/1/0914/8638/8542/files/newsletter-arrow.svg?v=1748589955');
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position: center center;
+  }
+
+  
   #shopify-section-{{ section.id }} .footer {
     {%- assign border_color = settings.footer_background | color_mix: settings.footer_text_color, 85 -%}
 
@@ -6,6 +124,42 @@
     --heading-color: {{ settings.footer_text_color.red }}, {{ settings.footer_text_color.green }}, {{ settings.footer_text_color.blue }};
     --text-color: {{ settings.footer_text_color.red }}, {{ settings.footer_text_color.green }}, {{ settings.footer_text_color.blue }};
     --border-color: {{ border_color.red }}, {{ border_color.green }}, {{ border_color.blue }};
+  }
+
+
+  @media(max-width:767px){
+    .footer__item--newsletter{
+      min-width: 100%!important;
+      margin-bottom: 16px;
+    }
+    .footer__item--newsletter .newsletter-logo{
+      width: 276px;
+    }
+    .footer__item--newsletter p{
+      margin-top:24px!important;
+      margin-bottom:16px;
+      font-size: 14px;
+    }
+    .footer__item-list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    }
+    .footer__copyright {
+      flex-direction: column!important;
+    align-items: flex-start!important;
+    }
+    .footer__aside{
+      display: flex!important;
+    flex-direction: column;
+      margin-top:0;
+    }
+    .footer__follow-and-payment{
+      margin: 0!important;
+    }
+    .footer__item .linklist__item:not(:first-child){
+      padding-top: 12px;
+    }
   }
 </style>
 
@@ -70,10 +224,10 @@
                 {%- endif -%}
 
                 <div class="footer__item-content">
+                  <img class="newsletter-logo" src="https://cdn.shopify.com/s/files/1/0914/8638/8542/files/Unscripted_-_logo.png?v=1737386935"></img>
                   {%- if block.settings.content != blank -%}
                     {{- block.settings.content -}}
                   {%- endif -%}
-
                   {%- form 'customer', id: 'footer-newsletter', class: 'footer__newsletter-form form' -%}
                     {%- if form.posted_successfully? -%}
                       <div class="form__banner banner banner--success">
@@ -194,7 +348,7 @@
           {%- endform -%}
         {%- endif -%}
 
-        <span class="footer__copyright text--xsmall text--subdued">{{ shop.name }} <span class="square-separator square-separator--block square-separator--subdued"></span> {{ powered_by_link | replace: '<a', '<a class="link--faded"' }}</span>
+        <span class="footer__copyright text--xsmall text--subdued">© 2024 UNSCRIPTED. Designed by <a href="https://digitality-agency.com/" target="blank">Digitality Agency</a></span>
 
         <div class="footer__follow-and-payment">
           {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}

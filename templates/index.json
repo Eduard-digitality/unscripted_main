@@ -12,10 +12,10 @@
     "image_with_text_overlay_eRmJpL": {
       "type": "image-with-text-overlay",
       "custom_css": [
-        ".content-box {max-width: 465px;}",
         ".h2 {font-size: 56px;}",
         "div.image-overlay__text-container > p {font-family: \"DM Sans\", sans-serif !important; font-weight: 300; font-size: 18px; line-height: 140%; letter-spacing: 0.04em; color: #f5f5f5;}",
-        "a {font-family: \"DM Sans\", sans-serif; font-weight: 700; font-size: 14px; line-height: 140%; letter-spacing: 0.04em; text-transform: uppercase; color: #9d2204; border-radius: 0; border: 1px solid #9d2204; padding: 16px 32px;}"
+        "a {font-family: \"DM Sans\", sans-serif; font-weight: 700; font-size: 14px; line-height: 140%; letter-spacing: 0.04em; text-transform: uppercase; color: #9d2204; border-radius: 0; border: 1px solid #9d2204; padding: 16px 32px;}",
+        "@media (min-width: 768px) {.content-box {max-width: 465px; margin-left: 56px !important; }}"
       ],
       "settings": {
         "reveal_on_scroll": true,
@@ -37,42 +37,6 @@
         "overlay_opacity": 20
       }
     },
-    "slideshow": {
-      "type": "slideshow",
-      "blocks": {
-        "slide-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Rectangle_197_png.png",
-            "mobile_image": "shopify://shop_images/Pinterest.png",
-            "text_position": "top_left",
-            "subheading": "",
-            "title": "THE FREEDOM TO BE YOU",
-            "button_1_text": "SHOP COLLECTION",
-            "button_1_link": "shopify://collections/fragrances",
-            "button_2_text": "",
-            "button_2_link": "",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "slide-2"
-      ],
-      "disabled": true,
-      "settings": {
-        "section_height": "auto",
-        "transition_type": "sweep",
-        "show_initial_transition": true,
-        "autoplay": false,
-        "cycle_speed": 5,
-        "background": "#f2f0ea"
-      }
-    },
     "featured-collections": {
       "type": "featured-collections",
       "blocks": {
@@ -90,17 +54,20 @@
         "collection_MMwjpg"
       ],
       "custom_css": [
-        ".section__header {text-align: left; margin-left: 0; padding-left: 0; width: 100%; display: flex; flex-direction: column; align-items: flex-start; /* Forces left alignment */}",
-        ".text-container {max-width: 100%; width: 100%; padding: 10 !important; margin: 100 !important;}",
-        ".container {width: 100%; max-width: 100%; padding: 10 !important; margin: 10 auto; /* Keeps images centered */}",
-        ".product-item-meta {font-size: 14px;}"
+        ".section__header {margin: 0 0 32px 0;}",
+        ".product-list__inner {margin: 0;}",
+        "h3 {font-size: 64px; margin-bottom: 0;}",
+        ".product-item-meta {text-align: left; padding: 0 14px;}",
+        ".product-item__image-wrapper {margin-bottom: 14px;}",
+        ".product-item-meta__title {font-family: \"DM Sans\", sans-serif; font-weight: 700; margin: 0; line-height: 1;}",
+        ".price {font-family: \"DM Sans\", sans-serif; font-weight: 300; font-size: 16px;}"
       ],
       "settings": {
         "subheading": "",
         "title": "Best Sellers",
         "content": "",
-        "products_count": 11,
-        "products_per_row": 6,
+        "products_count": 4,
+        "products_per_row": 4,
         "stack_products": false,
         "show_cta": false,
         "background": "#f2f0ea",
@@ -109,104 +76,81 @@
         "button_text_color": "rgba(0,0,0,0)"
       }
     },
-    "gallery_YUyV8c": {
-      "type": "gallery",
+    "multi_column_AdWiK6": {
+      "type": "multi-column",
       "blocks": {
-        "image_AggERH": {
-          "type": "image",
+        "item_Ekgq9K": {
+          "type": "item",
           "settings": {
             "image": "shopify://shop_images/3.png",
-            "image_link": "",
-            "caption": "<p><strong>EXPLORE<br/></strong>Reveal new shades of your personality and uncover the bold, unexpected side of yourself.</p>"
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "EXPLORE",
+            "content": "<p>Reveal new shades of your personality and uncover the bold, unexpected side of yourself.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
           }
         },
-        "image_EFfbJg": {
-          "type": "image",
+        "item_9aePTy": {
+          "type": "item",
           "settings": {
             "image": "shopify://shop_images/1.png",
-            "image_link": "",
-            "caption": "<p><strong>DREAM</strong><br/>Turn aspirations into reality and carve your own path with confidence and creativity.</p>"
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "DREAM",
+            "content": "<p>Turn aspirations into reality and carve your own path with confidence and creativity.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
           }
         },
-        "image_UzcAcB": {
-          "type": "image",
+        "item_RKjWX9": {
+          "type": "item",
           "settings": {
             "image": "shopify://shop_images/2.png",
-            "image_link": "",
-            "caption": "<p><strong>BREAK THE RULES</strong><br/>Live life your way, break away from the predictable, and express your individuality.</p>"
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "BREAK THE RULES",
+            "content": "<p>Live life your way, break away from the predictable, and express your individuality.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
           }
         }
       },
       "block_order": [
-        "image_AggERH",
-        "image_EFfbJg",
-        "image_UzcAcB"
+        "item_Ekgq9K",
+        "item_9aePTy",
+        "item_RKjWX9"
       ],
       "custom_css": [
-        "figcaption.gallery__caption.rte p {font-size: 20px; text-align: left;}",
-        "figcaption.gallery__caption.rte p strong {font-weight: 800;}",
-        ".gallery__list {justify-content: space-between;}"
+        "h3 {font-size: 64px;}",
+        ".section__header {margin-bottom: 32px;}",
+        "scrollable-content {display: flex; flex-direction: row; flex-wrap: nowrap; gap: 16px;}",
+        ".multi-column__item {width: calc(100% / 3 - 32px / 3);}",
+        ".h5 {font-weight: 700; font-size: 18px; font-family: \"DM Sans\", sans-serif; margin: 0;}",
+        "p:not(.h5) {font-family: \"DM Sans\", sans-serif; font-weight: 300; font-size: 18px; line-height: 140%; margin-top: 6px;}"
       ],
+      "name": "Multi-column",
       "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
         "subheading": "",
-        "title": "Discover unscripted",
-        "show_arrows": false,
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
-      }
-    },
-    "gallery_6Xf4Kw": {
-      "type": "gallery",
-      "blocks": {
-        "image_NRXVnL": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/94e36d25-9110-4f38-b3b2-d56a889f0e73.png",
-            "image_link": "shopify://collections/floral-fruity",
-            "caption": "<p>FLORAL & FRUITY</p>"
-          }
-        },
-        "image_xAF4VA": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/888_1179.png",
-            "image_link": "shopify://collections/woody",
-            "caption": "<p>WOODY</p>"
-          }
-        },
-        "image_QMJiNJ": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/0cdc76202138795.668124d65f744.png",
-            "image_link": "shopify://collections/fresh-leather",
-            "caption": "<p>FRESH & LEATHER</p>"
-          }
-        },
-        "image_aUBP3c": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/74290e2a-70ec-4c74-92cc-d8c7fc326e17.png",
-            "image_link": "shopify://collections/gourmand",
-            "caption": "<p>GOURMAND & ORIENTAL</p>"
-          }
-        }
-      },
-      "block_order": [
-        "image_NRXVnL",
-        "image_xAF4VA",
-        "image_QMJiNJ",
-        "image_aUBP3c"
-      ],
-      "custom_css": [
-        ".gallery__item {position: relative; overflow: hidden;}",
-        ".gallery__image {width: 100%; display: block;}",
-        ".gallery__caption {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 1.5em; font-weight: bold; text-align: center; z-index: 2;}",
-        ".gallery__caption {text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);}"
-      ],
-      "settings": {
-        "subheading": "",
-        "title": "OUR COLLECTIONS",
-        "show_arrows": false,
+        "title": "discover unscripted",
+        "content": "",
+        "button_text": "",
+        "button_url": "",
+        "column_alignment": "left",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "large",
+        "spacing": "normal",
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }
@@ -277,211 +221,206 @@
         "collection_3Fajtf",
         "collection-1"
       ],
-      "disabled": true,
       "custom_css": [
-        ".section__header {text-align: left; margin-left: 10; padding-left: 10; width: 100%; display: flex; flex-direction: column; align-items: flex-start; /* Forces left alignment */}",
-        ".text-container {max-width: 100%; width: 100%; padding: 10 !important; margin: 10 !important;}",
-        ".container {width: 100%; max-width: 100%; padding: 10 !important; margin: 10 auto; /* Keeps images centered */}"
+        "header {margin-bottom: 32px;}",
+        "h3 {font-size: 64px;}",
+        ".list-collections__item-list {display: flex; flex-direction: row; flex-wrap: nowrap; gap: 16px;}",
+        ".list-collections__item-info {position: static; transform: none; padding: 14px;}",
+        "p {font-family: \"DM Sans\", sans-serif; font-weight: 700; font-size: 18px; color: #0e0e0e; text-align: left;}"
       ],
       "settings": {
         "reveal_on_scroll": true,
-        "layout": "carousel",
+        "layout": "grid",
         "subheading": "",
         "title": "OUR COLLECTIONS",
+        "button_text": "see more",
+        "button_url": "shopify://collections",
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }
     },
-    "gallery_rz6bVL": {
-      "type": "gallery",
+    "multi_column_hgxPKc": {
+      "type": "multi-column",
       "blocks": {
-        "image_ppL6ND": {
-          "type": "image",
+        "item_pNeNEq": {
+          "type": "item",
           "settings": {
-            "image": "shopify://shop_images/IMG_2.png",
-            "image_link": "",
-            "caption": ""
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "<p>Unscripted was made to be different; we create perfume that powers self-discovery. This is your invitation to uncover the unknown and write your own destiny. Be bold. Be you.</p>",
+            "link_text": "discover OUR STORY",
+            "link_url": "",
+            "link_style": "button",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
           }
         },
-        "image_KANQ6x": {
-          "type": "image",
+        "item_GybnaE": {
+          "type": "item",
           "settings": {
-            "image": "shopify://shop_images/IMG_3.png",
-            "image_link": "",
-            "caption": ""
+            "image": "shopify://shop_images/discover-our-story-img.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
           }
         },
-        "image_VGBR8p": {
-          "type": "image",
+        "item_c4JRrA": {
+          "type": "item",
           "settings": {
-            "image": "shopify://shop_images/186616a6-8d58-4887-8d20-12a029acbef1_1.png",
-            "image_link": "",
-            "caption": ""
+            "image": "shopify://shop_images/discover-our-story-img-2.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
           }
         }
       },
       "block_order": [
-        "image_ppL6ND",
-        "image_KANQ6x",
-        "image_VGBR8p"
+        "item_pNeNEq",
+        "item_GybnaE",
+        "item_c4JRrA"
       ],
       "custom_css": [
-        "header.section__header.container.text-container {width: 75%; margin: 0; margin-bottom: 45px !important;}"
+        "h3 {font-family: \"DuPlay\", sans-serif !important; font-size: 64px;}",
+        "header {margin-bottom: 24px;}",
+        "scrollable-content {display: flex; flex-direction: row; flex-wrap: nowrap; gap: 16px;}",
+        ".multi-column__item:nth-child(1) {width: 10%; flex-grow: 2;}",
+        ".multi-column__text-container {max-width: 290px;}",
+        ".multi-column__item:nth-child(2) {width: 41%;}",
+        ".multi-column__item:nth-child(3) {width: 24%;}",
+        "p {font-family: \"DM Sans\", sans-serif; font-weight: 300; font-size: 18px; line-height: 140%;}",
+        ".button-wrapper {margin-top: 24px;}"
       ],
+      "name": "Multi-column",
       "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
         "subheading": "",
         "title": "\"BECAUSE EVERYBODY SHOULD BE ABLE TO HAVE A DISTINCTIVE SCENT TO REVEAL THEIR INDIVIDUALITY.\"",
-        "show_arrows": false,
+        "content": "",
+        "button_text": "",
+        "button_url": "",
+        "column_alignment": "left",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "large",
+        "spacing": "normal",
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }
     },
-    "custom_liquid_YGiFWz": {
-      "type": "custom-liquid",
-      "custom_css": [
-        ".section__header {text-align: left; margin-left: 10; padding-left: 10; width: 100%; display: flex; flex-direction: column; align-items: flex-start; /* Forces left alignment */}",
-        ".text-container {max-width: 100%; width: 100%; padding: 10 !important; margin: 10 !important;}",
-        ".container {width: 100%; max-width: 100%; padding: 10 !important; margin: 10 auto; /* Keeps images centered */}",
-        "h2.heading.heading--small {font-size: 20px;}",
-        "header.section__header.text-container {width: 60% !important; margin: 0;}",
-        "@media screen and (max-width: 800px) {}"
-      ],
-      "settings": {
-        "subheading": "Unscripted was made to be different; we create perfume that powers self-discovery. This is your invitation to uncover the unknown and write your own destiny. Be bold. Be you.",
-        "title": "",
-        "liquid": "",
-        "add_vertical_spacing": true,
-        "background_type": "full_width",
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
-      }
-    },
-    "rich_text_FjryWz": {
-      "type": "rich-text",
-      "custom_css": [
-        ".text-container {max-width: 95%;}"
-      ],
-      "settings": {
-        "subheading": "",
-        "title": "",
-        "content": "",
-        "button_text": "DISCOVER MORE",
-        "button_link": "shopify://pages/about-us",
-        "background_type": "full_width",
-        "text_width": "medium",
-        "text_position": "left",
-        "text_alignment": "left",
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)",
-        "button_background": "rgba(0,0,0,0)",
-        "button_text_color": "rgba(0,0,0,0)"
-      }
-    },
-    "image_with_text_block_gbtQNB": {
-      "type": "image-with-text-block",
-      "disabled": true,
-      "custom_css": [],
-      "settings": {
-        "reveal_on_scroll": false,
-        "image": "shopify://shop_images/Untitled_design_7_64218e17-d0a8-47c4-b8b5-e5dbc6f1b440.png",
-        "mobile_image": "shopify://shop_images/Untitled_design_4_88af5282-0e16-4579-a8d8-260a252b557c.png",
-        "subheading": "",
-        "title": "",
-        "content": "",
-        "button_text": "DISCOVER OUR STORY",
-        "button_link": "shopify://pages/about-us",
-        "background_type": "full_width",
-        "text_position": "left",
-        "text_alignment": "left",
-        "text_background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)",
-        "button_background": "rgba(0,0,0,0)",
-        "button_text_color": "rgba(0,0,0,0)"
-      }
-    },
-    "gallery_eAHUd6": {
-      "type": "gallery",
+    "multi_column_zeaan3": {
+      "type": "multi-column",
       "blocks": {
-        "image_AGQAHA": {
-          "type": "image",
+        "item_JmRqwz": {
+          "type": "item",
           "settings": {
-            "image": "shopify://shop_images/daisy_calloway_ryke_meadows_raisy_addicted_calloway_sisters_series_7d76ee9c-3ef2-43f3-9026-90596ac5d09e.png",
-            "image_link": "https://www.instagram.com/unscripted.dubai?igsh=Mm05cmdlZHVmem5i",
-            "caption": ""
+            "image": "shopify://shop_images/follow-us-1-img.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
           }
         },
-        "image_wyTPFq": {
-          "type": "image",
+        "item_G4irbX": {
+          "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-3-2_807a82dc-679d-47dd-9619-22b5f4885067.png",
-            "image_link": "https://www.instagram.com/unscripted.dubai?igsh=Mm05cmdlZHVmem5i",
-            "caption": ""
+            "image": "shopify://shop_images/follow-us-img.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
           }
         },
-        "image_atCnAV": {
-          "type": "image",
+        "item_jXFiKT": {
+          "type": "item",
           "settings": {
-            "image": "shopify://shop_images/514c7316bfb036bf77512744025946d7.jpg",
-            "image_link": "https://www.instagram.com/unscripted.dubai?igsh=Mm05cmdlZHVmem5i",
-            "caption": ""
+            "image": "shopify://shop_images/follow-us-2-img.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
           }
         },
-        "image_948dJW": {
-          "type": "image",
+        "item_dKmDmn": {
+          "type": "item",
           "settings": {
-            "image": "shopify://shop_images/6613e271a65728512cab3c94c0379d51.jpg",
-            "image_link": "https://www.instagram.com/unscripted.dubai?igsh=Mm05cmdlZHVmem5i",
-            "caption": ""
+            "image": "shopify://shop_images/follow-us-4-img_c77b2936-6250-4534-9c9f-13f65851aa53.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
           }
         }
       },
       "block_order": [
-        "image_AGQAHA",
-        "image_wyTPFq",
-        "image_atCnAV",
-        "image_948dJW"
+        "item_JmRqwz",
+        "item_G4irbX",
+        "item_jXFiKT",
+        "item_dKmDmn"
       ],
       "custom_css": [
-        ".section__header {text-align: left; margin-left: 10; padding-left: 10; width: 100%; display: flex; flex-direction: column; align-items: flex-start; /* Forces left alignment */}",
-        ".text-container {max-width: 100%; width: 100%; padding: 10 !important; margin: 10 !important;}",
-        ".container {width: 100%; max-width: 100%; padding: 10 !important; margin: 10 auto; /* Keeps images centered */}"
+        ".h2 {font-size: 64px; margin-bottom: 0;}",
+        ".multi-column__item {max-width: calc(25% - 12px);}",
+        "scrollable-content {display: flex; max-width: 100%; flex-direction: row; flex-wrap: nowrap; gap: 16px;}",
+        ".section__header {margin-bottom: 32px;}",
+        "@media (max-width: 767px) {.h2 {font-size: 28px; margin-bottom: 16px; }}"
       ],
+      "name": "Multi-column",
       "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
         "subheading": "",
-        "title": "FOLLOW US",
-        "show_arrows": false,
+        "title": "follow us",
+        "content": "",
+        "button_text": "instagram",
+        "button_url": "##",
+        "column_alignment": "left",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "large",
+        "spacing": "tight",
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
-      }
-    },
-    "1747301687c9b46446": {
-      "type": "apps",
-      "settings": {
-        "include_horizontal_margins": true,
-        "include_vertical_margins": true
-      }
-    },
-    "1747301760007ca9b5": {
-      "type": "apps",
-      "settings": {
-        "include_horizontal_margins": true,
-        "include_vertical_margins": true
       }
     }
   },
   "order": [
     "image_with_text_overlay_eRmJpL",
-    "slideshow",
     "featured-collections",
-    "gallery_YUyV8c",
-    "gallery_6Xf4Kw",
+    "multi_column_AdWiK6",
     "collection-list",
-    "gallery_rz6bVL",
-    "custom_liquid_YGiFWz",
-    "rich_text_FjryWz",
-    "image_with_text_block_gbtQNB",
-    "gallery_eAHUd6",
-    "1747301687c9b46446",
-    "1747301760007ca9b5"
+    "multi_column_hgxPKc",
+    "multi_column_zeaan3"
   ]
 }

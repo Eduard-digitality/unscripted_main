@@ -56,22 +56,28 @@
   <div class="section__color-wrapper">
     <div class="container {% unless blends_with_background %}vertical-breather{% endunless %}">
       {%- if section.settings.title != blank or section.settings.subheading != blank or section.settings.content != blank -%}
-        <header class="section__header {% if section.settings.content != blank %}section__header--tight{% endif %} section__header--{{ section.settings.column_alignment }}">
-          <div class="text-container">
-            {%- if section.settings.subheading != blank -%}
-              <h2 class="heading heading--small">{{ section.settings.subheading }}</h2>
-            {%- endif -%}
-
-            {%- if section.settings.title != blank -%}
-              <h3 class="heading h2">{{ section.settings.title }}</h3>
-            {%- endif -%}
-
-            {%- if section.settings.content != blank -%}
-              {{- section.settings.content -}}
-            {%- endif -%}
-          </div>
-        </header>
+  <header class="section__header {% if section.settings.content != blank %}section__header--tight{% endif %} section__header--{{ section.settings.column_alignment }}">
+    <div class="text-container">
+      {%- if section.settings.subheading != blank -%}
+        <h2 class="heading heading--small">{{ section.settings.subheading }}</h2>
       {%- endif -%}
+
+      {%- if section.settings.title != blank -%}
+        <h3 class="heading h2">{{ section.settings.title }}</h3>
+      {%- endif -%}
+
+      {%- if section.settings.content != blank -%}
+        {{- section.settings.content -}}
+      {%- endif -%}
+
+      {%- if section.settings.button_text != blank -%}
+        <div class="section__button-wrapper">
+          <a href="{{ section.settings.button_url }}" class="button button--primary">{{ section.settings.button_text | escape }}</a>
+        </div>
+      {%- endif -%}
+    </div>
+  </header>
+{%- endif -%}
 
       {%- if section.blocks.size > 0 -%}
         <multi-column {% if section.settings.stack_items %}stack{% endif %} {% if section.settings.reveal_on_scroll %}stagger-apparition{% endif %} class="multi-column multi-column--pocket-{{ section.settings.mobile_item_size }} multi-column--{{ section.settings.desktop_item_size }} multi-column--spacing-{{ section.settings.spacing }}">
@@ -353,6 +359,16 @@
       "type": "richtext",
       "id": "content",
       "label": "Content"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button link"
     },
     {
       "type": "select",

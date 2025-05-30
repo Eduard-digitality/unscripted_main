@@ -60,6 +60,10 @@
           {%- if section.settings.title != blank -%}
             <h3 class="heading h2">{{ section.settings.title | escape }}</h3>
           {%- endif -%}
+
+          {%- if section.settings.button_text != blank -%}
+            <a href="{{ section.settings.button_url }}" class="button button--primary">{{ section.settings.button_text | escape }}</a>
+          {%- endif -%}
         </header>
       {%- endif -%}
 
@@ -338,6 +342,16 @@
       "id": "title",
       "label": "Heading",
       "default": "Collection list"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button link"
     },
     {
       "type": "header",
