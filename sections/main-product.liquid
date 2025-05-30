@@ -186,10 +186,19 @@
     .product-form__payment-container {
         margin-block-start: -4px !important;
     }
+  .product__thumbnail-scroll-shadow{
+    background: none  !important;
+    --scroll-shadow-right: none !important;
+        --scroll-shadow-top: none !important;
+  }
   @media screen and (max-width: 1000px) {
     .product-meta__title.heading.h3 {
       font-size: 40px;
     }
+    .product__thumbnail-scroll-shadow{
+    background: none  !important;
+    box-shadow: none !important;
+  }
     .quantity-selector {
         width: 100%;
       display: grid;
