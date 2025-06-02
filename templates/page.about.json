@@ -34,7 +34,7 @@
         "card_7dDmgb": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/xo-animate.png",
+            "image": "shopify://shop_images/about-us-2021-img.png",
             "card_heading": "2021",
             "card_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui. Auctor tincidunt id ornare."
           }
@@ -135,6 +135,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Collection_card_1.png"
+
           }
         }
       },

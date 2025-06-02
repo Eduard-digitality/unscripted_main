@@ -1,506 +1,426 @@
-{% style %}
-     .heading.h2 {
-        font-weight: 700 !important;
-        font-size: 64px !important;
-        vertical-align: middle;
-        text-transform: uppercase;
-        text-align: center;
-        letter-spacing: 2.56px;
-        width: 100%;
-    }
-
-    input {
-        font-family: DM Sans;
-        font-weight: 700 !important;
-        font-size: 16px !important;
-        width: 100%;
-        border: 1px solid #3A3A3A1A;
-        background: #FFFFFF !important;
-        color: #0E0E0E99 !important;
-    }
-
-    textarea {
-        font-family: DM Sans;
-        font-weight: 700 !important;
-        font-size: 16px !important;
-        width: 100%;
-        background: #FFFFFF !important;
-        color: #0E0E0E99 !important;
-    }
-
-    .input__field {
-        font-family: DM Sans;
-        font-weight: 700 !important;
-        font-size: 16px !important;
-        width: 100%;
-        background: #FFFFFF !important;
-        color: #0E0E0E99 !important;
-        border: none;
-    }
-
-    .input__label {
-        font-family: DM Sans;
-        font-weight: 700 !important;
-        font-size: 16px !important;
-        width: 100%;
-        background: #FFFFFF !important;
-        color: #0E0E0E99 !important;
-    }
-
-    *::placeholder {
-        color: #0E0E0E99 !important;
-    }
-
-    *:focus {
-        outline: none !important;
-        border: none !important;
-        box-shadow: 0 0 0 0 !important;
-    }
-
-    .input_group {
-        display: flex;
-        gap: 15px;
-        margin-bottom: 15px;
-    }
-
-    .input-wrapper {
-        width: 100% !important;
-    }
-
-    button.form__submit.button.button--primary.button--full {
-        border-radius: 100rem !important;
-        margin-top: 15px;
-        background: #DD3F21;
-    }
-    button.form__submit.button.button--primary.button--full:hover{
-      background: #dd3f22b8;
-    }
-    .contact__form {
-        max-width: 704px !important;
-    }
-    @media screen and (max-width: 1376px) {
-        .section{
-            width: 96%;
-            margin: 0 auto !important;
-        }
-    }
-  @media screen and (max-width: 767px) {
-    .contact__main_section .heading.h2 {
-        font-size: 34px !important;
-    }
-    .input_group {
-        display: block !important;
-    }
-    .input-wrapper {
-    width: 100% !important;
-    margin-bottom: 15px !important;
-}
-}
-{% endstyle %}
-
-{%- if section.settings.background != settings.background and section.settings.background != 'rgba(0,0,0,0)' -%}
-  {%- assign blends_with_background = false -%}
-{%- else -%}
-  {%- assign blends_with_background = true -%}
-{%- endif -%}
-
-<style>
-  #shopify-section-{{ section.id }} {
-    {%- if section.settings.background == 'rgba(0,0,0,0)' -%}
-      {%- assign section_background = settings.background -%}
-    {%- else -%}
-      {%- assign section_background = section.settings.background -%}
-    {%- endif -%}
-
-    {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
-      {%- assign heading_color = settings.heading_color -%}
-      {%- assign text_color = settings.text_color -%}
-    {%- else -%}
-      {%- assign heading_color = section.settings.text_color -%}
-      {%- assign text_color = section.settings.text_color -%}
-    {%- endif -%}
-
-    {%- if section.settings.button_background == 'rgba(0,0,0,0)' -%}
-      {%- assign button_background = settings.primary_button_background -%}
-    {%- else -%}
-      {%- assign button_background = section.settings.button_background -%}
-    {%- endif -%}
-
-    {%- if section.settings.button_text_color == 'rgba(0,0,0,0)' -%}
-      {%- assign button_text_color = settings.primary_button_text_color -%}
-    {%- else -%}
-      {%- assign button_text_color = section.settings.button_text_color -%}
-    {%- endif -%}
-
-    --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
-    --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
-    --primary-button-background: {{ button_background.red }}, {{ button_background.green }}, {{ button_background.blue }};
-    --primary-button-text-color: {{ button_text_color.red }}, {{ button_text_color.green }}, {{ button_text_color.blue }};
-
-    --section-background: {{ section_background.red }}, {{ section_background.green }}, {{ section_background.blue }};
-  }
-</style>
-
-<section class="section one_area {% if template.name == 'page' and template.suffix contains 'contact' %}section--tight{% endif %} {% unless blends_with_background %}section--flush{% endunless %}">
-  <div class="section__color-wrapper">
-      <div class="contact {% unless blends_with_background %}vertical-breather{% endunless %}">
-        {%- capture aside_content -%}
-          {%- if section.settings.image != blank -%}
-            {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) calc(100vw - 24px * 2), 530px', widths: '200,300,400,500,600,800,1000,1200,1400', class: 'contact__image' -}}
-          {%- endif -%}
-
-          {%- capture aside_text_1 -%}
-            {%- if section.settings.text_1_heading != blank or section.settings.text_1_text != blank -%}
-              {%- if section.settings.text_1_heading != blank -%}
-                <p class="heading heading--small">{{ section.settings.text_1_heading | escape }}</p>
-              {%- endif -%}
-
-              {%- if section.settings.text_1_text != blank -%}
-                <div class="rte">
-                  {{- section.settings.text_1_text -}}
-                </div>
-              {%- endif -%}
-            {%- endif -%}
-          {%- endcapture -%}
-
-          {%- capture aside_text_2 -%}
-            {%- if section.settings.text_2_heading != blank or section.settings.text_2_text != blank -%}
-              {%- if section.settings.text_2_heading != blank -%}
-                <p class="heading heading--small">{{ section.settings.text_2_heading | escape }}</p>
-              {%- endif -%}
-
-              {%- if section.settings.text_2_text != blank -%}
-                <div class="rte">
-                  {{- section.settings.text_2_text -}}
-                </div>
-              {%- endif -%}
-            {%- endif -%}
-          {%- endcapture -%}
-
-          {%- if aside_text_1 != blank or aside_text_2 != blank -%}
-            <div class="contact__text-list">
-              {%- if aside_text_1 != blank -%}
-                <div class="contact__text-item text-container">
-                  {{- aside_text_1 -}}
-                </div>
-              {%- endif -%}
-
-              {%- if aside_text_2 != blank -%}
-                <div class="contact__text-item text-container">
-                  {{- aside_text_2 -}}
-                </div>
-              {%- endif -%}
-            </div>
-          {%- endif -%}
-        {%- endcapture -%}
-
-        <div class="contact__main">
-          {%- if section.settings.title != blank or section.settings.content != blank -%}
-            <header class="section__header {% if section.settings.content != blank %}section__header--tight{% endif %} text-container">
-              {%- if section.settings.title != blank -%}
-                <h1 class="heading h2">{{ section.settings.title }}</h1>
-              {%- endif -%}
-
-              {%- if section.settings.content != blank -%}
-                {{- section.settings.content -}}
-              {%- endif -%}
-            </header>
-          {%- endif -%}
-
-          {%- form 'contact', class: 'contact__form form' -%}
-            {%- if form.posted_successfully? -%}
-              <div class="banner banner--success form__banner">
-                <span class="banner__ribbon">{% render 'icon' with 'form-success' %}</span>
-                <p class="banner__content">{{ 'contact.form.successfully_sent' | t }}</p>
-              </div>
-            {%- endif -%}
-
-            {%- if form.errors -%}
-              <div class="form__banner banner banner--error">
-                <span class="banner__ribbon">{% render 'icon' with 'form-error' %}</span>
-
-                <div class="banner__content">
-                  {{- form.errors | default_errors -}}
-                </div>
-              </div>
-            {%- endif -%}
-
-            <div class="input-group input_group">
-              <!-- First Name Field -->
-              <div class="input-wrapper">
-                <!-- <label for="contact-form-first-name" class="input__label">First Name</label> -->
-                <input
-                  id="contact-form-first-name"
-                  type="text"
-                  class="input__field {% if customer.first_name != blank %}is-filled{% endif %}"
-                  name="contact[first_name]"
-                  placeholder="First Name"
-                  aria-label="First Name"
-                  required
-                  {% if customer and customer.first_name %}
-                    value="{{ customer.first_name }}"
-                  {% endif %}
-                >
-              </div>
-
-              <!-- Last Name Field -->
-              <div class="input-wrapper">
-                <!-- <label for="contact-form-last-name" class="input__label">Last Name</label> -->
-                <input
-                  id="contact-form-last-name"
-                  type="text"
-                  class="input__field {% if customer.last_name != blank %}is-filled{% endif %}"
-                  name="contact[last_name]"
-                  placeholder="Last Name"
-                  aria-label="Last Name"
-                  required
-                  {% if customer and customer.last_name %}
-                    value="{{ customer.last_name }}"
-                  {% endif %}
-                >
-              </div>
-            </div>
-
-            <div class="input">
-              <!-- <label for="contact-form-email" class="input__label">{{ 'contact.form.email' | t }}</label> -->
-              <input
-                id="contact-form-email"
-                type="email" placeholder="{{ 'contact.form.email' | t }}"
-                class="input__field {% if customer.email != blank %}is-filled{% endif %}"
-                name="contact[email]"
-                aria-label="{{ 'contact.form.email' | t }}"
-                required
-                {% if customer %}
-                  value="{{ customer.email }}"
-                {% endif %}
-              >
-            </div>
-
-            {%- for block in section.blocks -%}
-              {%- assign field_title = block.settings.title -%}
-
-              {%- if field_title == blank -%}
-                {%- capture field_title -%}Custom field {% increment custom_field %}{%- endcapture -%}
-              {%- endif -%}
-
-              {%- if block.type == 'text' -%}
-                <div class="input">
-                  {%- if block.settings.use_long_text -%}
-                    <textarea
-                      id="contact-form-{{ field_title | handle }}"
-                      name="contact[{{ field_title | escape }}]"
-                      rows="4" placeholder="{{- block.settings.title | escape -}}" 
-                      class="input__field input__field--textarea"
-                      aria-label="{{ block.settings.title | escape }}"
-                      {% if block.settings.is_required %}
-                        required
-                      {% endif -%}
-                    ></textarea>
-                    
-                  {%- else -%}
-                    <input
-                      id="contact-form-{{ field_title | handle }}"
-                      type="text" placeholder="{{- block.settings.title | escape -}}" 
-                      class="input__field"
-                      name="contact[{{ field_title | escape }}]"
-                      aria-label="{{ block.settings.title | escape }}"
-                      {% if block.settings.is_required %}
-                        required
-                      {% endif %}
-                    >
-                  {%- endif -%}
-                </div>
-              {%- elsif block.type == 'dropdown' -%}
-                {%- assign values = block.settings.values | split: ',' -%}
-
-                {%- if values == empty -%}
-                  {%- continue -%}
-                {%- endif -%}
-
-                <div class="input">
-                  <div class="select-wrapper">
-                    <select
-                      id="contact-form-{{ field_title | handle }}"
-                      class="select"  placeholder="{{- block.settings.title | escape -}}" 
-                      name="contact[{{ field_title | escape }}]"
-                      title="{{ block.settings.title | escape }}"
-                      required
-                    >
-                      <option value="" disabled selected></option>
-
-                      {%- for value in values -%}
-                        {%- assign trim_value = value | strip -%}
-
-                        <option value="{{ trim_value | escape }}">{{ trim_value | escape }}</option>
-                      {%- endfor -%}
-                    </select>
-
-                    {%- render 'icon' with 'chevron' -%}
-                  </div>
-
-                  
-                </div>
-              {%- endif -%}
-            {%- endfor -%}
-
-            <div class="input">
-              <textarea
-                id="contact-form-message"
-                name="contact[body]"
-                rows="4" placeholder="{{ 'contact.form.message' | t }}" 
-                class="input__field input__field--textarea"
-                aria-label="{{ 'contact.form.message' | t }}"
-                required
-              ></textarea>
-            </div>
-
-            <button is="loader-button" type="submit" class="form__submit button button--primary button--full">
-              {{ 'contact.form.submit' | t }}
-            </button>
-          {%- endform -%}
-        </div>
-
-        {%- if aside_content != blank -%}
-          <aside class="contact__aside">
-            {{- aside_content -}}
-          </aside>
-        {%- endif -%}
-      </div>
-  </div>
-</section>
-
-{% schema %}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-  "name": "Contact",
-  "class": "shopify-section--contact-form",
-  "disabled_on": {
-    "groups": ["header", "custom.overlay"]
+  "sections": {
+    "image_with_text_overlay_eRmJpL": {
+      "type": "image-with-text-overlay",
+      "custom_css": [
+        ".h2 {font-size: 56px;}",
+        "div.image-overlay__text-container > p {font-family: \"DM Sans\", sans-serif !important; font-weight: 300; font-size: 18px; line-height: 140%; letter-spacing: 0.04em; color: #f5f5f5;}",
+        "a {font-family: \"DM Sans\", sans-serif; font-weight: 700; font-size: 14px; line-height: 140%; letter-spacing: 0.04em; text-transform: uppercase; color: #9d2204; border-radius: 0; border: 1px solid #9d2204; padding: 16px 32px;}",
+        "@media (min-width: 768px) {.content-box {max-width: 465px; margin-left: 56px !important; }}"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "large",
+        "image": "shopify://shop_images/All_Products_on_Concrete_Textured_Floor.png",
+        "subheading": "",
+        "title": "THE FREEDOM  TO BE YOU",
+        "content": "<p>Are you ready to enter new realms of fragrance? Discover our signature collection of standout scents<br/></p>",
+        "button_text": "SHOP now",
+        "button_link": "shopify://collections/fragrances",
+        "link_style": "button",
+        "background_type": "boxed",
+        "text_width": "fill",
+        "text_position": "middle_left",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#9d2204",
+        "overlay_color": "#000000",
+        "overlay_opacity": 20
+      }
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_MMwjpg": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage",
+            "label": "",
+            "button_text": "See More",
+            "button_url": "shopify://collections/fragrances"
+          }
+        }
+      },
+      "block_order": [
+        "collection_MMwjpg"
+      ],
+      "custom_css": [
+        ".section__header {margin: 0 0 32px 0;}",
+        ".product-list__inner {margin: 0;}",
+        "h3 {font-size: 64px; margin-bottom: 0;}",
+        ".product-item-meta {text-align: left; padding: 0 14px;}",
+        ".product-item__image-wrapper {margin-bottom: 14px;}",
+        ".product-item-meta__title {font-family: \"DM Sans\", sans-serif; font-weight: 700; margin: 0; line-height: 1;}",
+        ".price {font-family: \"DM Sans\", sans-serif; font-weight: 300; font-size: 16px;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "Best Sellers",
+        "content": "",
+        "products_count": 4,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "background": "#f2f0ea",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "multi_column_AdWiK6": {
+      "type": "multi-column",
+      "blocks": {
+        "item_Ekgq9K": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/3.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "EXPLORE",
+            "content": "<p>Reveal new shades of your personality and uncover the bold, unexpected side of yourself.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_9aePTy": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/1.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "DREAM",
+            "content": "<p>Turn aspirations into reality and carve your own path with confidence and creativity.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_RKjWX9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "BREAK THE RULES",
+            "content": "<p>Live life your way, break away from the predictable, and express your individuality.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "item_Ekgq9K",
+        "item_9aePTy",
+        "item_RKjWX9"
+      ],
+      "custom_css": [
+        "h3 {font-size: 64px;}",
+        ".section__header {margin-bottom: 32px;}",
+        "scrollable-content {display: flex; flex-direction: row; flex-wrap: nowrap; gap: 16px;}",
+        ".multi-column__item {width: calc(100% / 3 - 32px / 3);}",
+        ".h5 {font-weight: 700; font-size: 18px; font-family: \"DM Sans\", sans-serif; margin: 0;}",
+        "p:not(.h5) {font-family: \"DM Sans\", sans-serif; font-weight: 300; font-size: 18px; line-height: 140%; margin-top: 6px;}"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "",
+        "title": "discover unscripted",
+        "content": "",
+        "button_text": "",
+        "button_url": "",
+        "column_alignment": "left",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "large",
+        "spacing": "normal",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "collection-list": {
+      "type": "collection-list",
+      "blocks": {
+        "collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage",
+            "image": "shopify://shop_images/94e36d25-9110-4f38-b3b2-d56a889f0e73.png",
+            "subheading": "",
+            "title": "FLORAL & FRUITY",
+            "link_text": "",
+            "link_url": "shopify://collections/floral-fruity",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_RpKLEn": {
+          "type": "collection",
+          "settings": {
+            "collection": "fragrances",
+            "image": "shopify://shop_images/888_1179.png",
+            "subheading": "",
+            "title": "WOODY",
+            "link_text": "",
+            "link_url": "shopify://collections/woody",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_3Fajtf": {
+          "type": "collection",
+          "settings": {
+            "collection": "fragrances",
+            "image": "shopify://shop_images/0cdc76202138795.668124d65f744.png",
+            "subheading": "",
+            "title": "FRESH & LEATHER",
+            "link_text": "",
+            "link_url": "shopify://collections/fresh-leather",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "fragrances",
+            "image": "shopify://shop_images/74290e2a-70ec-4c74-92cc-d8c7fc326e17.png",
+            "subheading": "",
+            "title": "GOURMAND & ORIENTAL",
+            "link_text": "",
+            "link_url": "shopify://collections/gourmand",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection-2",
+        "collection_RpKLEn",
+        "collection_3Fajtf",
+        "collection-1"
+      ],
+      "custom_css": [
+        "header {margin-bottom: 32px;}",
+        "h3 {font-size: 64px;}",
+        ".list-collections__item-list {display: flex; flex-direction: row; flex-wrap: nowrap; gap: 16px;}",
+        ".list-collections__item-info {position: static; transform: none; padding: 14px;}",
+        "p {font-family: \"DM Sans\", sans-serif; font-weight: 700; font-size: 18px; color: #0e0e0e; text-align: left;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "layout": "grid",
+        "subheading": "",
+        "title": "OUR COLLECTIONS",
+        "button_text": "see more",
+        "button_url": "",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "multi_column_hgxPKc": {
+      "type": "multi-column",
+      "blocks": {
+        "item_pNeNEq": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "<p>Unscripted was made to be different; we create perfume that powers self-discovery. This is your invitation to uncover the unknown and write your own destiny. Be bold. Be you.</p>",
+            "link_text": "discover OUR STORY",
+            "link_url": "",
+            "link_style": "button",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_GybnaE": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/discover-our-story-img.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_c4JRrA": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/discover-our-story-img-2.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "item_pNeNEq",
+        "item_GybnaE",
+        "item_c4JRrA"
+      ],
+      "custom_css": [
+        "h3 {font-family: \"DuPlay\", sans-serif !important; font-size: 64px;}",
+        "header {margin-bottom: 24px;}",
+        "scrollable-content {display: flex; flex-direction: row; flex-wrap: nowrap; gap: 16px;}",
+        ".multi-column__item:nth-child(1) {width: 10%; flex-grow: 2;}",
+        ".multi-column__text-container {max-width: 290px;}",
+        ".multi-column__item:nth-child(2) {width: 41%;}",
+        ".multi-column__item:nth-child(3) {width: 24%;}",
+        "p {font-family: \"DM Sans\", sans-serif; font-weight: 300; font-size: 18px; line-height: 140%;}",
+        ".button-wrapper {margin-top: 24px;}"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "",
+        "title": "\"BECAUSE EVERYBODY SHOULD BE ABLE TO HAVE A DISTINCTIVE SCENT TO REVEAL THEIR INDIVIDUALITY.\"",
+        "content": "",
+        "button_text": "",
+        "button_url": "",
+        "column_alignment": "left",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "large",
+        "spacing": "normal",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "multi_column_zeaan3": {
+      "type": "multi-column",
+      "blocks": {
+        "item_JmRqwz": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/follow-us-1-img.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_G4irbX": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/follow-us-img.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_jXFiKT": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/follow-us-2-img.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_dKmDmn": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/follow-us-4-img_c77b2936-6250-4534-9c9f-13f65851aa53.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "item_JmRqwz",
+        "item_G4irbX",
+        "item_jXFiKT",
+        "item_dKmDmn"
+      ],
+      "custom_css": [
+        ".h2 {font-size: 64px; margin-bottom: 0;}",
+        ".multi-column__item {max-width: calc(25% - 12px);}",
+        "scrollable-content {display: flex; max-width: 100%; flex-direction: row; flex-wrap: nowrap; gap: 16px;}",
+        ".section__header {margin-bottom: 32px;}",
+        "@media (max-width: 767px) {.h2 {font-size: 28px; margin-bottom: 16px; }}"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "",
+        "title": "follow us",
+        "content": "",
+        "button_text": "instagram",
+        "button_url": "##",
+        "column_alignment": "left",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "large",
+        "spacing": "tight",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
   },
-  "settings": [
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Image",
-      "info": "1000 x 1000px .jpg recommended"
-    },
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Heading",
-      "default": "Contact Us"
-    },
-    {
-      "type": "richtext",
-      "id": "content",
-      "label": "Content"
-    },
-    {
-      "type": "header",
-      "content": "Block 1"
-    },
-    {
-      "type": "text",
-      "id": "text_1_heading",
-      "label": "Heading"
-    },
-    {
-      "type": "richtext",
-      "id": "text_1_text",
-      "label": "Text"
-    },
-    {
-      "type": "header",
-      "content": "Block 2"
-    },
-    {
-      "type": "text",
-      "id": "text_2_heading",
-      "label": "Heading"
-    },
-    {
-      "type": "richtext",
-      "id": "text_2_text",
-      "label": "Text"
-    },
-    {
-      "type": "header",
-      "content": "Colors"
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "Background",
-      "default": "rgba(0,0,0,0)"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text color",
-      "default": "rgba(0,0,0,0)"
-    },
-    {
-      "type": "color",
-      "id": "button_background",
-      "label": "Button background",
-      "default": "rgba(0,0,0,0)"
-    },
-    {
-      "type": "color",
-      "id": "button_text_color",
-      "label": "Button text",
-      "default": "rgba(0,0,0,0)"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "text",
-      "name": "Text field",
-      "settings": [
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Name",
-          "default": "Custom field"
-        },
-        {
-          "type": "checkbox",
-          "id": "use_long_text",
-          "label": "Use long text",
-          "default": false
-        },
-        {
-          "type": "checkbox",
-          "id": "is_required",
-          "label": "Field is required",
-          "default": false
-        }
-      ]
-    },
-    {
-      "type": "dropdown",
-      "name": "Dropdown",
-      "settings": [
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Name",
-          "default": "Custom field"
-        },
-        {
-          "type": "text",
-          "id": "values",
-          "label": "Values",
-          "info": "Separate each value by a comma.",
-          "default": "value 1, value 2, value 3"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Contact form",
-      "settings": {}
-    }
+  "order": [
+    "image_with_text_overlay_eRmJpL",
+    "featured-collections",
+    "multi_column_AdWiK6",
+    "collection-list",
+    "multi_column_hgxPKc",
+    "multi_column_zeaan3"
   ]
 }
-{% endschema %}

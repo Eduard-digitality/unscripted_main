@@ -21,8 +21,13 @@ letter-spacing: 0.04em;
 color: #000;
 }
 
-.header__icon-wrapper svg {
+.header__icon-wrapper:not([aria-controls="mobile-menu-drawer"]) svg {
   opacity: 0;
+}
+.header__icon-wrapper[aria-controls="mobile-menu-drawer"]{
+  display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .header__icon-wrapper{
   background-repeat: no-repeat;
@@ -40,7 +45,7 @@ color: #000;
 .header__icon-wrapper[aria-label="Cart"]{
   background-image: url('https://cdn.shopify.com/s/files/1/0914/8638/8542/files/solar_bag-3-outline.svg?v=1746557455');
 }
-button.header__icon-wrapper{
+button.header__icon-wrapper:not([aria-controls="mobile-menu-drawer"]){
   display: none!important;
 }
 
