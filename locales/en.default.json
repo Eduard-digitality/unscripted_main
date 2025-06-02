@@ -46,7 +46,7 @@
       "follow_label": "Follow us on {{ social_media }}"
     },
     "newsletter": {
-      "email": "Your e-mail",
+      "email": "Email",
       "subscribe": "Subscribe",
       "success": "You have been subscribed to our newsletter"
     },

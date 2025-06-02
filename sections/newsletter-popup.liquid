@@ -7,7 +7,6 @@
   .newsletter-modal {
     align-items: center;
     display: flex;
-    flex-direction: column !important;
     max-width: 709px;
     overflow: hidden;
   }
@@ -21,6 +20,7 @@
   .newsletter-modal__content {
     padding: 0 50px !important;
     order: 2;
+    position: relative;
   }
 
   form.form.newsletter-modal__form {
@@ -67,13 +67,26 @@
 
   }
 
+.modal__content .heading.h5::before {
+    content: "10% OFF";
+    color: red;
+    position: absolute;
+    left: 137px;
+    background: #fff;
+}
 
   @media screen and (max-width: 991px) {
     .newsletter-modal {
       display: grid;
       flex-direction: row !important;
     }
-
+    .modal__content .heading.h5::before {
+      content: "10% OFF";
+      color: red;
+      position: absolute;
+      left: 99px;
+      background: #fff;
+    }
     .newsletter-modal img {
       order: 2;
       min-width: 227px !important;
