@@ -162,7 +162,9 @@
     background: #DD3F21 !important;
     border-radius: 100px !important;
   }
-
+button.shopify-payment-button__button.shopify-payment-button__button--unbranded:hover{
+  background: #dd3f2175 !important
+}
   .product-meta {
     border-bottom: none !important;
     margin: 0 !important;
@@ -224,10 +226,6 @@
     .section_area .faq__item {
         padding: 0 !important;
     }
-        .text-with-icons__item {
-          margin-bottom: 24px;
-          padding: 10px !important;
-      }
     .heading.h3 {
         font-size: 28px !important;
         padding: 0px;
@@ -244,6 +242,9 @@
     margin: 0 auto !important;
 }
     @media screen and (max-width: 767px) {
+      .product.product--thumbnails-bottom {
+    grid-template-columns: 1fr !important;
+}
        .product-meta__title.heading.h3 {
       font-size: 28px !important;
     }
@@ -271,10 +272,7 @@
     .section_area .faq__item {
         padding: 0 !important;
     }
-        .text-with-icons__item {
-          margin-bottom: 24px;
-          padding: 10px !important;
-      }
+      
     .heading.h3 {
         font-size: 28px !important;
         padding: 0px;
@@ -283,6 +281,15 @@
         width: 40px !important;
         min-width: 40px !important;
     }
+      .hidden-phone{
+        display: inline-grid !important;
+      }
+      .product-sticky-form:hover {
+        display: none;
+    }
+      button.product-meta__share-label.link.hidden-tablet-and-up {
+          display: none !important;
+      }
     }
 {% endstyle %}
 <style>
