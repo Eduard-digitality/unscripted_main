@@ -124,7 +124,7 @@
           "type": "item",
           "settings": {
             "icon": "picto-box",
-            "custom_icon": "shopify://shop_images/fluent_box-20-regular.svg",
+            "custom_icon": "shopify://shop_images/Vector.png",
             "custom_icon_width": 40,
             "title": "free delivery",
             "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
