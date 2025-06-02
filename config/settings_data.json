@@ -9,11 +9,8 @@
  */
 {
   "current": {
-    "button_border_radius": 30,
-    "favicon": "shopify://shop_images/Unscripted_ICON_96x96_PX_PNG.png",
-    "cart_type": "message",
-    "currency_code_enabled": false,
     "icon_stroke_width": 2,
+    "button_border_radius": 30,
     "block_border_radius": "none",
     "vertical_spacing": "small",
     "heading_color": "#000000",
@@ -42,6 +39,7 @@
     "heading_text_transform": "uppercase",
     "text_font": "dm_sans_n4",
     "text_font_size": 18,
+    "currency_code_enabled": false,
     "stagger_products_apparition": true,
     "round_color_swatches": false,
     "show_vendor": false,
@@ -49,8 +47,10 @@
     "show_product_rating": false,
     "product_color_display": "count",
     "product_image_size": "natural",
+    "cart_type": "message",
     "cart_icon": "shopping_bag",
     "cart_show_free_shipping_threshold": true,
+    "favicon": "shopify://shop_images/Unscripted_ICON_96x96_PX_PNG.png",
     "accent_color": "#405de6",
     "checkout_sidebar_background_color": "#f5f5f5",
     "checkout_accent_color": "#282828",
