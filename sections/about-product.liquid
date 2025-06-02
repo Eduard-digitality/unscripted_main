@@ -1,0 +1,133 @@
+{% style %}
+.about-product-section {
+  padding: 60px 0;
+}
+.about-product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+.about-product-image {
+  flex: 1 1 40%;
+}
+.about-product-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.about-product-content {
+  flex: 1 1 55%;
+}
+.about-product-content h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  letter-spacing: 2.56px;
+}
+.info-pairs-grid .info-pair-row {
+  display: flex;
+  gap: 24px;
+}
+.info-pair {
+  flex: 1;
+}
+.info-pair h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.info-pair p {
+  font-size: 16px;
+  color: #555;
+}
+hr {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  margin: 10px 0 18px 0;
+}
+@media (max-width: 768px) {
+  .about-product-grid {
+    flex-direction: column;
+  }
+  .info-pairs-grid .info-pair-row {
+    flex-direction: column;
+  }
+}
+{% endstyle %}
+
+<section class="about-product-section">
+  <div class="container">
+    <div class="about-product-grid">
+      
+      <!-- Left Column: Product Image -->
+      <div class="about-product-image">
+        <img src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title }}" loading="lazy">
+      </div>
+
+      <!-- Right Column: Content -->
+      <div class="about-product-content">
+        <h2>{{ section.settings.main_heading }}</h2>
+        
+       <div class="info-pairs-grid">
+  {% for block in section.blocks %}
+    {% assign is_even = forloop.index0 | modulo: 2 %}
+
+    {% if is_even == 0 %}
+      <div class="info-pair-row">
+    {% endif %}
+
+    <div class="info-pair">
+      <h4>{{ block.settings.heading }}</h4>
+      <p>{{ block.settings.text }}</p>
+    </div>
+
+    {% if is_even == 1 or forloop.last %}
+      </div>
+      <hr>
+    {% endif %}
+  {% endfor %}
+</div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About Product",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Heading",
+      "default": "About the Product"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "info_pair",
+      "name": "Info Pair",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "About Product",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

@@ -50,7 +50,6 @@
     "cart_type": "message",
     "cart_icon": "shopping_bag",
     "cart_show_free_shipping_threshold": true,
-    "social_instagram": "https://www.instagram.com/digitality.agency/",
     "favicon": "shopify://shop_images/Unscripted_ICON_96x96_PX_PNG.png",
     "accent_color": "#405de6",
     "checkout_sidebar_background_color": "#f5f5f5",
@@ -69,34 +68,7 @@
         }
       }
     },
-    "content_for_index": [],
-    "blocks": {
-      "1986737046835575827": {
-        "type": "shopify://apps/az-google-font-custom-fonts/blocks/arc_fontify_block-app-embed/e720f1f7-5778-4825-85a3-3572dbcf27c4",
-        "disabled": false,
-        "settings": {}
-      },
-      "7161394637304097644": {
-        "type": "shopify://apps/cvc-multi-currency-converter/blocks/switcher_embed_block/f5c93801-24e1-4f0e-89db-62f45c9c55b5",
-        "disabled": false,
-        "settings": {}
-      },
-      "1804893150726543839": {
-        "type": "shopify://apps/nova-multi-currency-converter/blocks/app-embed/a5be3c35-cbd0-46a1-ac3a-1ace57a9c1ce",
-        "disabled": true,
-        "settings": {}
-      },
-      "8208493610395315515": {
-        "type": "shopify://apps/dondy-whatsapp-chat-marketing/blocks/app-block/7f5a70cb-e171-4cc7-ac02-e2220203abd6",
-        "disabled": false,
-        "settings": {}
-      },
-      "11532412952436166569": {
-        "type": "shopify://apps/loox-reviews/blocks/loox-inject/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-        "disabled": false,
-        "settings": {}
-      }
-    }
+    "content_for_index": []
   },
   "presets": {
     "Carbon": {

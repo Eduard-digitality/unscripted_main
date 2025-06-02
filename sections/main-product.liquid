@@ -1,3 +1,290 @@
+{% style %}
+  .product-meta__title.heading.h3 {
+    font-family: DuPlay;
+    font-weight: 700;
+    font-size: 80px;
+    vertical-align: middle;
+    text-transform: uppercase;
+  }
+  .product__info .faq__item .collapsible-toggle
+ {
+    text-transform: uppercase;
+}
+.product.product--thumbnails-bottom{
+    margin: 0 !important;
+    padding: 0 !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+}
+  .product-form__option-selector {
+    display: none;
+  }
+
+  span.product-form__quantity-label {
+    display: none;
+  }
+  .product__thumbnail-item  .product__thumbnail {
+    max-height: 74px;
+}
+  .product-meta p {
+    font-family: DM Sans;
+    font-weight: 300;
+    font-size: 16px;
+    vertical-align: middle;
+
+  }
+
+  .product-reviews-heading {
+    font-family: DuPlay;
+    font-weight: 700 !important;
+    font-size: 40px !important;
+    vertical-align: middle;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 0;
+    line-height: 42px;
+  }
+
+  .review-slider-button {
+    background: #fff !important;
+    color: #DD3F21 !important;
+    border: 1px solid #DD3F21 !important;
+    padding: 0 !important;
+    font-size: 18px !important;
+    cursor: pointer;
+    border-radius: 100px !important;
+    user-select: none;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heading.h2 {
+    font-family: DuPlay;
+    font-weight: 700;
+    font-size: 64px;
+    vertical-align: middle;
+    padding: 0 15px;
+    text-transform: uppercase;
+  }
+
+  .heading.h3 {
+    font-family: DuPlay;
+    font-weight: 700;
+    font-size: 64px;
+    padding: 0 15px;
+    vertical-align: middle;
+    letter-spacing: 2.56px;
+    text-transform: uppercase;
+  }
+
+  .section__color-wrapper.section_wrapper {
+    margin-top: 50px;
+    padding: 0 15px;
+  }
+
+  .about-product-content h2 {
+    font-family: DuPlay;
+    font-weight: 700;
+    font-size: 40px;
+    vertical-align: middle;
+    text-transform: uppercase;
+
+  }
+
+  .about-product-content .info-pair h4 {
+    margin: 0;
+    color: #0E0E0EA6;
+    font-weight: 100 !important;
+    font-size: 14px !important;
+    vertical-align: middle;
+  }
+
+  .about-product-content .info-pair p {
+    color: #0E0E0E;
+    margin: 0;
+    font-family: DM Sans;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    vertical-align: middle;
+  }
+
+  .product-item-meta__title {
+    margin-block-end: 4px;
+    display: block;
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 18px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .product-item-meta__price-list-container {
+    font-family: DM Sans;
+    font-weight: 300;
+    font-size: 16px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  p.product-item-meta__color-count.text--small.text--subdued {
+    display: none;
+  }
+
+  product-payment-container#MainPaymentContainer {
+    position: relative;
+  }
+
+  button#AddToCart {
+    border: 1px solid #DD3F21;
+    background: none !important;
+    color: #DD3F21;
+    width: 70%;
+    float: right !important;
+    position: absolute;
+    right: 0;
+    top: -60px;
+    border-radius: 100px !important;
+    line-height: 46px;
+  }
+    .collapsible__content.text-container {
+        font-size: 14px !important;
+    }
+  .quantity-selector {
+    border: 1px solid #DD3F21 !important;
+  }
+
+  button.shopify-payment-button__button.shopify-payment-button__button--unbranded {
+    background: #DD3F21 !important;
+    border-radius: 100px !important;
+  }
+
+  .product-meta {
+    border-bottom: none !important;
+    margin: 0 !important;
+    padding-block-end: 0px;
+    display: block;
+  }
+
+  .product-meta p {
+    font-family: DM Sans;
+    font-weight: 300;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+
+  .product-meta .price--large {
+    font-family: DM Sans;
+    font-weight: 500;
+    font-size: 28px !important;
+    vertical-align: middle;
+    text-transform: uppercase;
+  }
+    .product-form__payment-container {
+        margin-block-start: -4px !important;
+    }
+  .product__thumbnail-scroll-shadow{
+    background: none  !important;
+    --scroll-shadow-right: none !important;
+        --scroll-shadow-top: none !important;
+  }
+  @media screen and (max-width: 1000px) {
+    .product-meta__title.heading.h3 {
+      font-size: 40px;
+    }
+    .product__thumbnail-scroll-shadow{
+    background: none  !important;
+    box-shadow: none !important;
+  }
+    .quantity-selector {
+        width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    product-payment-container#MainPaymentContainer{
+    position: relative;
+    margin-top: 58px !important;
+    }
+    button#AddToCart {
+    width: 100% !important;
+    }
+    .quantity-selector button.quantity-selector__button {
+        width: 100%; 
+    }
+    .quantity-selector .quantity-selector__input {
+      width: 100%;
+      }
+       .section_area .faq__wrapper {
+        padding: 0 !important;
+    }
+    .section_area .faq__item {
+        padding: 0 !important;
+    }
+        .text-with-icons__item {
+          margin-bottom: 24px;
+          padding: 10px !important;
+      }
+    .heading.h3 {
+        font-size: 28px !important;
+        padding: 0px;
+    }
+    .product__thumbnail {
+        width: 40px !important;
+        min-width: 40px !important;
+    }
+  }
+  .shopify-section
+ {
+    padding: 0 15px !important;
+    max-width: 1376px !important;
+    margin: 0 auto !important;
+}
+    @media screen and (max-width: 767px) {
+       .product-meta__title.heading.h3 {
+      font-size: 28px !important;
+    }
+    .quantity-selector {
+        width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    product-payment-container#MainPaymentContainer{
+    position: relative;
+    margin-top: 58px !important;
+    }
+    button#AddToCart {
+    width: 100% !important;
+    }
+    .quantity-selector button.quantity-selector__button {
+        width: 100%; 
+    }
+    .quantity-selector .quantity-selector__input {
+      width: 100%;
+      }
+       .section_area .faq__wrapper {
+        padding: 0 !important;
+    }
+    .section_area .faq__item {
+        padding: 0 !important;
+    }
+        .text-with-icons__item {
+          margin-bottom: 24px;
+          padding: 10px !important;
+      }
+    .heading.h3 {
+        font-size: 28px !important;
+        padding: 0px;
+    }
+    .product__thumbnail {
+        width: 40px !important;
+        min-width: 40px !important;
+    }
+    }
+{% endstyle %}
 <style>
   #shopify-section-{{ section.id }} {
     {%- assign buy_buttons_block = section.blocks | where: 'type', 'buy_buttons' | first -%}
@@ -55,26 +342,14 @@
   {%- endif -%}
 
   <div class="container">
-    <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb text--xsmall text--subdued hidden-phone">
-      <ol class="breadcrumb__list" role="list">
-        <li class="breadcrumb__item">
-          <a class="breadcrumb__link" href="{{ routes.root_url }}">{{ 'general.breadcrumb.home' | t }}</a>
-        </li>
-
-        {%- if collection -%}
-          <li class="breadcrumb__item">
-            <a class="breadcrumb__link" href="{{ collection.url }}">{{- collection.title -}}</a>
-          </li>
-        {%- endif -%}
-
-        <li class="breadcrumb__item">
-          <span class="breadcrumb__link" aria-current="page">{{ product.title }}</span>
-        </li>
-      </ol>
-    </nav>
-
     <!-- PRODUCT TOP PART -->
-
+  {% unless featured %}
+      <h1 class="product-meta__title heading h3" style="padding-top: 70px">{{ product.title }}</h1>
+    {% else %}
+      <h2 class="product-meta__title heading h3">
+        <a href="{{ product.url }}">{{ product.title }}</a>
+      </h2>
+    {% endunless %}
     <product-rerender id="product-info-{{ product.id }}-{{ section.id }}" observe-form="{{ product_form_id }}" allow-partial-rerender>
       <div class="product product--thumbnails-{{ section.settings.desktop_thumbnails_position }}">
         {%- render 'product-media', product: product, product_form_id: product_form_id -%}
@@ -405,7 +680,7 @@ quite differently, as it is in a drawer on tablet/desktop, and a popover on mobi
           "id": "unchecked_value",
           "label": "Unchecked value",
           "default": "No"
-        }
+        },
       ]
     }
   ],
@@ -519,7 +794,8 @@ quite differently, as it is in a drawer on tablet/desktop, and a popover on mobi
         }
       ],
       "default": "slide"
-    }
+    },
+    
   ]
 }
 {% endschema %}

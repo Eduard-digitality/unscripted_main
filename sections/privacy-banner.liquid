@@ -1,3 +1,55 @@
+{% style %}
+cookie-bar.cookie-bar.text--xsmall {
+    min-width: 494px;
+    min-height: 286px;
+}
+ .cookie-bar p.heading.heading--xsmall {
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 24px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    margin: 0;
+}
+.cookie-bar p{
+  font-family: DM Sans;
+font-weight: 300;
+font-size: 16px;
+vertical-align: middle;
+
+}
+  .cookie-bar__actions button{
+    width: 140px;
+    height: 52px;
+    padding: 0px 32px;
+    background: #DD3F21;
+    border: 1px solid #9D2204;
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 14px;
+    vertical-align: middle;
+    text-transform: uppercase;
+  }
+  .cookie-bar__actions button:last-child{
+    background: #fff;
+    color: #DD3F21;
+  }
+ @media screen and (max-width: 1000px) {
+    cookie-bar.cookie-bar.text--xsmall {
+        min-width: 86%;
+        margin: 0 auto;
+    }  
+   .cookie-bar__actions button {
+    width: 100%;
+    margin-bottom: 20px;
+}
+   .cookie-bar__actions button:last-child{
+    margin-bottom: 0px;
+     margin-inline-start: 0  !important;
+  }
+}
+  }
+{% endstyle %}
 <cookie-bar section="{{ section.id }}" hidden class="cookie-bar text--xsmall">
   {%- if section.settings.cookie_bar_title != blank -%}
     <p class="heading heading--xsmall">{{ section.settings.cookie_bar_title }}</p>

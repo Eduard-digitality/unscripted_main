@@ -1,3 +1,178 @@
+{% style %}
+.product-facet {
+        display: block !important;
+    }
+.container{
+      width: 100%;
+      max-width: 100%;
+      padding: 0 !important;
+      margin: 0 auto !important;
+  }
+    .heading_sortby {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #3A3A3A;
+        margin-bottom: 15px;
+    }
+
+    .sortby_text {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .heading_sortby button.popover-button.hidden-pocket {
+        width: auto;
+        height: 34px;
+        border: 1px solid #DD3F21;
+        padding: 0 20px;
+        border-radius: 100px !important;
+    }
+
+    .main_collection {
+        display: flex;
+    }
+
+    .heading_sortby .product-facet__meta-bar-item {
+        font-family: DM Sans;
+        font-weight: 300;
+        font-size: 16px;
+        vertical-align: middle;
+        text-transform: uppercase;
+    }
+
+    .heading.h1 {
+        display: inline-block;
+        padding-left: 0;
+        margin-left: 0;
+        animation: marquee 10s linear infinite;
+        text-align: center;
+        font-size: 80px;
+        font-weight: bold;
+        color: #000;
+        background: linear-gradient(to right, #330000, #ff0000, #330000);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+    }
+
+    .collections-list {
+        min-width: 30%;
+    }
+      .heading--small, .heading--xsmall, .heading--xxsmall{
+        font-family: DM Sans !important;
+        font-weight: 700;
+        font-size: 18px;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase  !important;
+
+      }
+    .collections-list ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .collections-list ul li {
+        list-style: none;
+        font-family: DM Sans;
+        font-weight: 700;
+        font-size: 20px;
+        vertical-align: middle;
+  }
+  .collections-list ul li a{
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 20px;
+    vertical-align: middle;
+    color: #0E0E0EA6;
+  }
+  .collections-list ul li a.collection-active {
+    color: #0E0E0E;
+  }
+    .collections-list ul li ul {
+        padding-left: 20px !important;
+    }
+  .product-item-meta__price-list-container
+     {
+        font-family: DM Sans;
+        font-weight: 300 !important;
+        font-size: 16px !important;
+        vertical-align: middle !important;
+        text-transform: uppercase !important;
+        text-align: left !important;
+    }
+  .product-item-meta__title
+     {
+        margin-block-end: 4px;
+        display: block;
+           color: #0E0E0E !important;
+        font-family: DM Sans;
+        font-weight: 700;
+        font-size: 18px;
+        vertical-align: middle;
+        text-transform: uppercase !important;
+        text-align: left !important;
+       letter-spacing: 2.56px;
+    }
+  .product-facet__sort-by-title{
+    font-family: DM Sans;
+    font-weight: 300;
+    font-size: 16px;
+        color: #0E0E0E !important;
+    vertical-align: middle;
+  }
+  div#main {
+    padding: 0 15px  !important;
+}
+  @media screen and (min-width: 741px) {
+    .product-facet {
+        margin-block-start: 80px  !important;
+        margin-block-end: 80px;
+    }
+    
+}
+
+    @media screen and (max-width: 1000px) {
+      .collections-list {
+          min-width: 100%;
+          display: none;
+      }
+      .anchor {
+        padding: 0 15px !important;
+    }
+      .heading--small + .heading--large {
+          margin-block-start: 0 !important;
+      }
+      .text-container .heading--small, .rte .heading--small{
+    margin: 0 !important;
+}
+      div#mobile-facet-toolbar {
+          display: none;
+      }
+      .heading_sortby {
+          display: block;
+          border-bottom: none;
+          margin-bottom: 0px;
+      }
+          .heading_sortby .hidden-pocket{
+            display: block !important;
+          }
+      .anchor{
+        width: 100% !important;
+      }
+      .heading.h1 {
+        font-size: 40px !important;
+      }
+      .sortby_text{    
+        zoom: 0.8;
+      }
+      .product-item__quick-buy-button{
+         display: none;
+      }
+      
+    }
+{% endstyle %}
+   
 {%- assign collection_sort_by = collection.sort_by | default: collection.default_sort_by -%}
 {%- assign active_filters_count = 0 -%}
 
@@ -8,6 +183,7 @@
     {%- assign active_filters_count = active_filters_count | plus: 1 -%}
   {%- endif -%}
 {%- endfor -%}
+
 
 <style>
   #shopify-section-{{ section.id }} {
@@ -89,7 +265,64 @@
 <section>
   <div class="container">
     <product-facet section-id="{{ section.id }}" class="product-facet">
-      {%- if section.settings.show_filters and collection.filters != empty -%}
+      <div class="heading_sortby">
+              <div>
+               <h1 class="heading h1">{{ collection.title }}</h1>
+            </div>
+            <div class="sortby_text">
+
+            {%- if section.settings.filter_position == 'drawer' and section.settings.show_filters and collection.filters != empty -%}
+              <button type="submit" is="toggle-button" class="product-facet__meta-bar-item product-facet__meta-bar-item--filter hidden-pocket" aria-controls="facet-filters" aria-expanded="false">
+                {%- render 'icon' with 'filters', inline: true -%} Filter {% if active_filters_count > 0 %}<span class="product-facet__active-count bubble-count">{{ active_filters_count }}</span>{% endif %}
+              </button>
+            {%- endif -%}
+          
+            {%- if section.settings.show_sort_by -%}
+                  <div class="product-facet__meta-bar-item product-facet__meta-bar-item--sort">
+                    <span class="product-facet__sort-by-title text--subdued hidden-pocket">{{ 'collection.general.sort_by' | t }} :</span>
+    
+                    <div class="popover-container">
+                      {%- for option in collection.sort_options -%}
+                        {%- if option.value == collection_sort_by -%}
+                          {%- assign collection_sort_by_name = option.name -%}
+                          {%- break -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+    
+                      <button type="button" is="toggle-button" class="popover-button hidden-pocket" aria-expanded="false" aria-controls="sort-by-popover">
+                        <span id="sort-by-selected-value" style="pointer-events: none">{{- collection_sort_by_name -}} </span>
+                        {%- render 'icon' with 'chevron', inline: true -%} 
+                      </button>
+    
+                      <sort-by-popover id="sort-by-popover" class="popover">
+                        <span class="popover__overlay"></span>
+    
+                        <header class="popover__header">
+                          <span class="popover__title heading h6">{{- 'collection.general.sort_by' | t -}}</span>
+    
+                          <button type="button" class="popover__close-button tap-area tap-area--large" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
+                            {%- render 'icon' with 'close' -%}
+                          </button>
+                        </header>
+    
+                        <div class="popover__content">
+                          <div class="popover__choice-list">
+                            {%- for sort_option in collection.sort_options -%}
+                              <label class="popover__choice-item">
+                                <input type="radio" data-bind-value="sort-by-selected-value" class="visually-hidden" {% if sort_option.value == collection_sort_by %}checked="checked"{% endif %} name="sort_by" value="{{ sort_option.value }}" title="{{ sort_option.name }}">
+                                <span class="popover__choice-label">{{ sort_option.name }}</span>
+                              </label>
+                            {%- endfor -%}
+                          </div>
+                        </div>
+                      </sort-by-popover>
+                    </div>
+                  </div>
+            {%- endif -%}
+            </div>
+      </div>
+      <div class="main_collection">
+       {%- if section.settings.show_filters and collection.filters != empty -%}
         {%- if section.settings.filter_position == 'always_visible' -%}
           <div class="product-facet__aside">
             <safe-sticky offset="30" class="product-facet__aside-inner">
@@ -104,6 +337,50 @@
           {%- render 'facet-filters', filters: collection.filters, filters_position: section.settings.filter_position -%}
         {%- endif -%}
       {%- endif -%}
+      {%- if section.settings.show_filters and collection.filters != empty -%}
+        {%- if section.settings.filter_position == 'always_visible' -%}
+          <div class="product-facet__aside">
+            <div offset="30" class="product-facet__aside-inner">
+              <div class="collections-list">
+                <ul>
+                        {% assign collection_lower = collection.title | downcase %}
+
+                  <li><a href="/collections/all" class="{% if collection_lower == 'products' %} collection-active {% endif %}">{{ 'All' }}</a></li>
+                  <li>Collections -
+                    <ul>
+                      {%- for coll in collections -%}
+                        <li>
+                      <a href="{{ coll.url }}" class="{% if collection.handle == coll.handle
+                                                      %} collection-active {% endif %}">{{ coll.title }}</a>
+                    </li>
+                      {%- endfor -%}
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+      
+            </div>
+          </div>
+        {%- else -%}
+          <div class="collections-list">
+            <ul>
+              {% assign collection_lower = collection.title | downcase %}
+              <li><a href="/collections/all" class="{% if collection_lower == 'products' %} collection-active {% endif %}">{{ 'All' }}</a></li>
+              <li>Collections -
+                <ul>
+                  {%- for coll in collections -%}
+                    <li>
+                      <a href="{{ coll.url }}" class="{% if collection.handle == coll.handle
+                                                      %} collection-active {% endif %}">{{ coll.title }}</a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </li>
+            </ul>
+          </div>
+        {%- endif -%}
+      {%- endif -%}
+     
 
       <div id="facet-main" class="product-facet__main anchor" role="region" aria-live="polite">
         {%- if section.blocks.size > 0 -%}
@@ -156,65 +433,7 @@
         {%- endif -%}
 
         {%- if collection.products_count > 0 -%}
-          <div class="product-facet__meta-bar anchor">
-            {%- if section.settings.filter_position == 'drawer' and section.settings.show_filters and collection.filters != empty -%}
-              <button type="submit" is="toggle-button" class="product-facet__meta-bar-item product-facet__meta-bar-item--filter hidden-pocket" aria-controls="facet-filters" aria-expanded="false">
-                {%- render 'icon' with 'filters', inline: true -%} {{- 'collection.general.show_filters' | t -}} {% if active_filters_count > 0 %}<span class="product-facet__active-count bubble-count">{{ active_filters_count }}</span>{% endif %}
-              </button>
-            {%- endif -%}
-
-            <span class="product-facet__meta-bar-item product-facet__meta-bar-item--count" role="status">{{ 'collection.general.products_count' | t: count: collection.products_count }}</span>
-
-            {%- if section.settings.show_sort_by -%}
-              <div class="product-facet__meta-bar-item product-facet__meta-bar-item--sort">
-                <span class="product-facet__sort-by-title text--subdued hidden-pocket">{{ 'collection.general.sort_by' | t }}</span>
-
-                <div class="popover-container">
-                  {%- for option in collection.sort_options -%}
-                    {%- if option.value == collection_sort_by -%}
-                      {%- assign collection_sort_by_name = option.name -%}
-                      {%- break -%}
-                    {%- endif -%}
-                  {%- endfor -%}
-
-                  <button type="button" is="toggle-button" class="popover-button hidden-pocket" aria-expanded="false" aria-controls="sort-by-popover">
-                    <span id="sort-by-selected-value" style="pointer-events: none">{{- collection_sort_by_name -}}</span>
-                    {%- render 'icon' with 'chevron', inline: true -%}
-                  </button>
-
-                  <sort-by-popover id="sort-by-popover" class="popover">
-                    <span class="popover__overlay"></span>
-
-                    <header class="popover__header">
-                      <span class="popover__title heading h6">{{- 'collection.general.sort_by' | t -}}</span>
-
-                      <button type="button" class="popover__close-button tap-area tap-area--large" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
-                        {%- render 'icon' with 'close' -%}
-                      </button>
-                    </header>
-
-                    <div class="popover__content">
-                      <div class="popover__choice-list">
-                        {%- for sort_option in collection.sort_options -%}
-                          <label class="popover__choice-item">
-                            <input type="radio" data-bind-value="sort-by-selected-value" class="visually-hidden" {% if sort_option.value == collection_sort_by %}checked="checked"{% endif %} name="sort_by" value="{{ sort_option.value }}" title="{{ sort_option.name }}">
-                            <span class="popover__choice-label">{{ sort_option.name }}</span>
-                          </label>
-                        {%- endfor -%}
-                      </div>
-                    </div>
-                  </sort-by-popover>
-                </div>
-              </div>
-            {%- endif -%}
-          </div>
-
-          {%- if active_filters_count > 0 -%}
-            <div class="product-facet__active-list tag-list hidden-tablet-and-up">
-              {%- render 'facet-active-filters', filters: collection.filters -%}
-            </div>
-          {%- endif -%}
-
+         
           {%- paginate collection.products by section.settings.products_per_page -%}
             <product-list {% if settings.stagger_products_apparition %}stagger-apparition{% endif %} class="product-facet__product-list product-list anchor">
               {%- if section.settings.filter_position == 'always_visible' and section.settings.show_filters and collection.filters != empty -%}
@@ -229,7 +448,7 @@
                 {%- capture sizes_attribute -%}(max-width: 740px) calc({{ 100.0 | divided_by: section.settings.mobile_products_per_row | ceil }}vw - 24px), calc((min(100vw - 80px, 1520px) - {{ sidebar_width }}px) / {{ section.settings.desktop_products_per_row }} - {{ gap_width | ceil }}px){%- endcapture -%}
 
                 {%- for product in collection.products -%}
-                  {%- render 'product-item', product: product, collection: collection, sizes_attribute: sizes_attribute, reveal: settings.stagger_products_apparition -%}
+                  {%- render 'product-item', product: product, collection: collection, sizes_attribute: sizes_attribute, reveal: settings.stagger_products_apparition, color_display: 'hide' -%}
                 {%- endfor -%}
               </div>
             </product-list>
@@ -259,6 +478,7 @@
             {%- endif -%}
           </div>
         {%- endif -%}
+      </div>
       </div>
     </product-facet>
   </div>
@@ -386,7 +606,7 @@
           "id": "button_text_color",
           "label": "Button text color",
           "default": "#1e316a"
-        }
+        },
       ]
     }
   ],
@@ -394,7 +614,7 @@
     {
       "type": "checkbox",
       "id": "show_sort_by",
-      "label": "Show sort by",
+      "label": "sort by:",
       "default": true
     },
     {
@@ -437,7 +657,7 @@
     {
       "type": "checkbox",
       "id": "show_filters",
-      "label": "Show filters",
+      "label": "filters",
       "info": "[Customize filters](/admin/menus)",
       "default": true
     },
@@ -474,7 +694,7 @@
           "label": "Drawer"
         }
       ],
-      "default": "always_visible"
+      "default": "drawer"
     },
     {
       "type": "header",

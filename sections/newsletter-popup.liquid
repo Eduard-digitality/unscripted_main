@@ -1,3 +1,77 @@
+{% style %}
+  .modal__content{
+    max-width: 840px !important;
+       max-height: 339px !important;
+  }
+  .newsletter-modal  img{
+        min-width: 227px !important;
+        max-width: 227px !important;
+    }
+  form.form.newsletter-modal__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+   .modal__content .input{
+    margin: 0 !important;
+ }
+    .modal__content .input button{
+      margin: 0 !important;
+      width: 167px;
+      height: 48px;
+      border-radius: 100px !important;
+      border: none;
+      background: #DD3F21;
+      color:#fff;
+ }
+  .modal__content .heading.h5{
+    font-family: DuPlay;
+    font-weight: 700;
+    font-size: 40px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  .modal__content p{
+    font-family: DM Sans;
+    font-weight: 300;
+    font-size: 16px;
+    vertical-align: middle;
+    text-align: left;
+  }
+      .newsletter-modal__content {
+        padding: 0 166px 0 50px !important;
+    }
+  @media screen and (max-width: 991px) {
+    .modal__content .heading.h5{
+    font-size: 28px;
+  }
+    .modal__content p{
+    font-size: 14px;
+  }
+    .newsletter-modal__content {
+      padding: 0 30px !important;
+  }
+    .modal__content {
+        max-height: 100% !important;
+    }
+    form.form.newsletter-modal__form {
+      display: block !important;
+  }
+    .modal__content .input button{
+      width: 100% !important;
+ }
+    /* .newsletter-modal {
+    display: flex;
+    flex-direction: row-reverse;
+} */
+    .newsletter-modal img {
+        min-width: 100% !important;
+        min-height: 240px !important;
+    }
+}
+  }
+{% endstyle %}
 <style>
   [aria-controls="newsletter-popup"] {
     display: block; /* Allows to show the toggle icon in the header if the section is disabled */

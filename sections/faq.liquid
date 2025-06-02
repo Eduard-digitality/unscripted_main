@@ -1,3 +1,58 @@
+{% style %}
+  .faq__item .collapsible-toggle {
+    font-family: DM Sans;
+    font-weight: 300;
+    font-size: 20px;
+    vertical-align: middle;
+    padding: 25px 0 !important;
+}
+  .section_area{
+    margin: 100px auto !important;
+  }
+  .faq__item  p {
+    font-family: DM Sans;
+    font-weight: 300;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+  .animated-plus:before
+ {
+    width: 16px !important;
+}
+  .animated-plus:after {
+    height: 16px !important;
+}
+  .faq__wrapper {
+    max-width: 1038px !important;
+    width: 100% !important;
+    }
+  .faq__item{
+       position: relative;
+    /* border: none; */
+}
+  .faq__item:before{
+        content: '';
+   position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+        width: 100%;
+    background: linear-gradient(to right, red, darkred, black);
+    border: none;
+}
+  /* .faq__item:last-child:before{
+       display: none !important;
+} */
+   @media screen and (max-width: 767px) {
+    .shopify-section--faq .heading.h2 {
+        font-size: 28px !important;
+        padding: 0 !important;
+    } 
+     
+   }
+{% endstyle %}
+
 {%- if section.settings.background != settings.background and section.settings.background != 'rgba(0,0,0,0)' -%}
   {%- assign blends_with_background = false -%}
 {%- else -%}
@@ -32,10 +87,10 @@
 
 {%- assign categories = section.blocks | where: 'type', 'category' -%}
 
-<section class="section {% if template.name == 'page' and template.suffix contains 'faq' %}section--tight{% endif %} {% unless blends_with_background %}section--flush{% endunless %}">
+<section class="section section_area  {% if template.name == 'page' and template.suffix contains 'faq' %}section--tight{% endif %} {% unless blends_with_background %}section--flush{% endunless %}">
   <div class="section__color-wrapper">
     <div class="container">
-      <div class="{% unless blends_with_background %}vertical-breather{% endunless %}">
+      <div class="section {% unless blends_with_background %}vertical-breather{% endunless %}">
         {%- if section.settings.title != blank or section.settings.content != blank -%}
           <header class="section__header {% if section.settings.content != blank %}section__header--tight{% endif %} text-container">
             {%- if section.settings.title != blank -%}
@@ -112,7 +167,7 @@
       "type": "text",
       "id": "title",
       "label": "Heading",
-      "default": "FAQ"
+      "default": "FREQUENTLY ASKED QUESTIONS"
     },
     {
       "type": "richtext",

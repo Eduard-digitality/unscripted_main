@@ -1,0 +1,104 @@
+<section class="about-why-choose" style="padding: 60px 0;">
+  <div class="page-width">
+    
+    <!-- Section Heading -->
+    <h2 class="why-choose__heading" style="text-align: center; margin-bottom: 40px;">
+      {{ section.settings.heading }}
+    </h2>
+
+    <!-- Card Grid -->
+    <div class="grid grid--3-col">
+      {% for block in section.blocks %}
+        <div class="grid__item why-choose__card" style="text-align: center;">
+          
+          {% if block.settings.image != blank %}
+            <img
+              src="{{ block.settings.image | image_url: '400x' }}"
+              alt="{{ block.settings.image.alt | escape }}"
+              width="{{ block.settings.image.width }}"
+              height="{{ block.settings.image.height }}"
+              style="max-width: 100%; height: auto; margin-bottom: 15px;"
+            >
+          {% endif %}
+
+          <h3 class="why-choose__card-heading">{{ block.settings.title }}</h3>
+          <p class="why-choose__card-text">{{ block.settings.text }}</p>
+
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About - Why Choose Us",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Why Choose Us"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Card Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card Title",
+          "default": "Trusted Experience"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Card Description",
+          "default": "We've been delivering quality for over a decade."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Why Choose Us",
+      "category": "About",
+      "blocks": [
+        {
+          "type": "card",
+          "settings": {
+            "title": "Trusted Experience",
+            "text": "We've been delivering quality for over a decade.",
+            "image": ""
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "Customer Focus",
+            "text": "We prioritize client satisfaction and success.",
+            "image": ""
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "Innovative Solutions",
+            "text": "Pioneering ideas with real-world results.",
+            "image": ""
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

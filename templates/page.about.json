@@ -1,0 +1,148 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "about-hero-image-text-sAm1we1": {
+      "type": "text-overlay-banner",
+      "settings": {
+        "bg_image": "shopify://shop_images/V3_UNSCRIPTED_-_BRAND_BOOK_-_TOV_Design_2__page-0029.png",
+        "small_text": "LEARN MORE",
+        "heading_text": "ABOUT US",
+        "text_color": "#ffffff",
+        "overlay_opacity": 40
+      }
+    },
+    "about-text-two-image-sAm1we2": {
+      "type": "text-with-two-images",
+      "settings": {
+        "heading": "CARVE YOUR OWN PATH",
+        "text": "Unscripted was created to redefine the world of fragrances. We’re here for the free-spirited and rebellious - those who dare to break away and do it their way. Each fragrance has been designed to take you on a unique journey. Where will it take you? Only you can decide",
+        "image_1": "shopify://shop_images/the-essence-of-our-brand-left-img.png",
+        "image_2": "shopify://shop_images/the-essence-of-our-brand-right-img.png"
+      }
+    },
+    "about-card-slider-sAm1we3": {
+      "type": "slider-cards",
+      "blocks": {
+        "card_7dDmgb": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/about-us-2021-img.png",
+            "card_heading": "2021",
+            "card_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui. Auctor tincidunt id ornare."
+          }
+        },
+        "card_qjXpyq": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/about-us-2023-img.png",
+            "card_heading": "2023",
+            "card_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui. Auctor tincidunt id ornare."
+          }
+        },
+        "card_ptybfX": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/about-us-2025-img.png",
+            "card_heading": "2025 - today",
+            "card_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui. Auctor tincidunt id ornare."
+          }
+        }
+      },
+      "block_order": [
+        "card_7dDmgb",
+        "card_qjXpyq",
+        "card_ptybfX"
+      ],
+      "settings": {
+        "heading": "Our Story"
+      }
+    },
+    "about-scroll-gallery-sAm1we4": {
+      "type": "image-scroll-with-header",
+      "blocks": {
+        "image_4yC3mz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_2005_5e157b1d-aa3c-4ead-a012-150c6300460f.png"
+          }
+        },
+        "image_FrHcQX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_2007_c02957ce-a0fd-41e9-a6f7-695379d352e9.png"
+          }
+        },
+        "image_FJcPYB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_2006_8cdb8d33-8c42-4ed6-a9c0-bad1d1dd566a.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_4yC3mz",
+        "image_FrHcQX",
+        "image_FJcPYB"
+      ],
+      "settings": {
+        "heading": "The Concept Behind Our Store",
+        "text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui."
+      }
+    },
+    "about-social-scroll-sAm1we5": {
+      "type": "instagram-scroll-feed",
+      "blocks": {
+        "image_FiDLkX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/follow-us-1-img.png"
+          }
+        },
+        "image_WQUUCB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/follow-us-img.png"
+          }
+        },
+        "image_BXqnWc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/follow-us-2-img.png"
+          }
+        },
+        "image_9K4VhJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/follow-us-4-img_c77b2936-6250-4534-9c9f-13f65851aa53.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_FiDLkX",
+        "image_WQUUCB",
+        "image_BXqnWc",
+        "image_9K4VhJ"
+      ],
+      "settings": {
+        "heading": "follow us",
+        "instagram_url": "https://www.instagram.com/yourbrand",
+        "instagram_button_text": "instagram"
+      }
+    }
+  },
+  "order": [
+    "about-hero-image-text-sAm1we1",
+    "about-text-two-image-sAm1we2",
+    "about-card-slider-sAm1we3",
+    "about-scroll-gallery-sAm1we4",
+    "about-social-scroll-sAm1we5"
+  ]
+}

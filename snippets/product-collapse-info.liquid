@@ -1,0 +1,79 @@
+{% comment %}
+  Static FAQ collapse snippet with 3 hardcoded questions.
+  Ignores passed blocks; for testing with product data.
+{% endcomment %}
+
+{% style %}
+  .faq__item .collapsible-toggle {
+    font-family: DM Sans;
+    font-weight: 300;
+    font-size: 20px;
+    vertical-align: middle;
+    padding: 25px 0 !important;
+  }
+  .faq__item p {
+    font-family: DM Sans;
+    font-weight: 300;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+  .animated-plus:before {
+    width: 16px !important;
+  }
+  .animated-plus:after {
+    height: 16px !important;
+  }
+  .faq__wrapper {
+    max-width: 994px !important;
+    width: 100% !important;
+  }
+  .faq__item {
+    position: relative;
+  }
+  .faq__item:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right, red, darkred, black);
+    border: none;
+  }
+{% endstyle %}
+
+{%- assign faqs = "Description|__PRODUCT_DESC__|Shipping & Return|Shipping typically takes 5-7 business days.|Additional Info|Yes, we ship worldwide with varying shipping costs." | split: "|" -%}
+
+<section class="section section_area">
+  <div class="container">
+    <div class="faq__wrapper" itemscope itemtype="https://schema.org/FAQPage">
+
+      {%- for i in (0..2) -%}
+        {%- assign question_index = i | times: 2 -%}
+        {%- assign answer_index = question_index | plus: 1 -%}
+
+        {%- assign question = faqs[question_index] -%}
+        {%- assign answer = faqs[answer_index] -%}
+        {%- if answer == '__PRODUCT_DESC__' -%}
+          {%- assign answer = product.description -%}
+        {%- endif -%}
+
+        <div class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button is="toggle-button" class="collapsible-toggle text--strong" aria-controls="faq-{{ i }}" aria-expanded="false" itemprop="name">
+            {{ question }}
+            <span class="animated-plus"></span>
+          </button>
+
+          <collapsible-content id="faq-{{ i }}" class="collapsible anchor" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="collapsible__content text-container" itemprop="text">
+              {{ answer | raw }}
+            </div>
+          </collapsible-content>
+        </div>
+      {%- endfor -%}
+
+    </div>
+  </div>
+</section>
+
+
