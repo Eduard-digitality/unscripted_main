@@ -14,10 +14,59 @@
     color: #fff;
     border: 1px solid #DD3F21
   }
-    @media screen and (max-width: 767px) {
+  ul.slick-dots {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important;
+}
+  .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 25px;
+    height: 3px;
+    padding: 0px;
+    position: relative;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+  .slick-dots li button:before {
+    line-height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 3px;
+    content: '';
+    text-align: center;
+    opacity: 1;
+    background: #0E0E0E33;
+}
+  .slick-dots li {
+  list-style: none !important;
+}
+  .slick-dots li.slick-active button:before {
+    background: #DD3F21;
+}
+  
+  
+    @media screen and (max-width: 991px) {
+      ul.slick-dots {
+         display: flex;
+      }
       .product__thumbnail {
           width: 40px !important;
           min-width: 40px !important;
+      }
+      .product-item__quick-buy-button {
+          display: none !important;
+      }
+      button.button.button--outline.button--text.button--full.hidden-touch.hidden-phone {
+          display: none !important;
       }
     }
 {% endstyle %}
@@ -89,35 +138,69 @@
         <product-list {% if settings.stagger_products_apparition %}stagger-apparition{% endif %} class="product-list product-list--center">
           {%- assign smallest_image_aspect_ratio = 0 -%}
 
-          <div class="scroller">
-            <div class="product-list__inner product-list__inner--scroller hide-scrollbar">
+          
+            <div class="related-product-slider">
               {%- for product in recommendations.products -%}
-                {%- assign smallest_image_aspect_ratio = smallest_image_aspect_ratio | at_least: product.featured_media.aspect_ratio -%}
-
-                {%- capture sizes_attribute -%}(max-width: 740px) 75vw, min({{ 100.0 | divided_by: 4 | ceil }}vw, {{ 1520.0 | divided_by: 4 | ceil }}px){%- endcapture -%}
-                {%- render 'product-item', product: product, sizes_attribute: sizes_attribute, reveal: settings.stagger_products_apparition -%}
+                <div class="related-product-item">
+                  {%- assign smallest_image_aspect_ratio = smallest_image_aspect_ratio | at_least: product.featured_media.aspect_ratio -%}
+  
+                  {%- capture sizes_attribute -%}(max-width: 740px) 75vw, min({{ 100.0 | divided_by: 4 | ceil }}vw, {{ 1520.0 | divided_by: 4 | ceil }}px){%- endcapture -%}
+                  {%- render 'product-item', product: product, sizes_attribute: sizes_attribute, reveal: settings.stagger_products_apparition -%}
+                </div>
               {%- endfor -%}
             </div>
-          </div>
-
-          {%- if recommendations.products_count > 4 -%}
-            <prev-next-buttons class="product-list__prev-next hidden-pocket" style="--smallest-image-aspect-ratio: {{ smallest_image_aspect_ratio }}">
-              <button class="product-list__arrow prev-next-button prev-next-button--prev" disabled data-action="prev">
-                <span class="visually-hidden">{{ 'general.accessibility.previous' | t }}</span>
-                {%- render 'icon' with 'nav-arrow-left', block: true, direction_aware: true -%}
-              </button>
-
-              <button class="product-list__arrow prev-next-button prev-next-button--next" data-action="next">
-                <span class="visually-hidden">{{ 'general.accessibility.next' | t }}</span>
-                {%- render 'icon' with 'nav-arrow-right', block: true, direction_aware: true -%}
-              </button>
-            </prev-next-buttons>
-          {%- endif -%}
+         
         </product-list>
       </div>
     </div>
   {%- endif -%}
 </product-recommendations>
+
+<script>
+  $(window).on('load', function() {
+        $('.related-product-slider').slick({
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        centerMode: false,
+        autoplaySpeed: 2000,
+        arrows: false,
+        speed: 300,
+        slidesToShow: 4,
+        initialSlide: 0,
+        varibalewidth: true,
+          responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+                autoplay: true,
+                centerMode: false,
+                initialSlide: 0,
+                varibalewidth: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    });
+</script>
 
 {% schema %}
 {

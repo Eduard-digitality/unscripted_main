@@ -41,7 +41,7 @@
   gap: 15px;
 }
 .review-slider-button {
-  background: #222;
+  background: #ffffff00 !important;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -111,13 +111,17 @@
 @media (max-width: 768px) {
   .product-reviews-wrapper {
     flex-direction: column;
+    overflow-x: hidden;
   }
   .product-reviews-left,
   .product-reviews-right {
     flex: 1 1 100%;
   }
   .review-card {
-    flex: 0 0 44%;
+    flex: 0 0 50%;
+  }
+  .shopify-section {
+    overflow-x: hidden !important;
   }
 }
 {% endstyle %}
