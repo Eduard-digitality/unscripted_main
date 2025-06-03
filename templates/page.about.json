@@ -13,8 +13,8 @@
       "type": "text-overlay-banner",
       "settings": {
         "bg_image": "shopify://shop_images/pic.jpg",
-        "small_text": "LEARN MORE",
-        "heading_text": "ABOUT US",
+        "small_text": "live life",
+        "heading_text": "UNSCRIPTED",
         "text_color": "#ffffff",
         "overlay_opacity": 40
       }
@@ -35,24 +35,24 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/Rectangle_197_png.png",
-            "card_heading": "2021",
-            "card_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui. Auctor tincidunt id ornare."
+            "card_heading": "BOLD EXPRESSION",
+            "card_text": "Made for individuals who want to stand out from the crowd."
           }
         },
         "card_qjXpyq": {
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/Link_1.png",
-            "card_heading": "2023",
-            "card_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui. Auctor tincidunt id ornare."
+            "card_heading": "UNCHARTED SCENTS",
+            "card_text": "Inspired by the rarest elements of nature. Crafted by master perfumers to deliver bold, unforgettable fragrances."
           }
         },
         "card_ptybfX": {
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/Link.png",
-            "card_heading": "2025 - today",
-            "card_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui. Auctor tincidunt id ornare."
+            "card_heading": "ALWAYS AUTHENTIC",
+            "card_text": "Trust in quality formulas that leave a lasting impression."
           }
         }
       },
