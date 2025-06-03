@@ -92,7 +92,7 @@
         "{margin-bottom: -40px;}",
         ".header--bordered {box-shadow: none;}",
         ".header__wrapper {padding-top: 40px; padding-bottom: 32px;}",
-        "@media (min-width: 768px) {img {max-width: 340px !important; }"
+        "@media (min-width: 768px) {img {max-width: 340px !important; }}"
       ],
       "settings": {
         "enable_sticky_header": false,

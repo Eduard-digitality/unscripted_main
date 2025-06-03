@@ -43,13 +43,10 @@
         "text_color": "rgba(0,0,0,0)",
         "button_background": "rgba(0,0,0,0)",
         "button_text_color": "rgba(0,0,0,0)",
-        "icon_1": "shopify://shop_images/Icon.png",
         "heading_1": "Email",
         "detail_1": "Sales@amaya-international.com",
-        "icon_2": "shopify://shop_images/Icon_1.png",
         "heading_2": "Call us",
         "detail_2": "+971(04) 557 3012",
-        "icon_3": "shopify://shop_images/Icon_2.png",
         "heading_3": "address",
         "detail_3": "Dubai science park office 1106 North Tower"
       }
@@ -117,7 +114,7 @@
           "type": "item",
           "settings": {
             "icon": "picto-box",
-            "custom_icon": "shopify://shop_images/icon-park_leaves.png",
+            "custom_icon": "shopify://shop_images/fluent_box-20-regular.svg",
             "custom_icon_width": 40,
             "title": "Eco-friendly",
             "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
@@ -127,7 +124,7 @@
           "type": "item",
           "settings": {
             "icon": "picto-phone",
-            "custom_icon": "shopify://shop_images/Vector.png",
+            "custom_icon": "shopify://shop_images/hugeicons_shopping-basket-secure-01.svg",
             "custom_icon_width": 40,
             "title": "free delivery",
             "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
@@ -137,7 +134,7 @@
           "type": "item",
           "settings": {
             "icon": "picto-lock",
-            "custom_icon": "shopify://shop_images/hugeicons_shopping-basket-secure-01.png",
+            "custom_icon": "shopify://shop_images/hugeicons_return-request.svg",
             "custom_icon_width": 40,
             "title": "security payment",
             "content": "<p>Your payment information is processed securely.</p>"
@@ -147,7 +144,7 @@
           "type": "item",
           "settings": {
             "icon": "picto-email",
-            "custom_icon": "shopify://shop_images/hugeicons_return-request.png",
+            "custom_icon": "shopify://shop_images/streamline_shipment-check.svg",
             "custom_icon_width": 40,
             "title": "30 day return policy",
             "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. <br/><br/></p>"
