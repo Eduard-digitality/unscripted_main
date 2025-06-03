@@ -12,7 +12,7 @@
     "about-hero-image-text-sAm1we1": {
       "type": "text-overlay-banner",
       "settings": {
-        "bg_image": "shopify://shop_images/1653369c2b308b591e52f9a605c0bc9d208c3b84.jpg",
+        "bg_image": "shopify://shop_images/pic.jpg",
         "small_text": "LEARN MORE",
         "heading_text": "ABOUT US",
         "text_color": "#ffffff",
@@ -23,7 +23,7 @@
       "type": "text-with-two-images",
       "settings": {
         "heading": "CARVE YOUR OWN PATH",
-        "text": "Unscripted was created to redefine the world of fragrances. We’re here for the free-spirited and rebellious - those who dare to break away and do it their way. Each fragrance has been designed to take you on a unique journey. Where will it take you? Only you can decide",
+        "text": "Unscripted was created to redefine the world of fragrances. We’re here for the free-spirited and rebellious - those who dare to break away and do it their way. Each fragrance has been designed to take you on a unique journey. Where will it take you? Only you can decide.",
         "image_1": "shopify://shop_images/Frame_235.png",
         "image_2": "shopify://shop_images/Rectangle_2000.png"
       }
@@ -100,8 +100,8 @@
         "image_GnRMJr"
       ],
       "settings": {
-        "heading": "The Concept Behind Our Store",
-        "text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae nec est dui."
+        "heading": "NOW, GO EXPLORE",
+        "text": "It’s great to have you here. Take your time. Immerse yourself. Find a new fragrance that will take you places."
       }
     },
     "about-social-scroll-sAm1we5": {
