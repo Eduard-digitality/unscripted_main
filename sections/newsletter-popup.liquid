@@ -1,39 +1,48 @@
 {% style %}
-  .modal__content {
-    max-width: 840px !important;
+.modal__content {
+    max-width: 940px !important;
     max-height: 339px !important;
   }
 
-  .newsletter-modal {
+  .model_area .newsletter-modal {
     align-items: center;
-    display: flex;
-    max-width: 709px;
+    display: grid;
     overflow: hidden;
+    grid-template-columns: 227px 1fr;
   }
-
-  .newsletter-modal img {
-    order: 1;
+  .model-img{
+    width: 230px;
+    height: 286px;
+    overflow: hidden;
+     order: 1;
+  }
+  .model_area .model-img img {
     min-width: 227px !important;
     max-width: 227px !important;
   }
 
-  .newsletter-modal__content {
+  .model_area .newsletter-modal__content {
     padding: 0 50px !important;
     order: 2;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
-  form.form.newsletter-modal__form {
+  .model_area form.form.newsletter-modal__form {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    column-gap: 15px;
   }
 
-  .modal__content .input {
+  .model_area .modal__content .input {
     margin: 0 !important;
   }
 
-  .modal__content .input button {
+  .model_area .modal__content .input button {
     margin: 0 !important;
     width: 167px;
     height: 48px;
@@ -43,87 +52,115 @@
     color: #fff;
   }
 
-  .modal__content .heading.h5 {
+  .model_area .modal__content .heading.h5 {
     font-family: DuPlay;
     font-weight: 700;
     font-size: 40px;
     vertical-align: middle;
     text-transform: uppercase;
     text-align: left;
+    margin: 0;
   }
 
-  .modal__content p {
+  .model_area .modal__content p {
     font-family: DM Sans;
     font-weight: 300;
     font-size: 16px;
     vertical-align: middle;
     text-align: left;
   }
-  .input__label{
+
+  .model_area .input input {
     font-family: DM Sans;
     font-weight: 300;
     font-size: 18px;
     vertical-align: middle;
-
+    border: 1px solid #DD3F21 !important;
   }
 
-.modal__content .heading.h5::before {
+  .model_area input::placeholder {
+    font-family: DM Sans;
+    font-weight: 300;
+    font-size: 18px;
+    vertical-align: middle;
+  }
+
+  .input__field:focus,
+  select:focus,
+  #shopify-product-reviews .spr-form-input-text:focus,
+  #shopify-product-reviews .spr-form-input-email:focus,
+  #shopify-product-reviews .spr-form-input-textarea:focus {
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 0%) inset !important;
+  }
+
+  .model_area .modal__content .heading.h5::before {
     content: "10% OFF";
     color: red;
     position: absolute;
     left: 137px;
-    background: #fff;
-}
+    background: #f2f0ea;
+  }
 
   @media screen and (max-width: 991px) {
-    .newsletter-modal {
+    .model_area .newsletter-modal {
       display: grid;
       flex-direction: row !important;
+      grid-template-columns: 1fr;
     }
-    .modal__content .heading.h5::before {
+
+    .model_area .modal__content .heading.h5::before {
       content: "10% OFF";
       color: red;
       position: absolute;
       left: 99px;
-      background: #fff;
+      background: #f2f0ea;
     }
-    .newsletter-modal img {
-      order: 2;
-      min-width: 227px !important;
-      max-width: 227px !important;
-    }
-
-    .newsletter-modal__content {
+    .model-img{
+        width: 100%;
+        height: 286px;
+        overflow: hidden;
+        order: 2;
+        object-fit: cover;
+      }
+    .model_area .newsletter-modal__content {
       padding: 15px 40px !important;
       order: 1;
     }
 
-    form.form.newsletter-modal__form {
+    .model_area form.form.newsletter-modal__form {
       display: block;
     }
 
-    .modal__content .heading.h5 {
+    .model_area .modal__content .heading.h5 {
       font-size: 28px;
     }
 
-    .modal__content p {
+    .model_area .modal__content p {
       font-size: 14px;
     }
 
-    .modal__content {
+    .model_area .modal__content {
       max-height: 100% !important;
     }
 
-    .modal__content .input button {
+    .model_area .modal__content .input button {
       width: 100% !important;
       margin-top: 10px !important;
     }
 
-    .newsletter-modal img {
+    .model_area .newsletter-modal img {
       min-width: 100% !important;
       min-height: 240px !important;
     }
+
+    .modal__content {
+      max-height: 100% !important;
+      max-width: 343px !important;
+      margin: 0 auto;
+    }
   }
+
+  
 {% endstyle %}
 <style>
   [aria-controls="newsletter-popup"] {
@@ -149,7 +186,7 @@
   {%- endunless -%}
 {%- endunless -%}
 
-<modal-content section="{{ section.id }}" {% if section.settings.show_only_once %}only-once{% endif %} {% if should_appear_automatically %}apparition-delay="{{ section.settings.apparition_delay }}"{% endif %} id="newsletter-popup" class="modal">
+<modal-content section="{{ section.id }}" {% if section.settings.show_only_once %}only-once{% endif %} {% if should_appear_automatically %}apparition-delay="{{ section.settings.apparition_delay }}"{% endif %} id="newsletter-popup" class="modal model_area">
   <div class="modal__overlay"></div>
 
   <div class="modal__content">
@@ -157,12 +194,13 @@
       {%- render 'icon' with 'close' -%}
     </button>
 
-    <div class="newsletter-modal {% if section.settings.image_position == 'right' %}newsletter-modal--reverse{% endif %}">
-      {%- if section.settings.image != blank -%}
-        {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) 100vw, 500px', widths: '300,400,500,600,700,800,900,1000', class: 'newsletter-modal__image' -}}
-      {%- endif -%}
-
-      <div class="newsletter-modal__content {% if section.settings.image != blank %}newsletter-modal__content--extra{% endif %} text-container text--center">
+    <div class="newsletter-modal">
+      <div class="model-img">
+        {%- if section.settings.image != blank -%}
+          {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) 100vw, 500px', widths: '300,400,500,600,700,800,900,1000', class: 'newsletter-modal__image' -}}
+        {%- endif -%}
+      </div>
+      <div class="newsletter-modal__content">
         {%- if section.settings.title != blank -%}
           <h2 class="heading h5">{{ section.settings.title | escape }}</h2>
         {%- endif -%}
@@ -195,8 +233,8 @@
           <input type="hidden" name="contact[context]" value="{{ newsletter_id }}">
 
             <div class="input">
-              <input type="email" id="newsletter[{{ section.id }}][contact][email]" name="contact[email]" class="input__field" required>
-              <label for="newsletter[{{ section.id }}][contact][email]" class="input__label">{{ 'general.newsletter.email' | t }}</label>
+              <input type="email" id="newsletter[{{ section.id }}][contact][email]" name="contact[email]" placeholder="{{ 'general.newsletter.email' | t }}" class="input__field" required>
+              <!-- <label for="newsletter[{{ section.id }}][contact][email]" class="input__label">{{ 'general.newsletter.email' | t }}</label> -->
             </div>
 
             <div class="input">
