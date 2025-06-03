@@ -250,7 +250,7 @@
             "title": "",
             "content": "<p>Unscripted was made to be different; we create perfume that powers self-discovery. This is your invitation to uncover the unknown and write your own destiny. Be bold. Be you.</p>",
             "link_text": "discover OUR STORY",
-            "link_url": "",
+            "link_url": "shopify://pages/about-us",
             "link_style": "button",
             "text_alignment": "left",
             "vertical_alignment": "start"
