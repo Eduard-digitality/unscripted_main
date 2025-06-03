@@ -75,6 +75,7 @@
           "type": "item",
           "settings": {
             "icon": "picto-phone",
+            "custom_icon": "shopify://shop_images/icon-park_leaves.svg",
             "custom_icon_width": 50,
             "title": "Eco-friendly",
             "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
