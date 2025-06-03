@@ -117,8 +117,6 @@
     </a>
 
     {%- if request.page_type != 'password' and settings.product_add_to_cart and product.available and reduced_content != true and show_cta != true -%}
-      {%- if product.variants.size == 1 -%}
-      {%- else -%}
         {%- comment -%}
         IMPLEMENTATION NOTE: Depending on the device we show a different icon or open a different mode (either popover or drawer)
         {%- endcomment -%}
@@ -147,7 +145,6 @@
 
         <quick-buy-popover id="product-{{ section.id }}-{{ block.id }}-{{ product.id }}-popover" href="{{ product.url }}" class="popover popover--quick-buy hidden-tablet-and-up"></quick-buy-popover>
         <quick-buy-drawer id="product-{{ section.id }}-{{ block.id }}-{{ product.id }}-drawer" href="{{ product.url }}" class="drawer drawer--large drawer--quick-buy hidden-phone"></quick-buy-drawer>
-      {%- endif -%}
     {%- endif -%}
   </div>
 
