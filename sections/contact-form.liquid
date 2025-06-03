@@ -241,31 +241,37 @@
 
             <div class="three-icons-container">
             <div class="icon-detail">
-              {% if section.settings.icon_1 %}
-                <img src="{{ section.settings.icon_1 | img_url: '40x40' }}" alt="{{ section.settings.heading_1 }}">
-              {% endif %}
+              <div class="img_icon_area">
+                {% if section.settings.icon_1 %}
+                  <img src="{{ section.settings.icon_1 | img_url: '40x40' }}" alt="{{ section.settings.heading_1 }}">
+                {% endif %}
+              </div>
               <div>
-              <div class="heading">{{ section.settings.heading_1 }}</div>
-              <div class="detail-text">{{ section.settings.detail_1 }}</div>
-                </div>
+                <div class="heading">{{ section.settings.heading_1 }}</div>
+                <div class="detail-text">{{ section.settings.detail_1 }}</div>
+              </div>
             </div>
             <div class="icon-detail">
+              <div class="img_icon_area">
               {% if section.settings.icon_2 %}
                 <img src="{{ section.settings.icon_2 | img_url: '40x40' }}" alt="{{ section.settings.heading_2 }}">
               {% endif %}
+              </div>
               <div>
-              <div class="heading">{{ section.settings.heading_2 }}</div>
-              <div class="detail-text">{{ section.settings.detail_2 }}</div>
-                </div>
+                <div class="heading">{{ section.settings.heading_2 }}</div>
+                <div class="detail-text">{{ section.settings.detail_2 }}</div>
+              </div>
             </div>
             <div class="icon-detail">
+               <div class="img_icon_area">
               {% if section.settings.icon_3 %}
-                <img src="{{ section.settings.icon_3 | img_url: '40x40' }}" alt="{{ section.settings.heading_3 }}">
+               <img src="{{ section.settings.icon_3 | img_url: '40x40' }}" alt="{{ section.settings.heading_3 }}">
               {% endif %}
+              </div>
               <div>
-              <div class="heading">{{ section.settings.heading_3 }}</div>
-              <div class="detail-text">{{ section.settings.detail_3 }}</div>
-                </div>
+                <div class="heading">{{ section.settings.heading_3 }}</div>
+                <div class="detail-text">{{ section.settings.detail_3 }}</div>
+              </div>
             </div>
             </div>
           
