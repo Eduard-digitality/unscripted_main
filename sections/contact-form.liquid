@@ -4,10 +4,13 @@
         font-size: 64px !important;
         vertical-align: middle;
         text-transform: uppercase;
-        text-align: center;
+        text-align: left;
         letter-spacing: 2.56px;
         width: 100%;
     }
+  .section_area  .heading.h2 {
+        text-align: center;
+    } 
 
     input {
         font-family: DM Sans;
@@ -78,6 +81,34 @@
     .contact__form {
         max-width: 704px !important;
     }
+      .contact__main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .icon-detail {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      column-gap: 18px;
+      margin-bottom: 12px;
+  }
+  .heading{
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 18px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #0E0E0E;
+
+  }
+  .detail-text{
+    font-family: DM Sans;
+    font-weight: 300;
+    font-size: 16px;
+    vertical-align: middle;
+    color: #0E0E0E;
+
+
+  }
     @media screen and (max-width: 1376px) {
         .section{
             width: 100%;
@@ -193,10 +224,11 @@
             </div>
           {%- endif -%}
         {%- endcapture -%}
-
+ 
         <div class="contact__main">
+          <div class="contact-left-section">
           {%- if section.settings.title != blank or section.settings.content != blank -%}
-            <header class="section__header {% if section.settings.content != blank %}section__header--tight{% endif %} text-container">
+            <header class="section__header {% if section.settings.content != blank %}section__header--tight{% endif %}">
               {%- if section.settings.title != blank -%}
                 <h1 class="heading h2">{{ section.settings.title }}</h1>
               {%- endif -%}
@@ -207,6 +239,38 @@
             </header>
           {%- endif -%}
 
+            <div class="three-icons-container">
+            <div class="icon-detail">
+              {% if section.settings.icon_1 %}
+                <img src="{{ section.settings.icon_1 | img_url: '40x40' }}" alt="{{ section.settings.heading_1 }}">
+              {% endif %}
+              <div>
+              <div class="heading">{{ section.settings.heading_1 }}</div>
+              <div class="detail-text">{{ section.settings.detail_1 }}</div>
+                </div>
+            </div>
+            <div class="icon-detail">
+              {% if section.settings.icon_2 %}
+                <img src="{{ section.settings.icon_2 | img_url: '40x40' }}" alt="{{ section.settings.heading_2 }}">
+              {% endif %}
+              <div>
+              <div class="heading">{{ section.settings.heading_2 }}</div>
+              <div class="detail-text">{{ section.settings.detail_2 }}</div>
+                </div>
+            </div>
+            <div class="icon-detail">
+              {% if section.settings.icon_3 %}
+                <img src="{{ section.settings.icon_3 | img_url: '40x40' }}" alt="{{ section.settings.heading_3 }}">
+              {% endif %}
+              <div>
+              <div class="heading">{{ section.settings.heading_3 }}</div>
+              <div class="detail-text">{{ section.settings.detail_3 }}</div>
+                </div>
+            </div>
+            </div>
+          
+          </div>
+          <div class="contact-right-section">
           {%- form 'contact', class: 'contact__form form' -%}
             {%- if form.posted_successfully? -%}
               <div class="banner banner--success form__banner">
@@ -358,6 +422,7 @@
               {{ 'contact.form.submit' | t }}
             </button>
           {%- endform -%}
+          </div>
         </div>
 
         {%- if aside_content != blank -%}
@@ -449,6 +514,57 @@
       "id": "button_text_color",
       "label": "Button text",
       "default": "rgba(0,0,0,0)"
+    },
+     {
+      "type": "image_picker",
+      "id": "icon_1",
+      "label": "Email Icon"
+    },
+    {
+      "type": "text",
+      "id": "heading_1",
+      "label": "Email Heading",
+      "default": "Email"
+    },
+    {
+      "type": "text",
+      "id": "detail_1",
+      "label": "Email",
+      "default": "contact@example.com"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_2",
+      "label": "Call Icon"
+    },
+    {
+      "type": "text",
+      "id": "heading_2",
+      "label": "Phone Heading",
+      "default": "Phone"
+    },
+    {
+      "type": "text",
+      "id": "detail_2",
+      "label": "Phone",
+      "default": "+1 234 567 890"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_3",
+      "label": "Address Icon"
+    },
+    {
+      "type": "text",
+      "id": "heading_3",
+      "label": "Address Heading",
+      "default": "Address"
+    },
+    {
+      "type": "text",
+      "id": "detail_3",
+      "label": "Address",
+      "default": "123 Main Street, City"
     }
   ],
   "blocks": [

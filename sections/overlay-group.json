@@ -30,10 +30,19 @@
         "cookie_bar_title": "Cookies Notice",
         "cookie_bar_content": "<p>We use cookies to enhance your experience on our website. By continuing to browse, you agree to our use of cookies. For more information about how we use cookies, please read our Privacy Policy.</p>"
       }
+    },
+     "whatsapp_overlay": {
+      "type": "contact-whatsapp",
+      "settings": {
+        "whatsapp_icon": "shopify://shop_images/your-whatsapp-icon.png",
+        "whatsapp_number": "1234567890",
+        "tooltip_text": "Chat with us on WhatsApp"
+      }
     }
   },
   "order": [
     "newsletter-popup",
-    "privacy-banner"
+    "privacy-banner",
+    "whatsapp_overlay"
   ]
 }

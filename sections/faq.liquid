@@ -24,7 +24,7 @@
     height: 16px !important;
 }
   .faq__wrapper {
-    max-width: 954px  !important;
+    max-width: 1034px  !important;
     width: 100% !important;
     }
   .section.one_area .faq__wrapper {
@@ -48,17 +48,31 @@
   /* .faq__item:last-child:before{
        display: none !important;
 } */
+  .section_header p{
+    display: none !important;
+  }
    @media screen and (max-width: 767px) {
     .shopify-section--faq .heading.h2 {
         font-size: 28px !important;
         padding: 0 !important;
     } 
+     .section_header{
+       margin: 0 !important;
+     }
      .faq {
         margin-inline: inherit !important;
     }
        .section_area {
           margin: 0 auto !important;
       }
+     .contact__main{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 30px;
+    }
+     .faq__wrapper{
+               padding: 0 !important;
+     }
    }
 {% endstyle %}
 
@@ -101,7 +115,7 @@
     <div class="container">
       <div class="section {% unless blends_with_background %}vertical-breather{% endunless %}">
         {%- if section.settings.title != blank or section.settings.content != blank -%}
-          <header class="section__header {% if section.settings.content != blank %}section__header--tight{% endif %} text-container">
+          <div class="section_header">
             {%- if section.settings.title != blank -%}
               <h1 class="heading h2">{{ section.settings.title | escape }}</h1>
             {%- endif -%}
@@ -109,7 +123,7 @@
             {%- if section.settings.content -%}
               {{- section.settings.content -}}
             {%- endif -%}
-          </header>
+          </div>
         {%- endif -%}
 
         <div class="faq">
