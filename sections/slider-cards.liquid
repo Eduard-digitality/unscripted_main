@@ -1,10 +1,4 @@
 {% style %}
- @media screen and (max-width: 767px) {
-        body {
-            background-color: #fff !important;
-            overflow-x: hidden !important;
-        }
-    }
     #shopify-section-template--24746635854142__about-card-slider-sAm1we3{
         background: #fff !important;
         padding-top: 30px !important;
@@ -76,11 +70,6 @@
     align-items: center;
     width: 100%;
 }
-  .marquee_area .marquee_text:last-child{
-    padding: 0px !important;
-    width: 60px !important;
-    overflow: hidden;
-  }
 
     @media(max-width:767px) {
             .marquee_text {
@@ -130,8 +119,6 @@
     </script>
     {% if section.settings.heading != blank %}
       <div class="marquee_area">
-        <div class="marquee_text">{{ section.settings.heading }} </div>
-        <div class="marquee_text">{{ section.settings.heading }} </div>
         <div class="marquee_text">{{ section.settings.heading }} </div>
       </div>
     {% endif %}
