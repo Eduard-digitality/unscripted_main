@@ -75,7 +75,7 @@
           "type": "item",
           "settings": {
             "icon": "picto-phone",
-            "custom_icon": "shopify://shop_images/icon-park_leaves.png",
+            "custom_icon": "shopify://shop_images/icon-park_leaves.svg",
             "custom_icon_width": 50,
             "title": "Eco-friendly",
             "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. <br/><br/></p>"
@@ -85,7 +85,7 @@
           "type": "item",
           "settings": {
             "icon": "picto-lock",
-            "custom_icon": "shopify://shop_images/fluent_box-20-regular.png",
+            "custom_icon": "shopify://shop_images/fluent_box-20-regular.svg",
             "custom_icon_width": 50,
             "title": "free delivery",
             "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
@@ -151,7 +151,6 @@
           "settings": {
             "review_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae \nest dui. Pretium tellus",
             "stars": 5,
-            "user_image": "shopify://shop_images/Collection_card_1.png",
             "user_name": "John Bush"
           }
         },
@@ -160,7 +159,6 @@
           "settings": {
             "review_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae \nest dui. Pretium tellus",
             "stars": 5,
-            "user_image": "shopify://shop_images/yash-karmur-qYbitOLh7fk-unsplash_1.jpg",
             "user_name": "John Bush"
           }
         },
@@ -169,7 +167,6 @@
           "settings": {
             "review_text": "Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper dui arcu vitae \nest dui. Pretium tellus",
             "stars": 5,
-            "user_image": "shopify://shop_images/Collection_card_3.png",
             "user_name": "John Bush"
           }
         }
