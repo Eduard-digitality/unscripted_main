@@ -21,6 +21,13 @@
             "content": "<p>Sign in to our News letter for special promotion and product launched.</p>"
           }
         },
+        "social_media_4UEPLW": {
+          "type": "social_media",
+          "settings": {
+            "title": "Follow us",
+            "content": ""
+          }
+        },
         "links": {
           "type": "links",
           "settings": {
@@ -42,13 +49,13 @@
       },
       "block_order": [
         "newsletter",
+        "social_media_4UEPLW",
         "links",
         "links_RTMkGD",
         "links_Y7UP3T"
       ],
       "custom_css": [
-        "{margin-bottom: -70px !important; margin-top: 20px !important; padding-bottom: -300px !important; /* Adjusts padding if needed */}",
-        "p.footer__item-title.heading.heading--small {display: none;}"
+        ".social-media__link {width: 48px; height: 48px;}"
       ],
       "settings": {
         "show_payment_icons": true,

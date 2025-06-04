@@ -19,6 +19,7 @@
         "show_only_on_index": true,
         "show_only_for_visitors": false,
         "show_only_once": false,
+        "image": "shopify://shop_images/popup-img.png",
         "image_position": "left",
         "title": "Get 10% Off Your First Order!",
         "content": "<p>Sign up for our newsletter and get a 10% discount on your first purchase.<br/></p>"
@@ -31,12 +32,10 @@
         "cookie_bar_content": "<p>We use cookies to enhance your experience on our website. By continuing to browse, you agree to our use of cookies. For more information about how we use cookies, please read our Privacy Policy.</p>"
       }
     },
-     "whatsapp_overlay": {
+    "whatsapp_overlay": {
       "type": "contact-whatsapp",
       "settings": {
-        "whatsapp_icon": "shopify://shop_images/your-whatsapp-icon.png",
-        "whatsapp_number": "1234567890",
-        "tooltip_text": "Chat with us on WhatsApp"
+        "whatsapp_number": "1234567890"
       }
     }
   },
