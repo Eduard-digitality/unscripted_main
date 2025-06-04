@@ -2,18 +2,6 @@
 .product__info .section_area {
     margin: 40px 0  20px 0 !important;
 }
-  .product-sticky-form{
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
-.collapsible__content.text-container {
-    font-family: DM Sans;
-    font-weight: 300 !important;
-    font-size: 20px;
-    line-height: 140%;
-    letter-spacing: 0%;
-    vertical-align: middle;
-}
  .product__info .container {
     width: 100%;
     max-width: 100%;
@@ -212,7 +200,7 @@
           {%- assign pinterest_image = product.featured_image | image_url: width: 800 | prepend: 'https:' -%}
 
           <button is="share-toggle-button" share-url="{{ share_url | escape }}" share-title="{{ product.title | escape }}" class="product-meta__share-label link hidden-tablet-and-up" aria-controls="mobile-share-buttons-{{ section.id }}" aria-expanded="false">{{ 'product.general.share' | t }}</button>
-          <div class="product-meta__share-label hidden-phone">{{ 'product.general.share' | t }}:</div>
+          <div class="product-meta__share-label hidden-phone">{{ 'product.general.share' | t }} :</div>
 
           <popover-content id="mobile-share-buttons-{{ section.id }}" class="popover hidden-tablet-and-up">
             <span class="popover__overlay"></span>

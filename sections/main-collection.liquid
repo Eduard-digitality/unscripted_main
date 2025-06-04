@@ -2,7 +2,6 @@
   #shopify-section-sections--19317519843580__header {
     margin-bottom: 0 !important;
 }
-
   .text-container {
     max-width: 100%;
     width: 100%;
@@ -29,7 +28,12 @@
 .product-facet {
         display: block !important;
     }
- 
+.container{
+      width: 100%;
+      max-width: 100%;
+      padding: 0 !important;
+      margin: 0 auto !important;
+  }
     .heading_sortby {
         display: flex;
         justify-content: space-between;
@@ -134,7 +138,7 @@
         vertical-align: middle;
         text-transform: uppercase !important;
         text-align: left !important;
-       letter-spacing: 0.72px;
+       letter-spacing: 2.56px;
     }
   .product-facet__sort-by-title{
     font-family: DM Sans;
@@ -143,9 +147,8 @@
         color: #0E0E0E !important;
     vertical-align: middle;
   }
-    .anchor {
-    padding: 0 15px !important;
-    overflow-x: hidden;
+  div#main {
+    padding: 0 15px  !important;
 }
   .product-list__inner{
   gap: 0 !important;
@@ -297,7 +300,7 @@
 </style>
 
 <section>
-  <div >
+  <div class="container">
     <product-facet section-id="{{ section.id }}" class="product-facet">
       <div class="heading_sortby">
               <div>
@@ -380,7 +383,7 @@
                         {% assign collection_lower = collection.title | downcase %}
 
                   <li><a href="/collections/all" class="{% if collection_lower == 'products' %} collection-active {% endif %}">{{ 'All' }}</a></li>
-                  <li>Collections 
+                  <li>Collections -
                     <ul>
                       {%- for coll in collections -%}
                         <li>
@@ -400,7 +403,7 @@
             <ul>
               {% assign collection_lower = collection.title | downcase %}
               <li><a href="/collections/all" class="{% if collection_lower == 'products' %} collection-active {% endif %}">{{ 'All' }}</a></li>
-              <li>Collections
+              <li>Collections -
                 <ul>
                   {%- for coll in collections -%}
                     <li>

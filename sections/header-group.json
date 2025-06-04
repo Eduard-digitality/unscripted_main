@@ -14,7 +14,7 @@
     "custom_liquid_hCeBAH": {
       "type": "custom-liquid",
       "custom_css": [
-        ".container {padding: 0!important;}",
+        ".container {padding: 0 !important;}",
         " {min-width: 100%;}"
       ],
       "name": "Custom Liquid",

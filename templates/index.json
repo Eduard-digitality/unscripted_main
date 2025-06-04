@@ -405,7 +405,7 @@
         "title": "follow us",
         "content": "",
         "button_text": "instagram",
-        "button_url": "##",
+        "button_url": "https://www.instagram.com/",
         "column_alignment": "left",
         "mobile_item_size": "medium",
         "desktop_item_size": "large",
