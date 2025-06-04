@@ -78,7 +78,7 @@
             "custom_icon": "shopify://shop_images/icon-park_leaves.svg",
             "custom_icon_width": 50,
             "title": "Eco-friendly",
-            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. <br/><br/></p>"
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
           }
         },
         "item_BxMcnK": {
@@ -87,7 +87,7 @@
             "icon": "picto-lock",
             "custom_icon": "shopify://shop_images/fluent_box-20-regular.svg",
             "custom_icon_width": 50,
-            "title": "free delivery",
+            "title": "lorem ipsum",
             "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
           }
         },
@@ -95,20 +95,20 @@
           "type": "item",
           "settings": {
             "icon": "picto-email",
-            "custom_icon": "shopify://shop_images/icon-park-outline_shopping-bag.png",
+            "custom_icon": "shopify://shop_images/hugeicons_shopping-basket-secure-01_84998303-deff-4489-8e82-ab60b4020a86.svg",
             "custom_icon_width": 50,
-            "title": "security payment",
-            "content": "<p>Your payment information is processed securely.<br/><br/></p>"
+            "title": "Dolor",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
           }
         },
         "item_wtj6Ei": {
           "type": "item",
           "settings": {
             "icon": "picto-box",
-            "custom_icon": "shopify://shop_images/basil_user-outline.png",
+            "custom_icon": "shopify://shop_images/hugeicons_return-request.svg",
             "custom_icon_width": 50,
-            "title": "30 day return policy",
-            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. <br/><br/></p>"
+            "title": "Faucibus erat",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
           }
         }
       },
@@ -123,6 +123,64 @@
         "text_color": "rgba(0,0,0,0)",
         "show_heading": false,
         "heading_text": "Our Benefits"
+      }
+    },
+    "about-product-U3rTTg": {
+      "type": "about-product",
+      "blocks": {
+        "info_pair_HhJbWA": {
+          "type": "info_pair",
+          "settings": {
+            "heading": "Lorem ipsum",
+            "text": "Dolor sit amet"
+          }
+        },
+        "info_pair_gmY98J": {
+          "type": "info_pair",
+          "settings": {
+            "heading": "Lorem ipsum",
+            "text": "Dolor sit amet"
+          }
+        },
+        "info1": {
+          "type": "info_pair",
+          "settings": {
+            "heading": "Lorem ipsum",
+            "text": "Dolor sit amet"
+          }
+        },
+        "info2": {
+          "type": "info_pair",
+          "settings": {
+            "heading": "Lorem ipsum",
+            "text": "Dolor sit amet"
+          }
+        },
+        "info3": {
+          "type": "info_pair",
+          "settings": {
+            "heading": "Lorem ipsum",
+            "text": "Dolor sit amet"
+          }
+        },
+        "info4": {
+          "type": "info_pair",
+          "settings": {
+            "heading": "Lorem ipsum",
+            "text": "Dolor sit amet"
+          }
+        }
+      },
+      "block_order": [
+        "info_pair_HhJbWA",
+        "info_pair_gmY98J",
+        "info1",
+        "info2",
+        "info3",
+        "info4"
+      ],
+      "settings": {
+        "main_heading": "about the product"
       }
     },
     "product-reviews-U3eTTW": {
@@ -203,29 +261,45 @@
         "question_dbqDHa": {
           "type": "question",
           "settings": {
-            "title": "Do you ship overseas?",
+            "title": "Pellentesque habitant morbi tristique?",
             "answer": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
           }
         },
         "question_BCDEgU": {
           "type": "question",
           "settings": {
-            "title": "How long will it take to get my order?",
+            "title": "Lorem ipsum dolor sit?",
             "answer": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
           }
         },
         "question_jediTw": {
           "type": "question",
           "settings": {
-            "title": "Any question?",
+            "title": "Pretium tellus ?",
             "answer": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+          }
+        },
+        "question_jwqaUa": {
+          "type": "question",
+          "settings": {
+            "title": "Pellentesque habitant morbi tristique?",
+            "answer": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+          }
+        },
+        "question_BNnpmY": {
+          "type": "question",
+          "settings": {
+            "title": "Pretium tellus ?",
+            "answer": "<p>Lorem ipsum dolor sit?</p>"
           }
         }
       },
       "block_order": [
         "question_dbqDHa",
         "question_BCDEgU",
-        "question_jediTw"
+        "question_jediTw",
+        "question_jwqaUa",
+        "question_BNnpmY"
       ],
       "custom_css": [
         ".section__header {text-align: center; margin-left: 0;}",
@@ -239,13 +313,72 @@
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }
+    },
+    "text_with_icons_erFPtk": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_9U9MHP": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon": "shopify://shop_images/fluent_box-20-regular.svg",
+            "custom_icon_width": 50,
+            "title": "free delivery",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. <br/><br/></p>"
+          }
+        },
+        "item_eUn4A4": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-phone",
+            "custom_icon": "shopify://shop_images/hugeicons_shopping-basket-secure-01.png",
+            "custom_icon_width": 50,
+            "title": "security payment",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. <br/><br/></p>"
+          }
+        },
+        "item_mwDLrh": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-lock",
+            "custom_icon": "shopify://shop_images/hugeicons_return-request.png",
+            "custom_icon_width": 50,
+            "title": "30 day return policy",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
+          }
+        },
+        "item_TTXLnt": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-email",
+            "custom_icon": "shopify://shop_images/streamline_shipment-check.png",
+            "custom_icon_width": 50,
+            "title": "Every item is in stock ready to ship",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus erat tellus mattis facilisis. Non ullamcorper. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_9U9MHP",
+        "item_eUn4A4",
+        "item_mwDLrh",
+        "item_TTXLnt"
+      ],
+      "settings": {
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "show_heading": true,
+        "heading_text": "Our Benefits"
+      }
     }
   },
   "order": [
     "main",
     "text_with_icons_U3rTJJ",
+    "about-product-U3rTTg",
     "product-reviews-U3eTTW",
     "product-recommendations",
-    "faq_HKxcbx"
+    "faq_HKxcbx",
+    "text_with_icons_erFPtk"
   ]
 }

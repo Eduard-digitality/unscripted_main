@@ -1,6 +1,6 @@
 {% style %}
   .faq__item .collapsible-toggle {
-    font-family: DM Sans !important;
+    font-family: DM Sans;
     font-weight: 300;
     font-size: 20px;
     vertical-align: middle;
@@ -24,9 +24,13 @@
     height: 16px !important;
 }
   .faq__wrapper {
-    max-width: 955px  !important;
+    max-width: 1034px  !important;
     width: 100% !important;
     }
+  .section.one_area .faq__wrapper {
+      max-width: 1042px !important;
+      width: 100% !important;
+  }
   .faq__item{
        position: relative;
     /* border: none; */
@@ -46,11 +50,6 @@
 } */
   .section_header p{
     display: none !important;
-  }
-  ..heading.h2{
-    text-align: center !important;
-    letter-spacing: 0 !important;
-    width: 100%;
   }
    @media screen and (max-width: 767px) {
     .shopify-section--faq .heading.h2 {
@@ -118,7 +117,7 @@
         {%- if section.settings.title != blank or section.settings.content != blank -%}
           <div class="section_header">
             {%- if section.settings.title != blank -%}
-              <h1 class="heading h2" style="text-align: center;">{{ section.settings.title | escape }}</h1>
+              <h1 class="heading h2">{{ section.settings.title | escape }}</h1>
             {%- endif -%}
 
             {%- if section.settings.content -%}
