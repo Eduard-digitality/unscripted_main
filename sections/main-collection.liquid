@@ -2,6 +2,7 @@
   #shopify-section-sections--19317519843580__header {
     margin-bottom: 0 !important;
 }
+
   .text-container {
     max-width: 100%;
     width: 100%;
@@ -28,12 +29,7 @@
 .product-facet {
         display: block !important;
     }
-.container{
-      width: 100%;
-      max-width: 100%;
-      padding: 0 !important;
-      margin: 0 auto !important;
-  }
+ 
     .heading_sortby {
         display: flex;
         justify-content: space-between;
@@ -138,7 +134,7 @@
         vertical-align: middle;
         text-transform: uppercase !important;
         text-align: left !important;
-       letter-spacing: 2.56px;
+       letter-spacing: 0.72px;
     }
   .product-facet__sort-by-title{
     font-family: DM Sans;
@@ -147,8 +143,9 @@
         color: #0E0E0E !important;
     vertical-align: middle;
   }
-  div#main {
-    padding: 0 15px  !important;
+    .anchor {
+    padding: 0 15px !important;
+    overflow-x: hidden;
 }
   @media screen and (min-width: 741px) {
     .product-facet {
@@ -289,7 +286,7 @@
 </style>
 
 <section>
-  <div class="container">
+  <div >
     <product-facet section-id="{{ section.id }}" class="product-facet">
       <div class="heading_sortby">
               <div>
@@ -372,7 +369,7 @@
                         {% assign collection_lower = collection.title | downcase %}
 
                   <li><a href="/collections/all" class="{% if collection_lower == 'products' %} collection-active {% endif %}">{{ 'All' }}</a></li>
-                  <li>Collections -
+                  <li>Collections 
                     <ul>
                       {%- for coll in collections -%}
                         <li>
@@ -392,7 +389,7 @@
             <ul>
               {% assign collection_lower = collection.title | downcase %}
               <li><a href="/collections/all" class="{% if collection_lower == 'products' %} collection-active {% endif %}">{{ 'All' }}</a></li>
-              <li>Collections -
+              <li>Collections
                 <ul>
                   {%- for coll in collections -%}
                     <li>

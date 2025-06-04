@@ -1,14 +1,4 @@
 {% style %}
-    #shopify-section-template--24746635854142__about-card-slider-sAm1we3{
-        background: #fff !important;
-        padding-top: 30px !important;
-      
-    }
-    #shopify-section-template--19317521973500__about-card-slider-sAm1we3 {
-        background: #fff !important;
-        padding-top: 30px !important;
-      
-    }
    @media screen and (max-width: 1376px) {
      .shopify-section{
        width: 100%  !important;
@@ -22,7 +12,9 @@
         max-width: 1376px;
         margin: 0 auto;
     }
-
+      .slider-card img{
+        border: 1px solid #0000001A !important;
+      }
     section.slider-cards h3 {
         font-family: DM Sans !important;
         font-weight: 700 !important;
@@ -51,7 +43,7 @@
         display: inline-block;
         white-space: nowrap;
         color: #F5F5F5;
-        padding: 0px 80px 0px 0px;
+        padding: 0px;
         text-align: center;
         font-size: 80px;
         font-weight: bold;
@@ -63,10 +55,8 @@
         height: 98px;
     }
   .marquee_area {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
+    padding-top: 40px !important;
 }
   section.slider-cards.bg_background {
     padding-bottom: 100px;
@@ -75,18 +65,19 @@
             .marquee_text {
               font-size: 50px !important;
               line-height: 50px !important;
-              padding: 0px 355px 0 0px;
-              margin-left: -25px;
+              padding: 0px;
+              margin-left: 0;
               height: 50px !important;
               margin-top: 70px;
               overflow: hidden !important;
           }
           section.slider-cards.bg_background {
-    padding-bottom: 30px;
-}
+            padding-bottom: 30px;
+        }
       .slider-card img{
         max-height: 249px !important;
         object-fit: cover;
+        border: none !important;
       }
 
         section.image-scroll-with-header .grid_text {
@@ -128,7 +119,7 @@
       </div>
     {% endif %}
 
-    <div class="slider-wrapper" style="overflow-x: auto; display: flex; gap: 20px; padding-top: 30px; scroll-snap-type: x mandatory;">
+    <div class="slider-wrapper" style="overflow-x: auto; display: flex; gap: 20px; padding-top: 30px;overflow-x: hidden;">
       {% for block in section.blocks %}
         <div class="slider-card" style="flex: 0 0 auto; width: 32.3%; scroll-snap-align: start; background: #f9f9f9; padding: 20px; border-radius: 0 !important;">
           {% if block.settings.image %}
