@@ -2,8 +2,15 @@ div.shopify-section-group-header-group,
 div.shopify-section-group-footer-group{
   padding:0!important;
 }
+div.shopify-section-group-header-group .container,
+div.shopify-section-group-footer-group .container{
+  padding-inline: 15px!important;
+}
 .footer{
   border:none!important;
+}
+.container, .shopify-policy__container.shopify-policy__container{
+  padding-inline: 15px!important;
 }
 
 #shopify-section-template--24780760318270__featured-collections .section,
